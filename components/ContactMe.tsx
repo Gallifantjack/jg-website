@@ -1,12 +1,8 @@
-import React, { useState } from "react";
+import { EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
-import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
-import { PageInfo } from "../typings";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 
-type Props = {
-  pageInfo: PageInfo;
-};
+type Props = {}
 
 type Inputs = {
   name: string;
@@ -15,14 +11,14 @@ type Inputs = {
   message: string;
 };
 
-function ContactMe({ pageInfo }: Props) {
+function ContactMe({}: Props) {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    window.location.href = `mailto:${pageInfo.email}?subject=${data.subject}&body=Hi, my name is ${data.name}. ${data.message}`;
+    window.location.href = `mailto:jack.gallifant@nhs.net?subject=${data.subject}&body=Hi Jack, My name is ${data.name}. I wanted to reach out because i think we can collaborate! ${data.message}`;
   };
 
   return (
@@ -38,24 +34,20 @@ function ContactMe({ pageInfo }: Props) {
 
       <div className="flex flex-col space-y-10">
         <h4 className="text-4xl font-semibold text-center">
-          I have got just what you need.{" "}
-          <span className="decoration-[#F7AB0A]/50 underline">Lets Talk.</span>
+          Reach out,{" "}
+          <span className="decoration-[#F7AB0A]/50 underline"> if you want to collaborate.</span>
         </h4>
 
         <div className="space-y-10">
           <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">{pageInfo.phoneNumber}</p>
-          </div>
-          <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <a className="text-2xl" href={`mailto:${pageInfo.email}`}>
-              {pageInfo.email}
+            <a className="text-2xl" href={`mailto:$gallifantjack@gmail.com`}>
+              jack.gallifant@nhs.net
             </a>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">{pageInfo.address}</p>
+            <p className="text-2xl">London, UK</p>
           </div>
         </div>
 

@@ -1,15 +1,10 @@
-import React from "react";
 import { motion } from "framer-motion";
-import { Experience } from "../typings";
-import { urlFor } from "../sanity";
 
-type Props = {
-  experience: Experience;
-};
+type Props = {};
 
-function ExperienceCard({ experience }: Props) {
+export default function ExperienceCard({}: Props) {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
+    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w[600px] xl:w[p00px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
       <motion.img
         initial={{
           y: -100,
@@ -18,38 +13,33 @@ function ExperienceCard({ experience }: Props) {
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        src={urlFor(experience.companyImage).url()}
-        className="w-32 h-32 rounded-full md:rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
+        className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden"
+        src="https://media.licdn.com/dms/image/C5603AQHFOr2kp08I0w/profile-displayphoto-shrink_800_800/0/1593529357223?e=1679529600&v=beta&t=eL4LJTAzL-5i8x7TQNCf7rtt8KPZTHl5_aG7eODeNfM" 
+        alt=""
       />
 
-      <div className="px-0 md:px-10 ">
-        <h4 className="text-4xl font-light">{experience.jobTitle}</h4>
-        <p className="font-bold text-2xl mt-1">{experience.company}</p>
+      <div className="px-0 md:px-10">
+        <h4 className="text-4xl font-bold">Foundation Doctor</h4>
+        <p className="font-bold text-2xl mt-1"> Imperial College NHS Trust</p> 
         <div className="flex space-x-2 my-2">
-          {experience.technologies.map((technology) => (
-            <img
-              key={technology._id}
-              className="h-10 w-10 rounded-full"
-              src={urlFor(technology.image).url()}
-            />
-          ))}
-        </div>
-
+          <img
+            className="h-10 w-10 rounded full"
+            src="https://media.licdn.com/dms/image/C5603AQHFOr2kp08I0w/profile-displayphoto-shrink_800_800/0/1593529357223?e=1679529600&v=beta&t=eL4LJTAzL-5i8x7TQNCf7rtt8KPZTHl5_aG7eODeNfM"
+            alt=""
+          /> 
+          </div>
         <p className="uppercase py-5 text-gray-300">
-          {new Date(experience.dateStarted).toDateString()} -{" "}
-          {experience.isCurrentlyWorkingHere
-            ? "Present"
-            : new Date(experience.dateEnded).toDateString()}
+          2021 - present
         </p>
 
-        <ul className="list-disc space-y-4 ml-5 text-lg">
-          {experience.points.map((point, i) => (
-            <li key={i}>{point}</li>
-          ))}
+        <ul className="list-disc space-y-4 ml-5 text-lg h-40 overflow-y-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+          <li>Summary Points Summary Points Summary Points Summary Points</li>
+          <li>Summary Points Summary Points Summary Points Summary Points</li>
+          <li>Summary Points Summary Points Summary Points Summary Points</li>
+          <li>Summary Points Summary Points Summary Points Summary Points</li>
         </ul>
       </div>
     </article>
   );
 }
-
-export default ExperienceCard;
+{/* TODO: Add a link to the company website or tech used */}
