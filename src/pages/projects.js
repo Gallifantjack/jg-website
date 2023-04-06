@@ -11,8 +11,6 @@ import article5 from "../../public/images/articles/create modal component in rea
 import article3 from "../../public/images/articles/form validation in reactjs using custom react hook.png"
 import article4 from "../../public/images/articles/smooth scrolling in reactjs.png"
 import article6 from "../../public/images/articles/todo list app built using react redux and framer motion.png"
-import article8 from "../../public/images/articles/What is higher order component in React.jpg"
-import article7 from "../../public/images/articles/What is Redux with easy explanation.png"
 import project5 from "../../public/images/projects/agency-website-cover-image.jpg"
 import project1 from "../../public/images/projects/crypto-screener-cover-image.jpg"
 import project6 from "../../public/images/projects/devdreaming.jpg"
@@ -221,16 +219,16 @@ const projects = () => {
       <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
-            text="Imagination Trumps Knowledge!"
+            text="Recent Work"
             className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
 
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject
-                type="Featured Project"
-                title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency."
+                type="Lancet Digital Health"
+                title="AI Dashboard"
+                summary="An end-to-end Natural Language Processing pipeline that performs real- time identification, classification, and characterisation of AI research abstracts extracted from MEDLINE, outputting results to an interactive dash- board, creating a live view of global AI development."
                 img={project1}
                 link="https://devdreaming.com/videos/build-crypto-screener-app-with-react-tailwind-css"
                 github="https://github.com/codebucks27/CryptoBucks-Final-Code"
@@ -238,8 +236,8 @@ const projects = () => {
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                type="Website Template"
-                title="NFT collection Website"
+                type="British Journal of Anaesthesia"
+                title="Mechanical ventilators for LMICs"
                 img={project2}
                 link="https://devdreaming.com/videos/create-nft-collection-website-reactjs"
                 github="https://github.com/codebucks27/The-Weirdos-NFT-Website-Starter-Code"
@@ -247,8 +245,8 @@ const projects = () => {
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                type="Website"
-                title="Fashion Studio Website"
+                type="British Journal of Anaesthesia"
+                title="Quantification of lobar gas exchange"
                 img={project3}
                 link="https://devdreaming.com/videos/build-stunning-fashion-studio-website-with-reactJS-locomotive-scroll-gsap"
                 github="https://github.com/codebucks27/wibe-studio"
@@ -257,9 +255,9 @@ const projects = () => {
 
             <div className="col-span-12">
               <FeaturedProject
-                type="Portfolio Website"
-                title="React Portfolio Website"
-                summary="A professional portfolio website using React JS, Framer-motion, and Styled-components. It has smooth page transitions, cool background effects, unique design and it is mobile responsive."
+                type="British Journal of Anaesthesia"
+                title="Artificial intelligence for mechanical ventilation"
+                summary="A systematic review of AI literature as applied to mechanical ventilation, evaluating adherence to the Transparent Reporting of a multivariable pre- diction model for Individual Prognosis Or Diagnosis (TRIPOD) statement, risk of bias using the Prediction model Risk Of Bias Assessment Tool (PROBAST), algorithm design using a novel rubric, and the availability of both data and code."
                 img={project4}
                 link="https://devdreaming.com/videos/build-stunning-portfolio-website-react-js-framer-motion"
                 github="https://github.com/codebucks27/react-portfolio-final"
@@ -268,18 +266,18 @@ const projects = () => {
 
             <div className="col-span-6 sm:col-span-12">
               <Project
-                type="Website Template"
+                type="Critical Care Clinics"
                 img={project5}
-                title="Agency Website Template"
+                title="Bias in Critical Care Devices"
                 link="https://devdreaming.com/videos/build-stunning-fashion-studio-website-with-reactJS-locomotive-scroll-gsap"
                 github="https://github.com/codebucks27/wibe-studio"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                type="Blog Website"
+                type="PLOS Digital Health"
                 img={project6}
-                title="DevDreaming"
+                title="Equity and Innovation"
                 link="https://devdreaming.com"
                 github="https://github.com/codebucks27"
               />
@@ -291,40 +289,28 @@ const projects = () => {
         </h2>
         <ul className="flex flex-col items-center relative">
           <Article
-            title="form validation in reactjs: build a reusable custom hook for inputs and error handling"
+            title="An interactive dashboard to track themes, develop- 2022 ment maturity, and global equity in clinical artificial intelligence research."
             img={article3}
-            date="January 27, 2023"
+            date="TBC 2022"
             link="https://devdreaming.com/blogs/react-form-validation-custom-hook"
           />
           <Article
-            title="silky smooth scrolling in reactjs: a step-by-step guide for react developers"
+            title="Mechanical ventilators for low- and middle-income 2022 countries: informing a context-specific and sustainable design."
             img={article4}
-            date="January 30, 2023"
+            date="TBC 2023"
             link="https://devdreaming.com/blogs/smooth-scrolling-in-react-js"
           />
           <Article
-            title="creating an efficient modal component in react using hooks and portals"
+            title="Artificial intelligence for mechanical ventilation: 2021 systematic review of design, reporting standards, and bias."
             img={article5}
-            date="January 29, 2023"
+            date="TBC 2021"
             link="https://devdreaming.com/blogs/create-efficient-modal-react-portals"
           />
           <Article
-            title="build a fabulous todo list app with react, redux and framer-motion"
+            title="Quantification of lobar gas exchange: a proof-of-concept study in pigs"
             img={article6}
-            date="January 28, 2023"
+            date="TBC 2021"
             link="https://devdreaming.com/blogs/build-react-redux-framer-motion-todo-app"
-          />
-          <Article
-            title="redux simplified: a beginner's guide for web developers"
-            img={article7}
-            date="January 31, 2023"
-            link="https://devdreaming.com/blogs/redux-simply-explained"
-          />
-          <Article
-            title="what is higher order component (hoc) in react?"
-            date="January 4, 2023"
-            img={article8}
-            link="https://devdreaming.com/blogs/higher-order-component-hoc-react"
           />
         </ul>
       </main>

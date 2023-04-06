@@ -1,5 +1,4 @@
 import AnimatedText from "@/components/AnimatedText"
-import Education from "@/components/Education"
 import Experience from "@/components/Experience"
 import { LinkArrow } from "@/components/Icons"
 import Layout from "@/components/Layout"
@@ -58,9 +57,9 @@ const about = () => {
                 alt="Codebucks"
                 className="w-full h-auto rounded-2xl"
                 priority
-                sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
+                sizes="(max-width: 768px) 80vw,
+              (max-width: 1200px) 40vw,
+              20vw"
               />
             </div>
             <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
@@ -87,7 +86,7 @@ const about = () => {
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
-                  href="/dummy.pdf"
+                  href="/projects"
                   target={"_blank"}
                   className="flex items-center bg-dark text-light p-2.5 px-6
                   rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
@@ -98,10 +97,10 @@ const about = () => {
                   "
                   download={true}
                 >
-                  Resume <LinkArrow className={"w-6 ml-1"} />
+                  Publications <LinkArrow className={"w-6 ml-1"} />
                 </Link>
                 <Link
-                  href="mailto:abcd@gmail.com"
+                  href="mailto:jack.gallifant@nhs.net"
                   target={"_blank"}
                   className="ml-4 text-lg font-medium capitalize text-dark underline dark:text-light md:text-base"
                 >
@@ -111,7 +110,6 @@ const about = () => {
             </div>
           </div>
           <Experience />
-          <Education />
         </Layout>
       </main>
     </>

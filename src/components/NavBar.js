@@ -1,21 +1,21 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
-import React, { useState } from "react";
+import { motion } from "framer-motion"
+import Link from "next/link"
+import { useRouter } from "next/router"
+import { useState } from "react"
 import {
-  TwitterIcon,
   DribbbleIcon,
   GithubIcon,
   LinkedInIcon,
+  MoonIcon,
   PinterestIcon,
   SunIcon,
-  MoonIcon,
-} from "./Icons";
-import Logo from "./Logo";
-import { motion } from "framer-motion";
-import useThemeSwitcher from "./hooks/useThemeSwitcher";
+  TwitterIcon,
+} from "./Icons"
+import Logo from "./Logo"
+import useThemeSwitcher from "./hooks/useThemeSwitcher"
 
 const CustomLink = ({ href, title, className = "" }) => {
-  const router = useRouter();
+  const router = useRouter()
 
   return (
     <Link href={href} className={`${className} relative group`}>
@@ -32,16 +32,16 @@ const CustomLink = ({ href, title, className = "" }) => {
         &nbsp;
       </span>
     </Link>
-  );
-};
+  )
+}
 
 const CustomMobileLink = ({ href, title, className = "", toggle }) => {
-  const router = useRouter();
+  const router = useRouter()
 
   const handleClick = () => {
-    toggle();
-    router.push(href);
-  };
+    toggle()
+    router.push(href)
+  }
 
   return (
     <button
@@ -62,21 +62,21 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
         &nbsp;
       </span>
     </button>
-  );
-};
+  )
+}
 
 const NavBar = () => {
-  const [mode, setMode] = useThemeSwitcher();
-  const [isOpen, setIsOpen] = useState(false);
+  const [mode, setMode] = useThemeSwitcher()
+  const [isOpen, setIsOpen] = useState(false)
 
   const handleClick = () => {
-    setIsOpen(!isOpen);
-  };
+    setIsOpen(!isOpen)
+  }
 
   return (
     <header
-      className="w-full px-32 py-8 font-medium flex items-center justify-between
-    dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8
+      className="w-full sticky top-0 px-32 py-8 font-medium flex items-center justify-between bg-dark
+    dark:text-light z-10 lg:px-16 md:px-12 sm:px-8
     "
     >
       <button
@@ -259,10 +259,10 @@ const NavBar = () => {
       `}
             >
               {mode === "light" ? (
-            <SunIcon className={"fill-dark"} />
-          ) : (
-            <MoonIcon className={"fill-dark"} />
-          )}
+                <SunIcon className={"fill-dark"} />
+              ) : (
+                <MoonIcon className={"fill-dark"} />
+              )}
             </button>
           </nav>
         </motion.div>
@@ -272,7 +272,7 @@ const NavBar = () => {
         <Logo />
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar
