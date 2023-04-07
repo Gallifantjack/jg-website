@@ -16,7 +16,7 @@ export default function Home() {
         />
       </Head>
       <TransitionEffect />
-      <main className="flex items-center text-dark w-full min-h-screen dark:text-light sm:items-start">
+      <main className="flex items-center w-full min-h-screen sm:items-start">
         <Layout className="pt-0 md:pt-16 sm:pt-16">
           <Homepage />
         </Layout>
