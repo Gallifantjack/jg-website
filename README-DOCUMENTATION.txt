@@ -1,12 +1,3 @@
---
-- [] permanent navbar
-- [] about below home page (nav link to scroll down about section)
-- [] make photo smaller
-- [] projects on separate tab (nav link to new page)
-- [] change hero photo to paris one 
-- [] see if can make more tanned
-
-
 -- Please read this carefully --
 
 Please note that the source code for this project is being sold for personal and educational purposes only. You are not permitted to resell this code. For commercial purposes please contact me via email at codebucks27@gmail.com. 
