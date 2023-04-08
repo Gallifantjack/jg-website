@@ -1,4 +1,4 @@
-import Layout from "@/components/Layout"
+import Layout_dark from "@/components/Layout_dark"
 import TransitionEffect from "@/components/TransitionEffect"
 import Homepage from "@/components/homepage"
 import Head from "next/head"
@@ -17,9 +17,9 @@ export default function Home() {
       </Head>
       <TransitionEffect />
       <main className="flex items-center w-full min-h-screen sm:items-start">
-        <Layout className="pt-0 md:pt-16 sm:pt-16">
+        <Layout_dark className="pt-0 md:pt-16 sm:pt-16">
           <Homepage />
-        </Layout>
+        </Layout_dark>
       </main>
     </>
   )

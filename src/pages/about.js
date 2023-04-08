@@ -47,11 +47,11 @@ const about = () => {
         />
       </Head>
       <TransitionEffect />
-      <main className="flex items-center text-dark w-full min-h-screen dark:text-light sm:items-start">
-        <Layout className="pt-0 md:pt-16 sm:pt-16">
+      <main className="flex items-center w-full min-h-screen sm:items-start">
+        <Layout className="pt-16 md:pt-16 sm:pt-16">
           <div className="flex items-center justify-between w-full lg:flex-col">
-            <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light xl:col-span-4 md:order-1 md:col-span-8">
-              <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light" />
+            <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:border-light xl:col-span-4 md:order-1 md:col-span-8">
+              <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
               <Image
                 src={profilePic}
                 alt="Codebucks"
@@ -62,11 +62,11 @@ const about = () => {
               20vw"
               />
             </div>
-            <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
+            <div className="w-1/2 flex flex-col items-center self-center text-dark lg:w-full lg:text-center">
               <AnimatedText
                 text="Creating a data centered future that benefits everyone."
                 className="!text-5xl !text-left 
-                xl:!text-5xl lg:!text-center lg:!text=6xl md:!text-5xl sm:!text-3xl
+                xl:!text-5xl lg:!text-center lg:!text=6xl md:!text-5xl sm:!text-3xl text-dark
                 "
               />
               <p className="my-4 text-base font-medium md:text-sm sm:text-xs">

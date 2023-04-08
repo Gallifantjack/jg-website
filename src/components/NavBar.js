@@ -3,16 +3,6 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 import { useState } from "react"
 import { SocialIcon } from "react-social-icons"
-import {
-  DribbbleIcon,
-  GithubIcon,
-  LinkedInIcon,
-  MoonIcon,
-  PinterestIcon,
-  SunIcon,
-  TwitterIcon,
-} from "./Icons"
-import Logo from "./Logo"
 import useThemeSwitcher from "./hooks/useThemeSwitcher"
 
 const CustomLink = ({ href, title, className = "" }) => {
@@ -72,7 +62,7 @@ const NavBar = () => {
   }
 
   return (
-    <header className="w-full sticky top-0 px-32 py-8 font-medium flex items-center justify-between bg-dark text-light z-10 lg:px-16 md:px-12 sm:px-8">
+    <header className="w-full sticky top-0 px-32 py-8 font-medium flex items-center justify-between bg-black text-gray-400 z-10 lg:px-16 md:px-12 sm:px-8 border-b-2 border-zinc-400">
       <button
         className=" flex-col justify-center items-center hidden lg:flex"
         onClick={handleClick}
@@ -177,73 +167,8 @@ const NavBar = () => {
               toggle={handleClick}
             />
           </nav>
-
-          <nav className="flex items-center justify-center flex-wrap mt-2">
-            <motion.a
-              href="https://twitter.com"
-              target={"_blank"}
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              className="w-6 mr-3 sm:mx-1"
-            >
-              <TwitterIcon />
-            </motion.a>
-            <motion.a
-              href="https://twitter.com"
-              target={"_blank"}
-              className="w-6 mx-3 bg-light rounded-full dark:bg-dark sm:mx-1"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <GithubIcon />
-            </motion.a>
-            <motion.a
-              href="https://twitter.com"
-              target={"_blank"}
-              className="w-6 mx-3 sm:mx-1"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <LinkedInIcon />
-            </motion.a>
-            <motion.a
-              href="https://twitter.com"
-              target={"_blank"}
-              className="w-6 mx-3 bg-light rounded-full sm:mx-1"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <PinterestIcon />
-            </motion.a>
-            <motion.a
-              href="https://twitter.com"
-              target={"_blank"}
-              className="w-6 mx-3 sm:mx-1"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <DribbbleIcon />
-            </motion.a>
-
-            <button
-              onClick={() => setMode(mode === "light" ? "dark" : "light")}
-              className={`ml-3 flex items-center justify-center rounded-full p-1
-      ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
-      `}
-            >
-              {mode === "light" ? (
-                <SunIcon className={"fill-dark"} />
-              ) : (
-                <MoonIcon className={"fill-dark"} />
-              )}
-            </button>
-          </nav>
         </motion.div>
       ) : null}
-
-      <div className="absolute left-[50%] top-2 translate-x-[-50%]">
-        <Logo />
-      </div>
     </header>
   )
 }

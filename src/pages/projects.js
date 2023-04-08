@@ -11,12 +11,12 @@ import article5 from "../../public/images/articles/create modal component in rea
 import article3 from "../../public/images/articles/form validation in reactjs using custom react hook.png"
 import article4 from "../../public/images/articles/smooth scrolling in reactjs.png"
 import article6 from "../../public/images/articles/todo list app built using react redux and framer motion.png"
-import project5 from "../../public/images/projects/agency-website-cover-image.jpg"
-import project1 from "../../public/images/projects/crypto-screener-cover-image.jpg"
-import project6 from "../../public/images/projects/devdreaming.jpg"
-import project3 from "../../public/images/projects/fashion-studio-website.jpg"
-import project2 from "../../public/images/projects/nft-collection-website-cover-image.jpg"
-import project4 from "../../public/images/projects/portfolio-cover-image.jpg"
+import project5 from "../../public/images/projects/Pulse_oximeter.jpg"
+import project3 from "../../public/images/projects/Respiratory-medicine-thumbnail.png"
+import project1 from "../../public/images/projects/dashboard.png"
+import project6 from "../../public/images/projects/equity-innovation.png"
+import project4 from "../../public/images/projects/hospital-bed-promo.webp"
+import project2 from "../../public/images/projects/ventilator.webp"
 
 const FramerImage = motion(Image)
 
@@ -216,7 +216,7 @@ const projects = () => {
         />
       </Head>
       <TransitionEffect />
-      <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
+      <main className="w-full mb-16 flex flex-col items-center justify-center bg-slate-900">
         <Layout className="pt-16">
           <AnimatedText
             text="Recent Work"
@@ -284,7 +284,7 @@ const projects = () => {
             </div>
           </div>
         </Layout>
-        <h2 className="font-bold text-4xl w-full text-center my-16 mt-32">
+        <h2 className="font-bold text-4xl w-full text-center my-16 mt-32 text-light">
           All Articles
         </h2>
         <ul className="flex flex-col items-center relative">

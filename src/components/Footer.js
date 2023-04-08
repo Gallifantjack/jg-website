@@ -1,41 +1,37 @@
-import Link from "next/link";
-import React from "react";
-import Layout from "./Layout";
+import Link from "next/link"
+import Layout from "./Layout"
 
 const Footer = () => {
   return (
     <footer
-      className="w-full border-t-2 border-solid border-dark
-    font-medium text-lg dark:text-light dark:border-light sm:text-base
+      className="w-full border-t-2 border-solid bg-zinc-900 font-medium text-lg text-gray-400 border-light sm:text-base
     "
     >
       <Layout className="py-8 flex items-center justify-between lg:flex-col lg:py-6">
-        <span>{new Date().getFullYear()} &copy; All Rights Reserved.</span>
+        <span>{new Date().getFullYear()} &copy;</span>
         <div className="flex items-center lg:py-2">
-          Build With <span className="text-primary dark:text-primaryDark text-2xl px-1">&#9825;</span>
-          by&nbsp;
           <Link
-            href="https://devdreaming.com"
+            href="https://jackgallifant.com"
             className="underline
             underline-offset-2
             "
             target={"_blank"}
           >
-            CodeBucks
+            Jack Gallifant
           </Link>
         </div>
         <Link
-          href="https://devdreaming.com"
+          href="mailto:jack.gallifant@nhs.net"
           target={"_blank"}
           className="underline
             underline-offset-2
             "
         >
-          Say hello
+          Contact
         </Link>
       </Layout>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
