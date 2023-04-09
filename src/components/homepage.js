@@ -23,15 +23,20 @@ function Homepage() {
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#F7AB0A" />
         </h1>
-        <div className="flex items-center mt-2 self-center">
+        <div className="flex mt-2 z-10">
           <Link
-            href="#projects"
+            href="/projects"
             target={"_blank"}
-            className="flex items-center bg-zinc-800 text-zinc-400 p-2.5 px-6
-                  rounded-lg text-sm hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-light md:p-2 md:px-4 md:text-base"
+            className="flex items-center bg-dark text-light p-2.5 px-6
+                  rounded-lg text-sm hover:bg-light hover:text-dark
+                  border-2 border-solid border-transparent hover:border-dark
+                  
+                  dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light
+                  hover:dark:border-light md:p-2 md:px-4 md:text-base
+                  "
             download={true}
           >
-            Latest Work <LinkArrow className={"ml-1 w-2"} />
+            Recent Work <LinkArrow className={"w-4 ml-1"} />
           </Link>
         </div>
       </div>
