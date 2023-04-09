@@ -7,10 +7,10 @@ import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
 import { useRef } from "react"
-import article5 from "../../public/images/articles/create modal component in react using react portals.png"
-import article3 from "../../public/images/articles/form validation in reactjs using custom react hook.png"
-import article4 from "../../public/images/articles/smooth scrolling in reactjs.png"
-import article6 from "../../public/images/articles/todo list app built using react redux and framer motion.png"
+import article5 from "../../public/images/articles/aimv_image.png"
+import article6 from "../../public/images/articles/lobar_image.png"
+import article4 from "../../public/images/articles/mechvent_image.png"
+import article3 from "../../public/images/articles/nlp_image.png"
 import project5 from "../../public/images/projects/Pulse_oximeter.jpg"
 import project3 from "../../public/images/projects/Respiratory-medicine-thumbnail.png"
 import project1 from "../../public/images/projects/dashboard.png"
@@ -230,8 +230,8 @@ const projects = () => {
                 title="AI Dashboard"
                 summary="An end-to-end Natural Language Processing pipeline that performs real- time identification, classification, and characterisation of AI research abstracts extracted from MEDLINE, outputting results to an interactive dash- board, creating a live view of global AI development."
                 img={project1}
-                link="https://devdreaming.com/videos/build-crypto-screener-app-with-react-tailwind-css"
-                github="https://github.com/codebucks27/CryptoBucks-Final-Code"
+                link="https://doi.org/10.1016/S2589-7500(22)00032-2"
+                github="https://github.com/whizzlab/health_ai_online_pipeline.git"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
@@ -239,8 +239,8 @@ const projects = () => {
                 type="British Journal of Anaesthesia"
                 title="Mechanical ventilators for LMICs"
                 img={project2}
-                link="https://devdreaming.com/videos/create-nft-collection-website-reactjs"
-                github="https://github.com/codebucks27/The-Weirdos-NFT-Website-Starter-Code"
+                link="https://doi.org/10.1016/j.bja.2022.01.007"
+                github="_blank"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
@@ -248,8 +248,8 @@ const projects = () => {
                 type="British Journal of Anaesthesia"
                 title="Quantification of lobar gas exchange"
                 img={project3}
-                link="https://devdreaming.com/videos/build-stunning-fashion-studio-website-with-reactJS-locomotive-scroll-gsap"
-                github="https://github.com/codebucks27/wibe-studio"
+                link="https://doi.org/10.1016/j.bja.2021.04.022"
+                github="_blank"
               />
             </div>
 
@@ -259,8 +259,8 @@ const projects = () => {
                 title="Artificial intelligence for mechanical ventilation"
                 summary="A systematic review of AI literature as applied to mechanical ventilation, evaluating adherence to the Transparent Reporting of a multivariable pre- diction model for Individual Prognosis Or Diagnosis (TRIPOD) statement, risk of bias using the Prediction model Risk Of Bias Assessment Tool (PROBAST), algorithm design using a novel rubric, and the availability of both data and code."
                 img={project4}
-                link="https://devdreaming.com/videos/build-stunning-portfolio-website-react-js-framer-motion"
-                github="https://github.com/codebucks27/react-portfolio-final"
+                link="https://doi.org/10.1016/j.bja.2021.09.025"
+                github="_blank"
               />
             </div>
 
@@ -269,8 +269,8 @@ const projects = () => {
                 type="Critical Care Clinics"
                 img={project5}
                 title="Bias in Critical Care Devices"
-                link="https://devdreaming.com/videos/build-stunning-fashion-studio-website-with-reactJS-locomotive-scroll-gsap"
-                github="https://github.com/codebucks27/wibe-studio"
+                link="https://doi.org/10.1016/j.ccc.2023.02.005"
+                github="_blank"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
@@ -278,8 +278,8 @@ const projects = () => {
                 type="PLOS Digital Health"
                 img={project6}
                 title="Equity and Innovation"
-                link="https://devdreaming.com"
-                github="https://github.com/codebucks27"
+                link="https://doi.org/10.1016/j.ccc.2023.02.005"
+                github="_blank"
               />
             </div>
           </div>
@@ -289,10 +289,10 @@ const projects = () => {
         </h2>
         <ul className="flex flex-col items-center relative">
           <Article
-            title="An interactive dashboard to track themes, develop- 2022 ment maturity, and global equity in clinical artificial intelligence research."
+            title="An interactive dashboard to track themes, development maturity, and global equity in clinical artificial intelligence research."
             img={article3}
-            date="TBC 2022"
-            link="https://devdreaming.com/blogs/react-form-validation-custom-hook"
+            date="April 2022"
+            link="https://doi.org/10.1016/S2589-7500(22)00032-2"
           />
           <Article
             title="Mechanical ventilators for low- and middle-income 2022 countries: informing a context-specific and sustainable design."
