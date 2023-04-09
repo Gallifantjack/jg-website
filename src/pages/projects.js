@@ -1,6 +1,7 @@
 import AnimatedText from "@/components/AnimatedText"
 import { GithubIcon } from "@/components/Icons"
 import Layout from "@/components/Layout"
+import Layout_dark from "@/components/Layout_dark"
 import TransitionEffect from "@/components/TransitionEffect"
 import { motion, useMotionValue } from "framer-motion"
 import Head from "next/head"
@@ -8,6 +9,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useRef } from "react"
 import article5 from "../../public/images/articles/aimv_image.png"
+import article1 from "../../public/images/articles/critical-bias.png"
 import article6 from "../../public/images/articles/lobar_image.png"
 import article4 from "../../public/images/articles/mechvent_image.png"
 import article3 from "../../public/images/articles/nlp_image.png"
@@ -284,35 +286,43 @@ const projects = () => {
             </div>
           </div>
         </Layout>
-        <h2 className="font-bold text-4xl w-full text-center my-16 mt-32 text-light">
-          All Articles
-        </h2>
-        <ul className="flex flex-col items-center relative">
-          <Article
-            title="An interactive dashboard to track themes, development maturity, and global equity in clinical artificial intelligence research."
-            img={article3}
-            date="April 2022"
-            link="https://doi.org/10.1016/S2589-7500(22)00032-2"
-          />
-          <Article
-            title="Mechanical ventilators for low- and middle-income 2022 countries: informing a context-specific and sustainable design."
-            img={article4}
-            date="TBC 2023"
-            link="https://devdreaming.com/blogs/smooth-scrolling-in-react-js"
-          />
-          <Article
-            title="Artificial intelligence for mechanical ventilation: 2021 systematic review of design, reporting standards, and bias."
-            img={article5}
-            date="TBC 2021"
-            link="https://devdreaming.com/blogs/create-efficient-modal-react-portals"
-          />
-          <Article
-            title="Quantification of lobar gas exchange: a proof-of-concept study in pigs"
-            img={article6}
-            date="TBC 2021"
-            link="https://devdreaming.com/blogs/build-react-redux-framer-motion-todo-app"
-          />
-        </ul>
+        <Layout_dark>
+          <h2 className="font-bold text-4xl w-full text-center mb-12 text-light">
+            All Articles
+          </h2>
+          <ul className="flex flex-col items-center relative">
+            <Article
+              title="Critical Bias in Critical Care Devices."
+              img={article1}
+              date="April 2023"
+              link="https://doi.org/10.1016/j.ccc.2023.02.005"
+            />
+            <Article
+              title="An interactive dashboard to track themes, development maturity, and global equity in clinical artificial intelligence research."
+              img={article3}
+              date="April 2022"
+              link="https://doi.org/10.1016/S2589-7500(22)00032-2"
+            />
+            <Article
+              title="Mechanical ventilators for low- and middle-income 2022 countries: informing a context-specific and sustainable design."
+              img={article4}
+              date="April 2022"
+              link="https://doi.org/10.1016/j.bja.2022.01.007"
+            />
+            <Article
+              title="Artificial intelligence for mechanical ventilation: 2021 systematic review of design, reporting standards, and bias."
+              img={article5}
+              date="April 2022"
+              link="https://doi.org/10.1016/j.bja.2021.09.025"
+            />
+            <Article
+              title="Quantification of lobar gas exchange: a proof-of-concept study in pigs"
+              img={article6}
+              date="August 2021"
+              link="https://doi.org/10.1016/j.bja.2021.04.022"
+            />
+          </ul>
+        </Layout_dark>
       </main>
     </>
   )
