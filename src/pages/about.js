@@ -71,8 +71,8 @@ const about = () => {
               />
               <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
                 I am a full-time physician working in London and an honorary
-                researcher at Guy's and St Thomas' NHS Trust and teaching fellow
-                at MIT Critical Data.
+                researcher at Guy@apos;s and St Thomas@apos; NHS Trust and
+                teaching fellow at MIT Critical Data.
               </p>
               <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
                 AI can unlock new clinical insights but also{" "}
