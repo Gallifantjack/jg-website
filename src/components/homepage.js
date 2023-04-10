@@ -33,7 +33,7 @@ function Homepage() {
                   hover:dark:border-light md:p-2 md:px-4
                   "
           >
-            Latest Work <LinkArrow className="ml-1 w-4" />
+            Latest Work <LinkArrow className="ml-1 w-3" />
           </Link>
         </div>
       </div>

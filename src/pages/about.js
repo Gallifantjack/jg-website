@@ -97,7 +97,7 @@ const about = () => {
                   "
                   download={true}
                 >
-                  Publications <LinkArrow className={"w-6 ml-1"} />
+                  Publications <LinkArrow className={"w-3 ml-1"} />
                 </Link>
                 <Link
                   href="mailto:jack.gallifant@nhs.net"

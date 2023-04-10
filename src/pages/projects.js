@@ -283,7 +283,7 @@ const projects = () => {
                 type="PLOS Digital Health"
                 img={project6}
                 title="Equity and Innovation"
-                link="https://doi.org/10.1016/j.ccc.2023.02.005"
+                link="https://doi.org/10.1371/journal.pdig.0000224"
                 github="_blank"
               />
             </div>
@@ -298,7 +298,7 @@ const projects = () => {
               title="Equity should be fundamental to innovation."
               img={article_equity_innovation}
               date="2023"
-              link="https://doi.org/10.1016/j.ccc.2023.02.005"
+              link="https://doi.org/10.1371/journal.pdig.0000224"
             />
             <Article
               title="Critical Bias in Critical Care Devices."
