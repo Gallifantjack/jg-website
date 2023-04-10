@@ -32,7 +32,6 @@ function Homepage() {
                   dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light
                   hover:dark:border-light md:p-2 md:px-4
                   "
-            download={true}
           >
             Latest Work <LinkArrow className="ml-1 w-4" />
           </Link>
