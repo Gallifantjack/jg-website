@@ -62,7 +62,7 @@ const NavBar = () => {
   }
 
   return (
-    <header className="w-full sticky top-0 px-32 py-8 font-medium flex items-center justify-between bg-black text-gray-400 z-10 lg:px-16 md:px-12 sm:px-8 border-b-2 border-zinc-400">
+    <header className="w-full sticky top-0 px-32 py-8 font-medium flex items-center justify-between bg-[#ffffff] text-[#494949] z-10 lg:px-16 md:px-12 sm:px-8 border-b-2 border-[#494949]">
       <button
         className=" flex-col justify-center items-center hidden lg:flex"
         onClick={handleClick}
@@ -101,7 +101,7 @@ const NavBar = () => {
           >
             <SocialIcon
               url="https://scholar.google.com/citations?user=SlLz8KoAAAAJ&hl=en&oi=ao"
-              fgColor="white"
+              fgColor="#494949"
               bgColor="transparent"
             />
           </motion.a>
@@ -114,7 +114,7 @@ const NavBar = () => {
           >
             <SocialIcon
               url="https://github.com/Gallifantjack"
-              fgColor="white"
+              fgColor="#494949"
               bgColor="transparent"
             />
           </motion.a>
@@ -127,7 +127,7 @@ const NavBar = () => {
           >
             <SocialIcon
               url="https://www.linkedin.com/in/jackgallifant"
-              fgColor="white"
+              fgColor="#494949"
               bgColor="transparent"
             />
           </motion.a>

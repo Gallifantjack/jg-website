@@ -9,7 +9,10 @@ import Image from "next/image"
 import Link from "next/link"
 import { useRef } from "react"
 import article5 from "../../public/images/articles/aimv_image.png"
-import article1 from "../../public/images/articles/critical-bias.png"
+import {
+  default as article1,
+  default as article_equity_innovation,
+} from "../../public/images/articles/critical-bias.png"
 import article6 from "../../public/images/articles/lobar_image.png"
 import article4 from "../../public/images/articles/mechvent_image.png"
 import article3 from "../../public/images/articles/nlp_image.png"
@@ -248,7 +251,7 @@ const projects = () => {
             <div className="col-span-6 sm:col-span-12">
               <Project
                 type="British Journal of Anaesthesia"
-                title="Quantification of lobar gas exchange"
+                title="Quantifying of lobar gas exchange"
                 img={project3}
                 link="https://doi.org/10.1016/j.bja.2021.04.022"
                 github="_blank"
@@ -258,7 +261,7 @@ const projects = () => {
             <div className="col-span-12">
               <FeaturedProject
                 type="British Journal of Anaesthesia"
-                title="Artificial intelligence for mechanical ventilation"
+                title="AI for mechanical ventilation"
                 summary="A systematic review of AI literature as applied to mechanical ventilation, evaluating adherence to the Transparent Reporting of a multivariable pre- diction model for Individual Prognosis Or Diagnosis (TRIPOD) statement, risk of bias using the Prediction model Risk Of Bias Assessment Tool (PROBAST), algorithm design using a novel rubric, and the availability of both data and code."
                 img={project4}
                 link="https://doi.org/10.1016/j.bja.2021.09.025"
@@ -292,33 +295,39 @@ const projects = () => {
           </h2>
           <ul className="flex flex-col items-center relative">
             <Article
+              title="Equity should be fundamental to innovation."
+              img={article_equity_innovation}
+              date="2023"
+              link="https://doi.org/10.1016/j.ccc.2023.02.005"
+            />
+            <Article
               title="Critical Bias in Critical Care Devices."
               img={article1}
-              date="April 2023"
+              date="2023"
               link="https://doi.org/10.1016/j.ccc.2023.02.005"
             />
             <Article
               title="An interactive dashboard to track themes, development maturity, and global equity in clinical artificial intelligence research."
               img={article3}
-              date="April 2022"
+              date="2022"
               link="https://doi.org/10.1016/S2589-7500(22)00032-2"
             />
             <Article
               title="Mechanical ventilators for low- and middle-income 2022 countries: informing a context-specific and sustainable design."
               img={article4}
-              date="April 2022"
+              date="2022"
               link="https://doi.org/10.1016/j.bja.2022.01.007"
             />
             <Article
               title="Artificial intelligence for mechanical ventilation: 2021 systematic review of design, reporting standards, and bias."
               img={article5}
-              date="April 2022"
+              date="2022"
               link="https://doi.org/10.1016/j.bja.2021.09.025"
             />
             <Article
               title="Quantification of lobar gas exchange: a proof-of-concept study in pigs"
               img={article6}
-              date="August 2021"
+              date="2021"
               link="https://doi.org/10.1016/j.bja.2021.04.022"
             />
           </ul>
