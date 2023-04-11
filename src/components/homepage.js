@@ -7,18 +7,19 @@ function Homepage() {
     words: ["Artificial Intelligence", "Health Equity", "Critical Care"],
     loop: true,
     delaySpeed: 2000,
+    typeSpeed: 100,
   })
   return (
     <div className="h-screen flex flex-col space-y-8 items-start justify-center overflow-hidden">
       {/* <Circles /> */}
       <div className="flex flex-col items-start justify-center">
-        <h2 className="tracking-[4px] text-xl text-[#494949] pb-3 md:tracking-[8px]">
+        <h2 className="tracking-[4px] text-xl text-[#494949] pb-3 sm:text-sm md:tracking-[2px]">
           Jack Gallifant
         </h2>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold pb-3 text-[#494949]">
-          <span className="mr-3">Creating a better future in </span>
+        <h1 className="text-4xl sm:text-xl md:text-5xl lg:text-6xl font-bold pb-3 text-[#494949]">
+          <span className="mr-3">Designing a better future with </span>
         </h1>
-        <h1 className="text-4xl md:text-5xl lg:text-7xl font-semibold pb-3 text-[#494949]">
+        <h1 className="text-4xl sm:text-xl md:text-5xl lg:text-7xl font-semibold pb-3 text-[#494949]">
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#494949" />
         </h1>
@@ -33,7 +34,7 @@ function Homepage() {
                   hover:dark:border-light md:p-2 md:px-4
                   "
           >
-            Latest Work <LinkArrow className="ml-1 w-3" />
+            Latest Work <LinkArrow className="ml-1 w-2" />
           </Link>
         </div>
       </div>

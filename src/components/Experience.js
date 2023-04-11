@@ -15,20 +15,22 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
+        <h3 className="capitalize font-bold text-2xl sm:text-base">
           {position}&nbsp;
           <a
             href={companyLink}
             target="_blank"
-            className="text-primary dark:text-primaryDark capitalize"
+            className="text-primary capitalize"
           >
             @{company}
           </a>
         </h3>
-        <span className="capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
+        <span className="capitalize font-semibold text-[#494949] xs:text-sm">
           {time} | {address}
         </span>
-        <p className="font-medium w-full md:text-sm">{work}</p>
+        <p className="font-base sm:text-xs sm:text-justify w-full md:text-sm">
+          {work}
+        </p>
       </motion.div>
     </li>
   )
@@ -42,7 +44,7 @@ const Experience = () => {
   })
   return (
     <div className="my-64">
-      <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
+      <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl sm:text-xl text-[#494949] md:mb-16">
         Experience
       </h2>
 

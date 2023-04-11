@@ -68,17 +68,17 @@ const NavBar = () => {
         onClick={handleClick}
       >
         <span
-          className={`bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm  ${
+          className={`bg-[#494949] block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm  ${
             isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
           }`}
         ></span>
         <span
-          className={`bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
+          className={`bg-[#494949] block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
             isOpen ? "opacity-0" : "opacity-100"
           } `}
         ></span>
         <span
-          className={`bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+          className={`bg-[#494949] block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
             isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
           } `}
         ></span>
@@ -157,12 +157,6 @@ const NavBar = () => {
             <CustomMobileLink
               href="/projects"
               title="Projects"
-              className=""
-              toggle={handleClick}
-            />
-            <CustomMobileLink
-              href="/articles"
-              title="Articles"
               className=""
               toggle={handleClick}
             />

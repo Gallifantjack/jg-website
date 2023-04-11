@@ -72,13 +72,11 @@ const Article = ({ img, title, date, link }) => {
       whileInView={{ y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
       viewport={{ once: true }}
       className="relative w-full p-4 py-6 my-2 rounded-xl flex items-center
-        justify-between bg-light text-dark first:mt-0 border border-solid border-dark
-        border-r-4 border-b-4 dark:border-light dark:bg-dark dark:text-light
-        sm:flex-col
+        justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4 sm:flex-col
         "
     >
       <MovingImg title={title} img={img} link={link} />
-      <span className="text-primary font-semibold pl-4 dark:text-primaryDark sm:self-start sm:pl-0 xs:text-sm">
+      <span className="text-primary font-semibold pl-4 sm:self-start sm:pl-0 xs:text-sm">
         {date}
       </span>
     </motion.li>
@@ -141,7 +139,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
             target="_blank"
             className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold
             dark:bg-light dark:text-dark
-            sm:px-4 sm:text-base
+            sm:px-4 sm:text-xs sm:text-justify
             "
           >
             Visit Project
@@ -213,19 +211,18 @@ const projects = () => {
   return (
     <>
       <Head>
-        <title>Modern Portfolio Built with Nextjs | Projects Page</title>
+        <title>Projects</title>
         <meta
           name="description"
-          content="Discover the latest webapp projects created by CodeBucks, a Next.js developer with 
-        expertise in React.js and full-stack development. Browse software engineering articles and tutorials for tips on creating your own portfolio."
+          content="Recent publications and ongoing projects."
         />
       </Head>
       <TransitionEffect />
-      <main className="w-full mb-16 flex flex-col items-center justify-center bg-slate-900">
+      <main className="w-full mb-16 flex flex-col items-center justify-center">
         <Layout className="pt-16">
           <AnimatedText
             text="Recent Work"
-            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
+            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-xl xs:!text-4xl"
           />
 
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
@@ -290,10 +287,10 @@ const projects = () => {
           </div>
         </Layout>
         <Layout_dark>
-          <h2 className="font-bold text-4xl w-full text-center mb-12 text-light">
+          <h2 className="font-bold text-4xl w-full text-center mb-12 text-[#494949] sm:pt-10">
             All Articles
           </h2>
-          <ul className="flex flex-col items-center relative">
+          <ul className="flex flex-col items-center relative sm:text-sm">
             <Article
               title="Equity should be fundamental to innovation."
               img={article_equity_innovation}

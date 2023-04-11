@@ -50,7 +50,7 @@ const about = () => {
       <main className="flex items-center w-full min-h-screen sm:items-start">
         <Layout className="pt-16 md:pt-16 sm:pt-16">
           <div className="flex items-center justify-between w-full lg:flex-col">
-            <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:border-light xl:col-span-4 md:order-1 md:col-span-8">
+            <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 xl:col-span-4 md:order-1 sm:mt-20 md:col-span-8">
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
               <Image
                 src={profilePic}
@@ -62,19 +62,19 @@ const about = () => {
               20vw"
               />
             </div>
-            <div className="w-1/2 flex flex-col items-center self-center text-dark lg:w-full lg:text-center">
+            <div className="w-1/2 flex flex-col items-center self-center text-[#494949] lg:w-full lg:text-center">
               <AnimatedText
                 text="Creating a data centered future that benefits everyone."
                 className="!text-5xl !text-left 
-                xl:!text-5xl lg:!text-center lg:!text=6xl md:!text-5xl sm:!text-3xl text-dark
+                xl:!text-5xl lg:!text-center lg:!text=6xl md:!text-5xl sm:!text-xl text-[#494949]
                 "
               />
-              <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
+              <p className="my-4 text-base font-medium md:text-sm sm:text-xs sm:text-justify">
                 I am a full-time physician working in London and an honorary
                 researcher at Guys and St Thomas NHS Trust and teaching fellow
                 at MIT Critical Data.
               </p>
-              <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
+              <p className="my-4 text-base font-medium md:text-sm sm:text-xs sm:text-justify">
                 AI can unlock new clinical insights but also{" "}
                 <span className="underline font-bold">
                   {" "}
