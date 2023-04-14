@@ -9,10 +9,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { useRef } from "react"
 import article5 from "../../public/images/articles/aimv_image.png"
-import {
-  default as article1,
-  default as article_equity_innovation,
-} from "../../public/images/articles/critical-bias.png"
+import article_critical_bias from "../../public/images/articles/critical-bias.png"
+import article_equity_innovation from "../../public/images/articles/equity_innovation.png"
 import article6 from "../../public/images/articles/lobar_image.png"
 import article4 from "../../public/images/articles/mechvent_image.png"
 import article3 from "../../public/images/articles/nlp_image.png"
@@ -236,35 +234,6 @@ const projects = () => {
                 github="https://github.com/whizzlab/health_ai_online_pipeline.git"
               />
             </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="British Journal of Anaesthesia"
-                title="Mechanical ventilators for LMICs"
-                img={project2}
-                link="https://doi.org/10.1016/j.bja.2022.01.007"
-                github="_blank"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="British Journal of Anaesthesia"
-                title="Quantifying of lobar gas exchange"
-                img={project3}
-                link="https://doi.org/10.1016/j.bja.2021.04.022"
-                github="_blank"
-              />
-            </div>
-
-            <div className="col-span-12">
-              <FeaturedProject
-                type="British Journal of Anaesthesia"
-                title="AI for mechanical ventilation"
-                summary="A systematic review of AI literature as applied to mechanical ventilation, evaluating adherence to the Transparent Reporting of a multivariable pre- diction model for Individual Prognosis Or Diagnosis (TRIPOD) statement, risk of bias using the Prediction model Risk Of Bias Assessment Tool (PROBAST), algorithm design using a novel rubric, and the availability of both data and code."
-                img={project4}
-                link="https://doi.org/10.1016/j.bja.2021.09.025"
-                github="_blank"
-              />
-            </div>
 
             <div className="col-span-6 sm:col-span-12">
               <Project
@@ -284,6 +253,36 @@ const projects = () => {
                 github="_blank"
               />
             </div>
+
+            <div className="col-span-12">
+              <FeaturedProject
+                type="British Journal of Anaesthesia"
+                title="AI for mechanical ventilation"
+                summary="A systematic review of AI literature as applied to mechanical ventilation, evaluating adherence to the Transparent Reporting of a multivariable pre- diction model for Individual Prognosis Or Diagnosis (TRIPOD) statement, risk of bias using the Prediction model Risk Of Bias Assessment Tool (PROBAST), algorithm design using a novel rubric, and the availability of both data and code."
+                img={project4}
+                link="https://doi.org/10.1016/j.bja.2021.09.025"
+                github="_blank"
+              />
+            </div>
+
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="British Journal of Anaesthesia"
+                title="Mechanical ventilators for LMICs"
+                img={project2}
+                link="https://doi.org/10.1016/j.bja.2022.01.007"
+                github="_blank"
+              />
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="British Journal of Anaesthesia"
+                title="Quantifying of lobar gas exchange"
+                img={project3}
+                link="https://doi.org/10.1016/j.bja.2021.04.022"
+                github="_blank"
+              />
+            </div>
           </div>
         </Layout>
         <Layout_dark>
@@ -299,7 +298,7 @@ const projects = () => {
             />
             <Article
               title="Critical Bias in Critical Care Devices."
-              img={article1}
+              img={article_critical_bias}
               date="2023"
               link="https://doi.org/10.1016/j.ccc.2023.02.005"
             />
