@@ -1,4 +1,3 @@
-import { LinkArrow } from "@/components/Icons"
 import Link from "next/link"
 import { Cursor, useTypewriter } from "react-simple-typewriter"
 
@@ -34,7 +33,7 @@ function Homepage() {
                   hover:dark:border-light md:p-2 md:px-4
                   "
           >
-            Latest Work <LinkArrow className="ml-1 w-2 sm:w-3" />
+            Latest Work
           </Link>
         </div>
       </div>

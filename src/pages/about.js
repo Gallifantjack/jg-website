@@ -1,6 +1,5 @@
 import AnimatedText from "@/components/AnimatedText"
 import Experience from "@/components/Experience"
-import { LinkArrow } from "@/components/Icons"
 import Layout from "@/components/Layout"
 import TransitionEffect from "@/components/TransitionEffect"
 import { useInView, useMotionValue, useSpring } from "framer-motion"
@@ -97,7 +96,7 @@ const about = () => {
                   "
                   download={true}
                 >
-                  Publications <LinkArrow className={"w-3 ml-1 sm:w-3"} />
+                  Publications
                 </Link>
                 <Link
                   href="mailto:jack.gallifant@nhs.net"
