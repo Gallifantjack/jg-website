@@ -1,5 +1,4 @@
 import AnimatedText from "@/components/AnimatedText"
-import { GithubIcon } from "@/components/Icons"
 import Layout from "@/components/Layout"
 import Layout_dark from "@/components/Layout_dark"
 import TransitionEffect from "@/components/TransitionEffect"
@@ -10,13 +9,14 @@ import Link from "next/link"
 import { useRef } from "react"
 import article5 from "../../public/images/articles/aimv_image.png"
 import article_critical_bias from "../../public/images/articles/critical-bias.png"
+import article_digital_inequality from "../../public/images/articles/digital_inequality.png"
 import article_equity_innovation from "../../public/images/articles/equity_innovation.png"
 import article6 from "../../public/images/articles/lobar_image.png"
 import article4 from "../../public/images/articles/mechvent_image.png"
 import article3 from "../../public/images/articles/nlp_image.png"
 import project5 from "../../public/images/projects/Pulse_oximeter.jpg"
-import project3 from "../../public/images/projects/Respiratory-medicine-thumbnail.png"
 import project1 from "../../public/images/projects/dashboard.png"
+import project_digital_inequality from "../../public/images/projects/digital_inequality_map.png"
 import project6 from "../../public/images/projects/equity-innovation.png"
 import project4 from "../../public/images/projects/hospital-bed-promo.webp"
 import project2 from "../../public/images/projects/ventilator.webp"
@@ -127,22 +127,6 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
         <p className="my-2 font-medium text-dark dark:text-light sm:text-sm">
           {summary}
         </p>
-        <div className="mt-2 flex items-center">
-          <Link href={github} target="_blank" className="w-10">
-            {" "}
-            <GithubIcon />
-          </Link>
-          <Link
-            href={link}
-            target="_blank"
-            className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold
-            dark:bg-light dark:text-dark
-            sm:px-4 sm:text-xs sm:text-justify
-            "
-          >
-            Visit Project
-          </Link>
-        </div>
       </div>
     </article>
   )
@@ -196,9 +180,6 @@ const Project = ({ title, type, img, link, github }) => {
           >
             Visit
           </Link>
-          <Link href={github} target="_blank" className="w-8 md:w-6">
-            <GithubIcon />
-          </Link>
         </div>
       </div>
     </article>
@@ -231,7 +212,6 @@ const projects = () => {
                 summary="An end-to-end Natural Language Processing pipeline that performs real- time identification, classification, and characterisation of AI research abstracts extracted from MEDLINE, outputting results to an interactive dash- board, creating a live view of global AI development."
                 img={project1}
                 link="https://doi.org/10.1016/S2589-7500(22)00032-2"
-                github="https://github.com/whizzlab/health_ai_online_pipeline.git"
               />
             </div>
 
@@ -250,7 +230,6 @@ const projects = () => {
                 img={project6}
                 title="Equity and Innovation"
                 link="https://doi.org/10.1371/journal.pdig.0000224"
-                github="_blank"
               />
             </div>
 
@@ -261,7 +240,6 @@ const projects = () => {
                 summary="A systematic review of AI literature as applied to mechanical ventilation, evaluating adherence to the Transparent Reporting of a multivariable pre- diction model for Individual Prognosis Or Diagnosis (TRIPOD) statement, risk of bias using the Prediction model Risk Of Bias Assessment Tool (PROBAST), algorithm design using a novel rubric, and the availability of both data and code."
                 img={project4}
                 link="https://doi.org/10.1016/j.bja.2021.09.025"
-                github="_blank"
               />
             </div>
 
@@ -271,16 +249,14 @@ const projects = () => {
                 title="Mechanical ventilators for LMICs"
                 img={project2}
                 link="https://doi.org/10.1016/j.bja.2022.01.007"
-                github="_blank"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                type="British Journal of Anaesthesia"
-                title="Quantifying of lobar gas exchange"
-                img={project3}
-                link="https://doi.org/10.1016/j.bja.2021.04.022"
-                github="_blank"
+                type="Pre-print"
+                title="Quantifying digital health inequality across a national healthcare system."
+                img={project_digital_inequality}
+                link="http://dx.doi.org/10.21203/rs.3.rs-2764838/v1"
               />
             </div>
           </div>
@@ -290,6 +266,12 @@ const projects = () => {
             All Articles
           </h2>
           <ul className="flex flex-col items-center relative sm:text-sm">
+            <Article
+              title="Quantifying digital health inequality across a national healthcare system."
+              img={article_digital_inequality}
+              date="2023"
+              link="http://dx.doi.org/10.21203/rs.3.rs-2764838/v1"
+            />
             <Article
               title="Equity should be fundamental to innovation."
               img={article_equity_innovation}

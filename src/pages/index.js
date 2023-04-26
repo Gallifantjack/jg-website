@@ -7,12 +7,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Awesome Portfolio Built with Nextjs</title>
+        <title>Jack Gallifant</title>
         <meta
           name="description"
-          content="Explore CodeBucks's Next.js developer portfolio and 
-        discover the latest webapp projects and software engineering articles. 
-        Showcase your skills as a full-stack developer and software engineer."
+          content="Building a Cathedral with AI | Health Equity | Physiology."
         />
       </Head>
       <TransitionEffect />
