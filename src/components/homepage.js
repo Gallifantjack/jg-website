@@ -21,7 +21,7 @@ function Homepage() {
           Jack Gallifant
         </h2>
         <h1 className="text-4xl sm:text-xl md:text-5xl lg:text-6xl font-bold pb-3 text-[#494949]">
-          <span className="mr-3">Building a Cathdral with </span>
+          <span className="mr-3">Building a Cathedral with </span>
         </h1>
         <h1 className="text-4xl sm:text-xl md:text-5xl lg:text-7xl font-semibold pb-3 text-[#494949]">
           <span className="mr-3">{text}</span>
