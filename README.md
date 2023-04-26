@@ -1,17 +1,43 @@
-#  To-do
+#  Web planning
 
 ## All pages
 
 - [] mobile version
 
-## Home page
+## The Cathedral
 
-## about page
+- Explain
+- Interests
+- What am I building
+- What is my bigger picture?
+- Why am I doing what doing
 
-- done?
+## The Bricks
 
-## projects page
+- Change publications to this framing
+- Invited talks
+- Digital inequality
 
-- [] remove github links image in projects
-- [] reorder projects
-- [] add equity and innovation image when published
+## To-do
+
+- [ ]  sort text-size articles
+- [ ]  Contact info using gstt email
+- [ ]  Mentors section?
+  - [ ]  Links to labs → LCP and GSTT
+  - [ ]  Leo, Luigi, Federico
+
+- see cv
+
+## For future
+
+- Reviewer: nature,
+- Editor:
+- Awards and honors
+- Skills:
+  - python, R, HTML CSS, JS / Ts , SQL, big query
+
+## Examples
+
+- [ ]  [bfantasykuo](https://sites.google.com/site/bfantasykuo/interests)
+- [ ]  [joao](https://github.com/joamats/joamats.github.io)
+- [ ]  [PAPA-Github-Repo](https://github.com/PAPA-Github-Repo)
