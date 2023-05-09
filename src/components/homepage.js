@@ -21,7 +21,7 @@ function Homepage() {
           Jack Gallifant
         </h2>
         <h1 className="text-4xl sm:text-xl md:text-5xl lg:text-6xl font-bold pb-3 text-[#494949]">
-          <span className="mr-3">Building a Cathedral with </span>
+          <span className="mr-3">Building a better future with </span>
         </h1>
         <h1 className="text-4xl sm:text-xl md:text-5xl lg:text-7xl font-semibold pb-3 text-[#494949]">
           <span className="mr-3">{text}</span>
@@ -30,7 +30,6 @@ function Homepage() {
         <div className="flex pb-3 z-10">
           <Link
             href="/projects"
-            target={"_blank"}
             className="flex items-center bg-dark text-light p-2.5 px-6
                   rounded-lg text-sm hover:bg-light hover:text-dark
                   border-2 border-solid border-transparent hover:border-dark

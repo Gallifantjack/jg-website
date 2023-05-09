@@ -124,7 +124,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
             {title}
           </h2>
         </Link>
-        <p className="my-2 font-medium text-dark dark:text-light sm:text-sm">
+        <p className="my-2 font-medium text-justify text-dark dark:text-light sm:text-sm">
           {summary}
         </p>
       </div>
@@ -209,7 +209,7 @@ const projects = () => {
               <FeaturedProject
                 type="Lancet Digital Health"
                 title="AI Dashboard"
-                summary="An end-to-end Natural Language Processing pipeline that performs real- time identification, classification, and characterisation of AI research abstracts extracted from MEDLINE, outputting results to an interactive dash- board, creating a live view of global AI development."
+                summary="An end-to-end Natural Language Processing pipeline that performs real-time identification, classification, and characterisation of AI research abstracts extracted from MEDLINE, outputting results to an interactive dashboard, creating a live view of global AI development."
                 img={project1}
                 link="https://doi.org/10.1016/S2589-7500(22)00032-2"
               />
@@ -237,7 +237,7 @@ const projects = () => {
               <FeaturedProject
                 type="British Journal of Anaesthesia"
                 title="AI for mechanical ventilation"
-                summary="A systematic review of AI literature as applied to mechanical ventilation, evaluating adherence to the Transparent Reporting of a multivariable pre- diction model for Individual Prognosis Or Diagnosis (TRIPOD) statement, risk of bias using the Prediction model Risk Of Bias Assessment Tool (PROBAST), algorithm design using a novel rubric, and the availability of both data and code."
+                summary="A systematic review of AI literature as applied to mechanical ventilation, evaluating adherence to the Transparent Reporting of a multivariable prediction model for Individual Prognosis Or Diagnosis (TRIPOD) statement, risk of bias using the Prediction model Risk Of Bias Assessment Tool (PROBAST), algorithm design using a novel rubric, and the availability of both data and code."
                 img={project4}
                 link="https://doi.org/10.1016/j.bja.2021.09.025"
               />
