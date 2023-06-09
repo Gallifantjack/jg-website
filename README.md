@@ -1,19 +1,17 @@
-# Tailwind CSS Documentation
+# P2P v2
 
-Tailwind CSS uses [Next.js](https://nextjs.org/) for its documentation.
+Based off:
+- https://tailwindcss.com/
+- https://tx.shadcn.com/
 
-To run the project locally, first install the dependencies:
 
-```bash
-npm install
-```
+- react email
 
-Next, run the development server:
-
-```bash
-npm run dev
-```
-
-## License
-
-This project is not licensed under an open-source license and is the intellectual property of Tailwind Labs Inc. The source is available only as an educational resource and to accept fixes for minor mistakes.
+## Plan
+- find old website for info
+- find old website for images
+- sketch out new website here in markdown
+- think about setting up for p2p.jackgallifant.com and ai.jackgallifant.com and jackgallifant.com
+    - can integrate new website with this +
+- need to think about distribution
+    - convertkit worth more than react email? how disseminate easiest?
