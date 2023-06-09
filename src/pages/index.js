@@ -88,18 +88,18 @@ function Header() {
         </div>
         <div className="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32">
           <h1 className="text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white">
-            Rapidly build modern websites without ever leaving your HTML.
+          A more permanent solution to timeless wisdom.
           </h1>
           <p className="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">
-            A utility-first CSS framework packed with classes like{' '}
-            <code className="font-mono font-medium text-sky-500 dark:text-sky-400">flex</code>,{' '}
-            <code className="font-mono font-medium text-sky-500 dark:text-sky-400">pt-4</code>,{' '}
+            The principles of great minds like{' '}
+            <code className="font-mono font-medium text-sky-500 dark:text-sky-400">Warren Buffett</code>,{' '}
+            <code className="font-mono font-medium text-sky-500 dark:text-sky-400">Ray Dalio</code>,{' '}
             <code className="font-mono font-medium text-sky-500 dark:text-sky-400">
-              text-center
+              Charlie Munger
             </code>{' '}
             and{' '}
-            <code className="font-mono font-medium text-sky-500 dark:text-sky-400">rotate-90</code>{' '}
-            that can be composed to build any design, directly in your markup.
+            <code className="font-mono font-medium text-sky-500 dark:text-sky-400">Marcus Aurelius</code>{' '}
+            that are quick to read and easy to remember. 
           </p>
           <div className="mt-6 sm:mt-10 flex justify-center space-x-6 text-sm">
             <NextLink
@@ -155,35 +155,34 @@ export default function Home() {
         <meta
           key="twitter:title"
           name="twitter:title"
-          content="Tailwind CSS - Rapidly build modern websites without ever leaving your HTML."
+          content="Pages2Principles - A more permanent solution to timeless wisdom."
         />
         <meta
           key="og:title"
           property="og:title"
-          content="Tailwind CSS - Rapidly build modern websites without ever leaving your HTML."
+          content="Pages2Principles - A more permanent solution to timeless wisdom."
         />
-        <title>Tailwind CSS - Rapidly build modern websites without ever leaving your HTML.</title>
+        <title>Pages2Principles - A more permanent solution to timeless wisdom.</title>
       </Head>
       <div className="mb-20 overflow-hidden sm:mb-32 md:mb-40">
         <Header />
         <section className="text-center px-8 mt-20 sm:mt-32 md:mt-40">
           <h2 className="text-slate-900 text-4xl tracking-tight font-extrabold sm:text-5xl dark:text-white">
-            “Best practices” don’t actually work.
+          All Signal, No Noise.
           </h2>
           <figure>
             <blockquote>
               <p className="mt-6 max-w-3xl mx-auto text-lg">
-                I’ve written{' '}
+                I’ve read{' '}
                 <a
-                  href="https://adamwathan.me/css-utility-classes-and-separation-of-concerns/"
                   className="text-sky-500 font-semibold dark:text-sky-400"
                 >
-                  a few thousand words
+                  hundreds of books
                 </a>{' '}
-                on why traditional “semantic class names” are the reason CSS is hard to maintain,
-                but the truth is you’re never going to believe me until you actually try it. If you
-                can suppress the urge to retch long enough to give it a chance, I really think
-                you’ll wonder how you ever worked with CSS any other way.
+                from history's greatest minds, only to realize that the key lessons often fade within weeks. 
+                Frustratingly, this insight is always buried in hundreds of pages that could often be explained in a few minutes. 
+                P2P is my response to this challenge: distilling the principles of these leaders into succinct, transferable wisdom.
+                
               </p>
             </blockquote>
             <figcaption className="mt-6 flex items-center justify-center space-x-4 text-left">
@@ -195,8 +194,8 @@ export default function Home() {
                 decoding="async"
               />
               <div>
-                <div className="text-slate-900 font-semibold dark:text-white">Adam Wathan</div>
-                <div className="mt-0.5 text-sm leading-6">Creator of Tailwind CSS</div>
+                <div className="text-slate-900 font-semibold dark:text-white">Jack Gallifant</div>
+                <div className="mt-0.5 text-sm leading-6">Creator of P2P</div>
               </div>
             </figcaption>
           </figure>
