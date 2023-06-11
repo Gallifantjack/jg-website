@@ -6,7 +6,7 @@ const pages = createPageList(
 )
 
 export const documentationNav = {
-  'Business': [
+  'Getting Started': [
     {
       title: 'Installation',
       href: '/docs/installation',
