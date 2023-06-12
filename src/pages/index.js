@@ -1,26 +1,18 @@
-import { Testimonials } from '@/components/Testimonials'
-import { DarkMode } from '@/components/home/DarkMode'
-import { ConstraintBased } from '@/components/home/ConstraintBased'
-import { BuildAnything } from '@/components/home/BuildAnything'
-import { Performance } from '@/components/home/Performance'
-import { MobileFirst } from '@/components/home/MobileFirst'
-import { StateVariants } from '@/components/home/StateVariants'
-import { ComponentDriven } from '@/components/home/ComponentDriven'
-import { Customization } from '@/components/home/Customization'
-import { ModernFeatures } from '@/components/home/ModernFeatures'
-import { EditorTools } from '@/components/home/EditorTools'
-import { ReadyMadeComponents } from '@/components/home/ReadyMadeComponents'
-import { SearchButton } from '@/components/Search'
-import { Hero } from '@/components/home/Hero'
-import { Logo } from '@/components/Logo'
-import { Footer } from '@/components/home/Footer'
-import NextLink from 'next/link'
-import Head from 'next/head'
 import { NavItems, NavPopover } from '@/components/Header'
-import styles from './index.module.css'
-import clsx from 'clsx'
+import { Logo } from '@/components/Logo'
+import { SearchButton } from '@/components/Search'
 import { ThemeToggle } from '@/components/ThemeToggle'
+import { BuildAnything } from '@/components/home/BuildAnything'
+import { ComponentDriven } from '@/components/home/ComponentDriven'
+import { Footer } from '@/components/home/Footer'
+import { Hero } from '@/components/home/Hero'
+import { ModernFeatures } from '@/components/home/ModernFeatures'
+import { ReadyMadeComponents } from '@/components/home/ReadyMadeComponents'
 import socialCardLarge from '@/img/social-card-large.jpg'
+import clsx from 'clsx'
+import Head from 'next/head'
+import NextLink from 'next/link'
+import styles from './index.module.css'
 
 function Header() {
   return (
@@ -88,18 +80,23 @@ function Header() {
         </div>
         <div className="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32">
           <h1 className="text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white">
-          A more permanent solution to timeless wisdom.
+            A more permanent solution to timeless wisdom.
           </h1>
           <p className="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">
             The principles of great minds like{' '}
-            <code className="font-mono font-medium text-sky-500 dark:text-sky-400">Warren Buffett</code>,{' '}
+            <code className="font-mono font-medium text-sky-500 dark:text-sky-400">
+              Warren Buffett
+            </code>
+            ,{' '}
             <code className="font-mono font-medium text-sky-500 dark:text-sky-400">Ray Dalio</code>,{' '}
             <code className="font-mono font-medium text-sky-500 dark:text-sky-400">
               Charlie Munger
             </code>{' '}
             and{' '}
-            <code className="font-mono font-medium text-sky-500 dark:text-sky-400">Marcus Aurelius</code>{' '}
-            that are quick to read and easy to remember. 
+            <code className="font-mono font-medium text-sky-500 dark:text-sky-400">
+              Marcus Aurelius
+            </code>{' '}
+            that are quick to read and easy to remember.
           </p>
           <div className="mt-6 sm:mt-10 flex justify-center space-x-6 text-sm">
             <NextLink
@@ -168,21 +165,17 @@ export default function Home() {
         <Header />
         <section className="text-center px-8 mt-20 sm:mt-32 md:mt-40">
           <h2 className="text-slate-900 text-4xl tracking-tight font-extrabold sm:text-5xl dark:text-white">
-          All Signal, No Noise.
+            All Signal, No Noise.
           </h2>
           <figure>
             <blockquote>
               <p className="mt-6 max-w-3xl mx-auto text-lg">
                 I’ve read{' '}
-                <a
-                  className="text-sky-500 font-semibold dark:text-sky-400"
-                >
-                  hundreds of books
-                </a>{' '}
-                from history's greatest minds, only to realize that the key lessons often fade within weeks. 
-                Frustratingly, this insight is always buried in hundreds of pages that could often be explained in a few minutes. 
-                P2P is my response to this challenge: distilling the principles of these leaders into succinct, transferable wisdom.
-                
+                <a className="text-sky-500 font-semibold dark:text-sky-400">hundreds of books</a>{' '}
+                from history's greatest minds, only to realize that the key lessons often fade
+                within weeks. Frustratingly, this insight is always buried in hundreds of pages that
+                could often be explained in a few minutes. P2P is my response to this challenge:
+                distilling the principles of these leaders into succinct, transferable wisdom.
               </p>
             </blockquote>
             <figcaption className="mt-6 flex items-center justify-center space-x-4 text-left">
@@ -201,18 +194,10 @@ export default function Home() {
           </figure>
         </section>
       </div>
-      <Testimonials />
       <div className="pt-20 mb-20 flex flex-col gap-y-20 overflow-hidden sm:pt-32 sm:mb-32 sm:gap-y-32 md:pt-40 md:mb-40 md:gap-y-40">
-        <ConstraintBased />
         <BuildAnything />
-        <Performance />
-        <MobileFirst />
-        <StateVariants />
         <ComponentDriven />
-        <DarkMode />
-        <Customization />
         <ModernFeatures />
-        <EditorTools />
         <ReadyMadeComponents />
       </div>
       <Footer />

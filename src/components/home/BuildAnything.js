@@ -1,19 +1,17 @@
-import { Fragment, useEffect, useRef, useState } from 'react'
+import { CodeWindow } from '@/components/CodeWindow'
+import { HtmlZenGarden } from '@/components/HtmlZenGarden'
+import { Tabs } from '@/components/Tabs'
 import {
-  IconContainer,
-  Caption,
   BigText,
-  Paragraph,
+  Caption,
+  IconContainer,
   Link,
+  Paragraph,
   Widont,
   themeTabs,
 } from '@/components/home/common'
-import { Tabs } from '@/components/Tabs'
-import { CodeWindow, getClassNameForToken } from '@/components/CodeWindow'
-import { HtmlZenGarden } from '@/components/HtmlZenGarden'
-import clsx from 'clsx'
+import { useEffect, useRef, useState } from 'react'
 import { GridLockup } from '../GridLockup'
-import { lines } from '../../samples/build-anything.html?highlight'
 
 const code = {
   Simple: `<div class="flex font-sans">
@@ -247,14 +245,13 @@ export function BuildAnything() {
           light={require('@/img/icons/home/build-anything.png').default.src}
           dark={require('@/img/icons/home/dark/build-anything.png').default.src}
         />
-        <Caption className="text-pink-500 dark:text-pink-400">Build anything</Caption>
+        <Caption className="text-pink-500 dark:text-pink-400">Foundations</Caption>
         <BigText>
-          <Widont>Build whatever you want, seriously.</Widont>
+          <Widont>Essential knowledge built from the ground up.</Widont>
         </BigText>
         <Paragraph>
-          Because Tailwind is so low-level, it never encourages you to design the same site twice.
-          Even with the same color palette and sizing scale, it's easy to build the same component
-          with a completely different look in the next project.
+          We condense and clarify foundational topics starting from first principles. Compiling the
+          lessons from the greatest books, giving you guides to navigating complex topics.
         </Paragraph>
         <Link href="/docs/installation" color="pink" darkColor="gray">
           Get started<span className="sr-only">, installation</span>
@@ -275,55 +272,11 @@ export function BuildAnything() {
         left={<HtmlZenGarden theme={theme} />}
         right={
           <CodeWindow>
-            <CodeWindow.Code2 lines={lines.length}>
-              {lines.map((tokens, lineIndex) => (
-                <Fragment key={lineIndex}>
-                  {tokens.map((token, tokenIndex) => {
-                    if (token.content === '_') {
-                      let cls = classes[theme][classIndex++]
-                      return (
-                        <span
-                          key={cls}
-                          className={clsx('code-highlight', getClassNameForToken(token), {
-                            'animate-flash-code': !initial.current,
-                          })}
-                        >
-                          {cls}
-                        </span>
-                      )
-                    }
-
-                    if (token.content.includes('__content__')) {
-                      let text = content[theme][contentIndex++]
-                      return (
-                        <Fragment key={text}>
-                          {token.content.split(/(__content__)/).map((part, i) =>
-                            i === 1 ? (
-                              <span
-                                key={i}
-                                className={clsx('code-highlight', getClassNameForToken(token), {
-                                  'animate-flash-code': !initial.current,
-                                })}
-                              >
-                                {text}
-                              </span>
-                            ) : (
-                              part
-                            )
-                          )}
-                        </Fragment>
-                      )
-                    }
-
-                    return (
-                      <span key={tokenIndex} className={getClassNameForToken(token)}>
-                        {token.content}
-                      </span>
-                    )
-                  })}
-                  {'\n'}
-                </Fragment>
-              ))}
+            <CodeWindow.Code2>
+              Principles can go in here <br />
+              1. Principle number one
+              <br />
+              The logic behind principle number one is <br />
             </CodeWindow.Code2>
           </CodeWindow>
         }

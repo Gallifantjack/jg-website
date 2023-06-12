@@ -1,15 +1,10 @@
-import { AnimateSharedLayout, motion } from 'framer-motion'
-import { font as pallyVariable } from '../fonts/generated/Pally-Variable.module.css'
-import { font as synonymVariable } from '../fonts/generated/Synonym-Variable.module.css'
-import { font as sourceSerifProRegular } from '../fonts/generated/SourceSerifPro-Regular.module.css'
-import { font as ibmPlexMonoRegular } from '../fonts/generated/IBMPlexMono-Regular.module.css'
-import { font as ibmPlexMonoSemiBold } from '../fonts/generated/IBMPlexMono-SemiBold.module.css'
 import { usePrevious } from '@/hooks/usePrevious'
-import { useCallback, useEffect, useRef, useState } from 'react'
-import debounce from 'debounce'
-import dlv from 'dlv'
 import { fit } from '@/utils/fit'
 import clsx from 'clsx'
+import debounce from 'debounce'
+import dlv from 'dlv'
+import { AnimateSharedLayout, motion } from 'framer-motion'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import colors from 'tailwindcss/colors'
 
 const themes = {
@@ -79,109 +74,50 @@ const themes = {
       inner: 'text-sm text-gray-700',
     },
   },
-  Playful: {
+  Economics: {
     wrapper: { borderRadius: 12 },
-    // container: ['p-6', 'p-6', ''],
+    container: '',
     image: {
       width({ containerWidth, col }, css = false) {
-        if (!containerWidth) return 224
+        if (!containerWidth) return 192
         if (css) {
-          return col ? 'calc(100% + 1rem)' : '224px'
+          return col ? '100%' : '192px'
         } else {
-          return col ? containerWidth + 16 : 224
+          return col ? containerWidth : 192
         }
       },
       height({ containerWidth, col }) {
-        if (!containerWidth) return 305 + 16
-        return col ? 191 : 305 + 16
+        if (!containerWidth) return 305
+        return col ? 191 : 305
       },
-      borderRadius: 8,
-      src: require('@/img/kids-jumper.jpg').default.src,
+      borderRadius: [
+        [8, 8, 0, 0],
+        [8, 8, 0, 0],
+        [8, 0, 0, 8],
+      ],
+      src: require('@/img/classic-utility-jacket.jpg').default.src,
       originalWidth: 1200,
-      originalHeight: 1700,
+      originalHeight: 1600,
       loading: 'lazy',
-      className: ['-mt-2 -mx-2', '-mt-2 -mx-2', '-my-2 -ml-2'],
     },
     contentContainer: 'p-6',
-    header: ['pb-4', 'pb-4', '-mt-6 pt-6 pb-4'],
+    header: '-mt-6 pt-6 pb-6',
     heading: 'flex-auto',
-    price: 'mt-2 w-full flex-none order-1',
-    stock: 'flex-none ml-3',
+    stock: 'flex-none w-full mt-2',
     button: {
       grid: ['1fr auto', '1fr 1fr auto', 'auto auto 1fr'],
-      height: 46,
-      borderRadius: 46 / 2,
+      height: 42,
+      borderRadius: 8,
       className: 'px-6',
       primary: {
         class: ['col-span-2', '', ''],
-        backgroundColor: colors.violet[600],
-        text: `text-base text-white font-medium ${pallyVariable}`,
-      },
-      secondary: {
-        backgroundColor: colors.white,
-        borderColor: colors.gray[200],
-        text: `text-base text-gray-900 font-medium ${pallyVariable}`,
-      },
-      like: {
-        color: colors.violet[600],
-        backgroundColor: colors.violet[50],
-        borderColor: colors.violet[50],
-      },
-    },
-    size: {
-      container: '',
-      list: 'space-x-3',
-      button: {
-        font: `font-bold ${pallyVariable}`,
-        size: 38,
-        borderRadius: 38 / 2,
-        borderColor: colors.white,
-        color: colors.violet[400],
-        activeBackgroundColor: colors.violet[600],
-        activeBorderColor: colors.violet[600],
-        activeColor: colors.white,
-      },
-    },
-    smallprint: { container: 'mt-5', inner: `text-sm ${pallyVariable}` },
-  },
-  Elegant: {
-    wrapper: { borderRadius: 0 },
-    container: 'p-1.5',
-    image: {
-      width({ containerWidth, col }, css = false) {
-        if (!containerWidth) return 210
-        if (css) {
-          return col ? '100%' : '210px'
-        } else {
-          return col ? containerWidth - 12 : 210
-        }
-      },
-      height({ containerWidth, col }) {
-        if (!containerWidth) return 305 - 12
-        return col ? 177 : 305 - 12
-      },
-      borderRadius: 0,
-      src: require('@/img/fancy-suit-jacket.jpg').default.src,
-      originalWidth: 1200,
-      originalHeight: 2128,
-    },
-    contentContainer: ['p-6 pt-0 -mx-1.5 -mb-1.5', 'p-6 pt-0 -mx-1.5 -mb-1.5', 'p-6 pt-0 -my-1.5'],
-    header: 'py-6',
-    heading: 'w-full flex-none mb-3',
-    stock: 'flex-none ml-auto',
-    button: {
-      grid: ['1fr auto', '1fr 1fr auto', '1fr 1fr auto'],
-      height: 46,
-      borderRadius: 0,
-      primary: {
-        class: ['col-span-2', '', ''],
         backgroundColor: colors.gray[900],
-        text: `text-white font-medium tracking-wide uppercase ${synonymVariable}`,
+        text: 'text-white font-semibold',
       },
       secondary: {
         backgroundColor: colors.white,
         borderColor: colors.gray[200],
-        text: `text-gray-900 font-medium tracking-wide uppercase ${synonymVariable}`,
+        text: 'text-gray-900 font-semibold',
       },
       like: {
         color: colors.gray[300],
@@ -189,84 +125,151 @@ const themes = {
     },
     size: {
       container: '',
-      button: {
-        font: `font-medium ${synonymVariable}`,
-        size: 32,
-        borderRadius: 32 / 2,
-        color: colors.gray[500],
-        activeBackgroundColor: colors.gray[100],
-        activeColor: colors.gray[900],
-      },
-    },
-    smallprint: {
-      container: 'mt-[1.375rem]',
-      inner: `text-sm ${synonymVariable}`,
-    },
-  },
-  Brutalist: {
-    wrapper: { borderRadius: 0 },
-    container: ['p-4 pb-6', 'p-4 pb-6', 'p-6 pb-[1.0625rem]'],
-    image: {
-      width({ containerWidth, col }, css = false) {
-        if (!containerWidth) return 184
-        if (css) {
-          return col ? '100%' : '184px'
-        } else {
-          return col ? containerWidth - 32 : 184
-        }
-      },
-      height({ containerWidth, col }) {
-        if (!containerWidth) return 224
-        return col ? 160 : 224
-      },
-      borderRadius: 0,
-      src: require('@/img/retro-shoe.jpg').default.src,
-      originalWidth: 1200,
-      originalHeight: 1772,
-    },
-    contentContainer: ['px-2', 'px-2', 'pl-8'],
-    header: ['py-6', 'py-6', '-mt-6 py-6'],
-    heading: 'w-full flex-none mb-2',
-    stock: 'flex-auto ml-3',
-    button: {
-      grid: ['1fr auto', '1fr 1fr auto', 'auto auto 1fr'],
-      width: 30,
-      height: 46,
-      borderRadius: 0,
-      className: 'px-6',
-      primary: {
-        class: ['col-span-2', '', ''],
-        backgroundColor: colors.teal[400],
-        borderColor: colors.black,
-        text: `text-base text-black uppercase ${ibmPlexMonoSemiBold}`,
-      },
-      secondary: {
-        backgroundColor: colors.white,
-        borderColor: colors.gray[200],
-        text: `text-base text-black uppercase ${ibmPlexMonoSemiBold}`,
-      },
-      like: {
-        container: ' ',
-        className: 'justify-center',
-        color: colors.black,
-        borderColor: colors.white,
-      },
-    },
-    size: {
-      container: 'my-6',
       list: 'space-x-3',
       button: {
-        font: ibmPlexMonoRegular,
-        size: 42,
-        borderRadius: 0,
-        color: colors.black,
-        activeBackgroundColor: colors.black,
+        activeFont: 'font-semibold',
+        size: 38,
+        borderRadius: 8,
+        color: colors.gray[700],
+        activeBackgroundColor: colors.gray[900],
         activeColor: colors.white,
       },
     },
     smallprint: {
-      container: 'mt-4',
-      inner: `${ibmPlexMonoRegular} text-xs leading-6`,
+      container: ['mt-6', 'mt-6', 'mt-6 mb-1'],
+      inner: 'text-sm text-gray-700',
+    },
+  },
+  History: {
+    wrapper: { borderRadius: 12 },
+    container: '',
+    image: {
+      width({ containerWidth, col }, css = false) {
+        if (!containerWidth) return 192
+        if (css) {
+          return col ? '100%' : '192px'
+        } else {
+          return col ? containerWidth : 192
+        }
+      },
+      height({ containerWidth, col }) {
+        if (!containerWidth) return 305
+        return col ? 191 : 305
+      },
+      borderRadius: [
+        [8, 8, 0, 0],
+        [8, 8, 0, 0],
+        [8, 0, 0, 8],
+      ],
+      src: require('@/img/classic-utility-jacket.jpg').default.src,
+      originalWidth: 1200,
+      originalHeight: 1600,
+      loading: 'lazy',
+    },
+    contentContainer: 'p-6',
+    header: '-mt-6 pt-6 pb-6',
+    heading: 'flex-auto',
+    stock: 'flex-none w-full mt-2',
+    button: {
+      grid: ['1fr auto', '1fr 1fr auto', 'auto auto 1fr'],
+      height: 42,
+      borderRadius: 8,
+      className: 'px-6',
+      primary: {
+        class: ['col-span-2', '', ''],
+        backgroundColor: colors.gray[900],
+        text: 'text-white font-semibold',
+      },
+      secondary: {
+        backgroundColor: colors.white,
+        borderColor: colors.gray[200],
+        text: 'text-gray-900 font-semibold',
+      },
+      like: {
+        color: colors.gray[300],
+      },
+    },
+    size: {
+      container: '',
+      list: 'space-x-3',
+      button: {
+        activeFont: 'font-semibold',
+        size: 38,
+        borderRadius: 8,
+        color: colors.gray[700],
+        activeBackgroundColor: colors.gray[900],
+        activeColor: colors.white,
+      },
+    },
+    smallprint: {
+      container: ['mt-6', 'mt-6', 'mt-6 mb-1'],
+      inner: 'text-sm text-gray-700',
+    },
+  },
+  Business: {
+    wrapper: { borderRadius: 12 },
+    container: '',
+    image: {
+      width({ containerWidth, col }, css = false) {
+        if (!containerWidth) return 192
+        if (css) {
+          return col ? '100%' : '192px'
+        } else {
+          return col ? containerWidth : 192
+        }
+      },
+      height({ containerWidth, col }) {
+        if (!containerWidth) return 305
+        return col ? 191 : 305
+      },
+      borderRadius: [
+        [8, 8, 0, 0],
+        [8, 8, 0, 0],
+        [8, 0, 0, 8],
+      ],
+      src: require('@/img/classic-utility-jacket.jpg').default.src,
+      originalWidth: 1200,
+      originalHeight: 1600,
+      loading: 'lazy',
+    },
+    contentContainer: 'p-6',
+    header: '-mt-6 pt-6 pb-6',
+    heading: 'flex-auto',
+    stock: 'flex-none w-full mt-2',
+    button: {
+      grid: ['1fr auto', '1fr 1fr auto', 'auto auto 1fr'],
+      height: 42,
+      borderRadius: 8,
+      className: 'px-6',
+      primary: {
+        class: ['col-span-2', '', ''],
+        backgroundColor: colors.gray[900],
+        text: 'text-white font-semibold',
+      },
+      secondary: {
+        backgroundColor: colors.white,
+        borderColor: colors.gray[200],
+        text: 'text-gray-900 font-semibold',
+      },
+      like: {
+        color: colors.gray[300],
+      },
+    },
+    size: {
+      container: '',
+      list: 'space-x-3',
+      button: {
+        activeFont: 'font-semibold',
+        size: 38,
+        borderRadius: 8,
+        color: colors.gray[700],
+        activeBackgroundColor: colors.gray[900],
+        activeColor: colors.white,
+      },
+    },
+    smallprint: {
+      container: ['mt-6', 'mt-6', 'mt-6 mb-1'],
+      inner: 'text-sm text-gray-700',
     },
   },
 }
@@ -400,15 +403,6 @@ export function HtmlZenGarden({ theme }) {
                     />
                   ))}
                 </motion.div>
-                <motion.div
-                  layout
-                  className={clsx(
-                    'absolute z-10 bg-teal-400',
-                    theme === 'Brutalist' ? 'top-1 left-1 -right-1 -bottom-1' : 'inset-px'
-                  )}
-                  initial={false}
-                  animate={getImageRadius(theme)}
-                />
               </div>
               <div
                 className={`self-start flex-auto flex flex-wrap items-baseline ${getThemeValue(
@@ -420,12 +414,6 @@ export function HtmlZenGarden({ theme }) {
                     getThemeValue('header') || ''
                   }`}
                 >
-                  <motion.div
-                    layout
-                    className="absolute -top-44 sm:-top-0 lg:-top-44 xl:top-0 bottom-0 -left-6 -right-6 sm:-left-60 sm:-right-6 lg:-left-6 lg:-right-6 xl:-left-60 xl:-right-6 bg-black"
-                    initial={false}
-                    animate={{ opacity: theme === 'Brutalist' ? 1 : 0 }}
-                  />
                   <div className={`relative ${themes[theme].heading}`}>
                     <motion.h2
                       layout
@@ -436,44 +424,40 @@ export function HtmlZenGarden({ theme }) {
                       initial={false}
                       animate={{ opacity: theme === 'Simple' ? 1 : 0 }}
                     >
-                      <span className="hidden sm:inline whitespace-pre">Classic </span>Utility
-                      Jacket
+                      <span className="hidden sm:inline whitespace-pre">Ray Dalio </span>
                     </motion.h2>
                     <motion.h2
                       layout
                       className={clsx(
-                        'inline-flex text-gray-900 text-base font-medium',
-                        pallyVariable,
-                        theme === 'Playful' ? '' : 'absolute bottom-0 left-0'
+                        'inline-flex text-gray-900 text-lg font-semibold',
+                        theme === 'Economics' ? '' : 'absolute bottom-0 left-0'
                       )}
                       initial={false}
-                      animate={{ opacity: theme === 'Playful' ? 1 : 0 }}
+                      animate={{ opacity: theme === 'Economics' ? 1 : 0 }}
                     >
-                      Kids Jumpsuit
+                      <span className="hidden sm:inline whitespace-pre">Warren Buffett </span>
                     </motion.h2>
                     <motion.h2
                       layout
                       className={clsx(
-                        'inline-flex text-gray-900 text-2xl leading-none',
-                        sourceSerifProRegular,
-                        theme === 'Elegant' ? '' : 'absolute bottom-0 left-0'
+                        'inline-flex text-gray-900 text-lg font-semibold',
+                        theme === 'Business' ? '' : 'absolute bottom-0 left-0'
                       )}
                       initial={false}
-                      animate={{ opacity: theme === 'Elegant' ? 1 : 0 }}
+                      animate={{ opacity: theme === 'Business' ? 1 : 0 }}
                     >
-                      Dogtooth Style Jacket
+                      <span className="hidden sm:inline whitespace-pre">Marcus Aurelius </span>
                     </motion.h2>
                     <motion.h2
                       layout
                       className={clsx(
-                        'inline-flex text-white text-2xl',
-                        ibmPlexMonoSemiBold,
-                        theme === 'Brutalist' ? '' : 'absolute bottom-0 left-0'
+                        'inline-flex text-gray-900 text-lg font-semibold',
+                        theme === 'History' ? '' : 'absolute bottom-0 left-0'
                       )}
                       initial={false}
-                      animate={{ opacity: theme === 'Brutalist' ? 1 : 0 }}
+                      animate={{ opacity: theme === 'History' ? 1 : 0 }}
                     >
-                      Retro Shoe
+                      <span className="hidden sm:inline whitespace-pre">Steve Jobs </span>
                     </motion.h2>
                   </div>
                   <div className={clsx('relative', themes[theme].price)}>
@@ -485,41 +469,37 @@ export function HtmlZenGarden({ theme }) {
                       initial={false}
                       animate={{ opacity: theme === 'Simple' ? 1 : 0 }}
                     >
-                      $110.00
+                      2015
                     </motion.div>
                     <motion.div
-                      className={`inline-flex text-3xl font-bold text-violet-600 ${pallyVariable} ${
-                        theme === 'Playful' ? '' : 'absolute bottom-0 left-0'
+                      className={`inline-flex text-lg font-semibold ${
+                        theme === 'Economics' ? '' : 'absolute bottom-0 left-0'
                       }`}
                       layout
                       initial={false}
-                      animate={{ opacity: theme === 'Playful' ? 1 : 0 }}
+                      animate={{ opacity: theme === 'Economics' ? 1 : 0 }}
                     >
-                      $39.00
+                      2020
                     </motion.div>
                     <motion.div
-                      className={clsx(
-                        'inline-flex text-lg text-gray-500 font-medium',
-                        synonymVariable,
-                        theme === 'Elegant' ? '' : 'absolute bottom-0 left-0'
-                      )}
+                      className={`inline-flex text-lg font-semibold ${
+                        theme === 'Business' ? '' : 'absolute bottom-0 left-0'
+                      }`}
                       layout
                       initial={false}
-                      animate={{ opacity: theme === 'Elegant' ? 1 : 0 }}
+                      animate={{ opacity: theme === 'Business' ? 1 : 0 }}
                     >
-                      $350.00
+                      1500
                     </motion.div>
                     <motion.div
-                      className={clsx(
-                        'inline-flex text-white text-base',
-                        ibmPlexMonoSemiBold,
-                        theme === 'Brutalist' ? '' : 'absolute bottom-0 left-0'
-                      )}
+                      className={`inline-flex text-lg font-semibold ${
+                        theme === 'History' ? '' : 'absolute bottom-0 left-0'
+                      }`}
                       layout
                       initial={false}
-                      animate={{ opacity: theme === 'Brutalist' ? 1 : 0 }}
+                      animate={{ opacity: theme === 'History' ? 1 : 0 }}
                     >
-                      $89.00
+                      1986
                     </motion.div>
                   </div>
                   <div className={clsx('relative whitespace-nowrap', themes[theme].stock)}>
@@ -531,246 +511,37 @@ export function HtmlZenGarden({ theme }) {
                         theme === 'Simple' ? '' : 'absolute bottom-0 left-0'
                       }`}
                     >
-                      In stock
+                      Founder of Bridgewater Associates
                     </motion.div>
                     <motion.div
                       layout
                       initial={false}
-                      animate={{ opacity: theme === 'Playful' ? 1 : 0 }}
-                      className={`inline-flex text-base font-medium text-gray-400 ${pallyVariable} ${
-                        theme === 'Playful' ? '' : 'absolute bottom-0 left-0'
+                      animate={{ opacity: theme === 'Business' ? 1 : 0 }}
+                      className={`inline-flex text-sm font-medium text-gray-700 ${
+                        theme === 'Business' ? '' : 'absolute bottom-0 left-0'
                       }`}
                     >
-                      In stock
+                      Founder of Berkshire Hathaway
                     </motion.div>
                     <motion.div
                       layout
                       initial={false}
-                      animate={{ opacity: theme === 'Elegant' ? 1 : 0 }}
-                      className={`inline-flex text-xs leading-6 text-gray-500 font-medium uppercase ${synonymVariable} ${
-                        theme === 'Elegant' ? '' : 'absolute bottom-0 left-0'
+                      animate={{ opacity: theme === 'Economics' ? 1 : 0 }}
+                      className={`inline-flex text-sm font-medium text-gray-700 ${
+                        theme === 'Economics' ? '' : 'absolute bottom-0 left-0'
                       }`}
                     >
-                      In stock
+                      Emperor of Rome
                     </motion.div>
                     <motion.div
                       layout
                       initial={false}
-                      animate={{ opacity: theme === 'Brutalist' ? 1 : 0 }}
-                      className={clsx(
-                        'inline-flex text-teal-400 text-base uppercase',
-                        ibmPlexMonoRegular,
-                        theme === 'Brutalist' ? '' : 'absolute bottom-0 left-0'
-                      )}
-                    >
-                      In stock
-                    </motion.div>
-                  </div>
-                </div>
-                <div
-                  className={clsx(
-                    'w-full flex-none flex items-center',
-                    getThemeValue('size.container')
-                  )}
-                >
-                  <motion.ul className={clsx('flex text-sm', themes[theme].size.list)}>
-                    {['XS', 'S', 'M', 'L', 'XL'].map((size) => (
-                      <motion.li
-                        layout
-                        key={size}
-                        className="relative flex-none flex items-center justify-center cursor-pointer"
-                        style={{
-                          width: themes[theme].size.button.size,
-                          height: themes[theme].size.button.size,
-                        }}
-                        initial={false}
-                        animate={{
-                          color:
-                            size === 'XS'
-                              ? themes[theme].size.button.activeColor
-                              : themes[theme].size.button.color,
-                        }}
-                      >
-                        {size === 'XS' && (
-                          <motion.div
-                            layout
-                            initial={false}
-                            className={clsx(
-                              'absolute bg-teal-400',
-                              theme === 'Brutalist'
-                                ? 'top-0.5 left-0.5 -right-0.5 -bottom-0.5'
-                                : 'inset-px'
-                            )}
-                            animate={{
-                              borderRadius: themes[theme].size.button.borderRadius,
-                            }}
-                          />
-                        )}
-                        <motion.div
-                          layout
-                          initial={false}
-                          className="absolute inset-0 border-2"
-                          animate={{
-                            borderRadius: themes[theme].size.button.borderRadius,
-                            borderColor:
-                              (size === 'XS'
-                                ? themes[theme].size.button.activeBorderColor
-                                : themes[theme].size.button.borderColor) ||
-                              (size === 'XS'
-                                ? themes[theme].size.button.activeBackgroundColor
-                                : '#fff'),
-                            ...(size === 'XS'
-                              ? {
-                                  backgroundColor: themes[theme].size.button.activeBackgroundColor,
-                                }
-                              : {}),
-                          }}
-                        />
-                        {Object.keys(themes).map((name) => (
-                          <motion.span
-                            key={name}
-                            className={`absolute inset-0 flex items-center justify-center ${
-                              size === 'XS'
-                                ? themes[name].size.button.activeFont ||
-                                  themes[name].size.button.font
-                                : themes[name].size.button.font
-                            } ${theme === name ? '' : 'pointer-events-none'}`}
-                            initial={false}
-                            animate={{ opacity: theme === name ? 1 : 0 }}
-                          >
-                            {size === 'XS' && name === 'Brutalist' ? (
-                              <>
-                                {/* <span className="absolute w-0.5 bg-teal-400 left-full ml-0.5 top-0 -bottom-1" />
-                                <span className="absolute h-0.5 bg-teal-400 top-full mt-0.5 left-0 -right-1" /> */}
-                                {size}
-                              </>
-                            ) : (
-                              size
-                            )}
-                          </motion.span>
-                        ))}
-                      </motion.li>
-                    ))}
-                  </motion.ul>
-                </div>
-                <motion.div
-                  layout
-                  className={clsx(
-                    'w-full h-px bg-gray-200',
-                    theme === 'Brutalist' ? '-mt-px' : 'my-6'
-                  )}
-                  initial={false}
-                  animate={{ opacity: theme === 'Brutalist' ? 0 : 1 }}
-                />
-                <div
-                  className="flex-none w-full grid gap-4 text-center"
-                  style={{ gridTemplateColumns: getThemeValue('button.grid') }}
-                >
-                  <div className={`relative ${getThemeValue('button.primary.class')}`}>
-                    <motion.div
-                      layout
-                      className={clsx(
-                        'relative text-sm border-2 cursor-pointer flex items-center justify-center whitespace-nowrap',
-                        themes[theme].button.primary.className || themes[theme].button.className
-                      )}
-                      style={{ height: getThemeValue('button.height') }}
-                      initial={false}
-                      animate={{
-                        backgroundColor: themes[theme].button.primary.backgroundColor,
-                        borderColor:
-                          themes[theme].button.primary.borderColor ||
-                          themes[theme].button.primary.backgroundColor,
-                        borderRadius: themes[theme].button.borderRadius,
-                      }}
-                    >
-                      {Object.keys(themes).map((name, i) => (
-                        <motion.span
-                          key={name}
-                          className={clsx(
-                            'flex items-center justify-center',
-                            themes[name].button.primary.text,
-                            theme === name ? '' : 'absolute'
-                          )}
-                          initial={false}
-                          animate={{ opacity: theme === name ? 1 : 0 }}
-                        >
-                          <motion.span layout>Buy now</motion.span>
-                        </motion.span>
-                      ))}
-                    </motion.div>
-                  </div>
-                  <div className="relative">
-                    <motion.div
-                      layout
-                      className={clsx(
-                        'relative text-sm border cursor-pointer flex items-center justify-center whitespace-nowrap',
-                        themes[theme].button.secondary.className || themes[theme].button.className
-                      )}
-                      style={{ height: getThemeValue('button.height') }}
-                      initial={false}
-                      animate={{
-                        backgroundColor: themes[theme].button.secondary.backgroundColor,
-                        borderColor:
-                          themes[theme].button.secondary.borderColor ||
-                          themes[theme].button.secondary.backgroundColor,
-                        borderRadius: themes[theme].button.borderRadius,
-                      }}
-                    >
-                      {Object.keys(themes).map((name, i) => (
-                        <motion.span
-                          key={name}
-                          className={clsx(
-                            'w-full flex-none flex items-center justify-center',
-                            themes[name].button.secondary.text,
-                            theme === name ? '' : 'absolute'
-                          )}
-                          initial={false}
-                          animate={{ opacity: theme === name ? 1 : 0 }}
-                        >
-                          <motion.span layout>Add to bag</motion.span>
-                        </motion.span>
-                      ))}
-                    </motion.div>
-                  </div>
-                  <div
-                    className={clsx('flex', themes[theme].button.like.container || 'justify-end')}
-                  >
-                    <motion.div
-                      layout
-                      className={`flex items-center border cursor-pointer ${
-                        themes[theme].button.like.className || 'justify-center'
+                      animate={{ opacity: theme === 'History' ? 1 : 0 }}
+                      className={`inline-flex text-sm font-medium text-gray-700 ${
+                        theme === 'History' ? '' : 'absolute bottom-0 left-0'
                       }`}
-                      style={{
-                        width: getThemeValue('button.width', getThemeValue('button.height')),
-                        height: getThemeValue('button.height'),
-                      }}
-                      initial={false}
-                      animate={{
-                        backgroundColor:
-                          themes[theme].button.like.backgroundColor ||
-                          themes[theme].button.secondary.backgroundColor,
-                        borderColor:
-                          themes[theme].button.like.borderColor ||
-                          themes[theme].button.secondary.borderColor ||
-                          themes[theme].button.secondary.backgroundColor,
-                        color: themes[theme].button.secondary.color,
-                        borderRadius: themes[theme].button.borderRadius,
-                      }}
                     >
-                      <motion.svg
-                        layout
-                        width="20"
-                        height="20"
-                        initial={false}
-                        animate={{ color: themes[theme].button.like.color }}
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                          fill="currentColor"
-                        />
-                      </motion.svg>
+                      Founder of Apple
                     </motion.div>
                   </div>
                 </div>
@@ -786,8 +557,8 @@ export function HtmlZenGarden({ theme }) {
                       animate={{ opacity: theme === name ? 1 : 0 }}
                     >
                       <span>
-                        Free shipping on all
-                        <span className="hidden sm:inline"> continental US</span> orders.
+                        Principle in here? <br />
+                        Or some text on what can learn from him
                       </span>
                     </motion.p>
                   ))}

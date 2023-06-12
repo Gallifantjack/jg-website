@@ -1,15 +1,15 @@
-import { IconContainer, Caption, BigText, Paragraph, Link, Widont } from '@/components/home/common'
-import { Tabs } from '@/components/Tabs'
 import { CodeWindow, getClassNameForToken } from '@/components/CodeWindow'
+import { Tabs } from '@/components/Tabs'
+import { BigText, Caption, IconContainer, Link, Paragraph, Widont } from '@/components/home/common'
+import clsx from 'clsx'
 import defaultConfig from 'defaultConfig'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
-import { GridLockup } from '../GridLockup'
-import clsx from 'clsx'
-import { lines as sizingSample } from '../../samples/sizing.html?highlight'
 import { lines as colorsSample } from '../../samples/colors.html?highlight'
-import { lines as typographySample } from '../../samples/typography.html?highlight'
 import { lines as shadowsSample } from '../../samples/shadows.html?highlight'
+import { lines as sizingSample } from '../../samples/sizing.html?highlight'
+import { lines as typographySample } from '../../samples/typography.html?highlight'
+import { GridLockup } from '../GridLockup'
 
 const tokens = {
   Sizing: sizingSample,
@@ -285,15 +285,13 @@ export function ConstraintBased() {
           light={require('@/img/icons/home/constraint-based.png').default.src}
           dark={require('@/img/icons/home/dark/constraint-based.png').default.src}
         />
-        <Caption className="text-indigo-500 dark:text-indigo-400">Constraint-based</Caption>
+        <Caption className="text-indigo-500 dark:text-indigo-400">Foundations</Caption>
         <BigText>
-          <Widont>An API for your design system.</Widont>
+          <Widont>Essential knowledge built from the ground up.</Widont>
         </BigText>
         <Paragraph>
-          Utility classes help you work within the constraints of a system instead of littering your
-          stylesheets with arbitrary values. They make it easy to be consistent with color choices,
-          spacing, typography, shadows, and everything else that makes up a well-engineered design
-          system.
+          We condense and clarify foundational topics starting from first principles. Compiling the
+          lessons from the greatest books, giving you guides to navigating complex topics.
         </Paragraph>
         <Link href="/docs/utility-first" color="indigo" darkColor="gray">
           Learn more<span className="sr-only">, utility-first fundamentals</span>
@@ -331,10 +329,10 @@ export function ConstraintBased() {
                   }}
                 />
                 <AnimatePresence initial={false} exitBeforeEnter>
-                  {tab === 'Sizing' && <Sizing key="sizing" />}
-                  {tab === 'Colors' && <Colors key="colors" />}
-                  {tab === 'Typography' && <Typography key="typography" />}
-                  {tab === 'Shadows' && <Shadows key="shadows" />}
+                  {tab === 'Business' && <Sizing key="sizing" />}
+                  {tab === 'Economics' && <Colors key="colors" />}
+                  {tab === 'History' && <Typography key="typography" />}
+                  {tab === 'Philosphy' && <Shadows key="shadows" />}
                 </AnimatePresence>
               </div>
             </div>
