@@ -118,7 +118,7 @@ UsingAngular.layoutProps = {
   meta: {
     title: 'Install Tailwind CSS with Angular',
     description: 'Setting up Tailwind CSS in an Angular project.',
-    section: 'Getting Started',
+    section: 'Business',
   },
   Layout: DocumentationLayout,
   allowOverflow: false,

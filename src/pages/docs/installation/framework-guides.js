@@ -2,29 +2,29 @@ import { DocumentationLayout } from '@/layouts/DocumentationLayout'
 import { InstallationLayout } from '@/layouts/InstallationLayout'
 import Link from 'next/link'
 
-import { ReactComponent as AstroLogo } from '@/img/guides/astro.svg'
-import { ReactComponent as AstroLogoWhite } from '@/img/guides/astro-white.svg'
 import { ReactComponent as AdonisLogo } from '@/img/guides/adonis.svg'
-import { ReactComponent as AngularLogo } from '@/img/guides/angular.svg'
 import { ReactComponent as AngularLogoWhite } from '@/img/guides/angular-white.svg'
+import { ReactComponent as AngularLogo } from '@/img/guides/angular.svg'
+import { ReactComponent as AstroLogoWhite } from '@/img/guides/astro-white.svg'
+import { ReactComponent as AstroLogo } from '@/img/guides/astro.svg'
 import { ReactComponent as CraLogo } from '@/img/guides/cra.svg'
 import { ReactComponent as EmberLogo } from '@/img/guides/ember.svg'
 import { ReactComponent as GatsbyLogo } from '@/img/guides/gatsby.svg'
 import { ReactComponent as LaravelLogo } from '@/img/guides/laravel.svg'
 import { ReactComponent as MeteorLogo } from '@/img/guides/meteor.svg'
-import { ReactComponent as NextJsLogo } from '@/img/guides/nextjs.svg'
 import { ReactComponent as NextJsLogoWhite } from '@/img/guides/nextjs-white.svg'
+import { ReactComponent as NextJsLogo } from '@/img/guides/nextjs.svg'
 import { ReactComponent as NuxtJsLogo } from '@/img/guides/nuxtjs.svg'
 import { ReactComponent as ParcelLogo } from '@/img/guides/parcel.svg'
 import { ReactComponent as PhoenixLogo } from '@/img/guides/phoenix.svg'
-import { ReactComponent as RailsLogo } from '@/img/guides/rails.svg'
 import { ReactComponent as RailsLogoWhite } from '@/img/guides/rails-white.svg'
-import { ReactComponent as RemixLogo } from '@/img/guides/remix.svg'
+import { ReactComponent as RailsLogo } from '@/img/guides/rails.svg'
 import { ReactComponent as RemixLogoWhite } from '@/img/guides/remix-white.svg'
+import { ReactComponent as RemixLogo } from '@/img/guides/remix.svg'
 import { ReactComponent as SolidJSLogo } from '@/img/guides/solidjs.svg'
 import { ReactComponent as SvelteLogo } from '@/img/guides/svelte.svg'
-import { ReactComponent as SymfonyLogo } from '@/img/guides/symfony.svg'
 import { ReactComponent as SymfonyLogoWhite } from '@/img/guides/symfony-white.svg'
+import { ReactComponent as SymfonyLogo } from '@/img/guides/symfony.svg'
 import { ReactComponent as ViteLogo } from '@/img/guides/vite.svg'
 
 export default function FrameworkGuides() {
@@ -210,7 +210,7 @@ FrameworkGuides.layoutProps = {
     title: 'Framework Guides',
     description:
       'Framework-specific guides that cover our recommended approach to installing Tailwind CSS in a number of popular environments.',
-    section: 'Getting Started',
+    section: 'Business',
   },
   Layout: DocumentationLayout,
   allowOverflow: false,

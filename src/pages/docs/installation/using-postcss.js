@@ -1,7 +1,7 @@
-import { DocumentationLayout } from '@/layouts/DocumentationLayout'
-import { InstallationLayout } from '@/layouts/InstallationLayout'
 import { Cta } from '@/components/Cta'
 import { Steps } from '@/components/Steps'
+import { DocumentationLayout } from '@/layouts/DocumentationLayout'
+import { InstallationLayout } from '@/layouts/InstallationLayout'
 
 let steps = [
   {
@@ -161,7 +161,7 @@ UsingPostCss.layoutProps = {
     title: 'Install Tailwind CSS using PostCSS',
     description:
       'Installing Tailwind CSS as a PostCSS plugin is the most seamless way to integrate it with build tools like webpack, Rollup, Vite, and Parcel.',
-    section: 'Getting Started',
+    section: 'Business',
   },
   Layout: DocumentationLayout,
   allowOverflow: false,

@@ -1,7 +1,7 @@
-import NextLink from 'next/link'
+import { Steps } from '@/components/Steps'
 import { DocumentationLayout } from '@/layouts/DocumentationLayout'
 import { InstallationLayout } from '@/layouts/InstallationLayout'
-import { Steps } from '@/components/Steps'
+import NextLink from 'next/link'
 
 let steps = [
   {
@@ -161,7 +161,7 @@ PlayCdn.layoutProps = {
   meta: {
     title: 'Try Tailwind CSS using the Play CDN',
     description: 'Use the Play CDN to try Tailwind right in the browser without any build step.',
-    section: 'Getting Started',
+    section: 'Business',
   },
   Layout: DocumentationLayout,
   allowOverflow: false,

@@ -121,7 +121,7 @@ UsingMeteor.layoutProps = {
   meta: {
     title: 'Install Tailwind CSS with Meteor',
     description: 'Setting up Tailwind CSS in a Meteor project.',
-    section: 'Getting Started',
+    section: 'Business',
   },
   Layout: DocumentationLayout,
   allowOverflow: false,

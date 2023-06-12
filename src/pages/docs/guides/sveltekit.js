@@ -1,6 +1,6 @@
+import { Steps } from '@/components/Steps'
 import { DocumentationLayout } from '@/layouts/DocumentationLayout'
 import { FrameworkGuideLayout } from '@/layouts/FrameworkGuideLayout'
-import { Steps } from '@/components/Steps'
 
 let steps = [
   {
@@ -35,7 +35,7 @@ let steps = [
       code: 'npm install -D tailwindcss postcss autoprefixer\nnpx tailwindcss init -p',
     },
   },
-    {
+  {
     title: 'Enable use of PostCSS in <style> blocks',
     body: () => (
       <p>
@@ -57,7 +57,7 @@ let steps = [
   };
   export default config;`,
     },
-  },  
+  },
   {
     title: 'Configure your template paths',
     body: () => (
@@ -175,7 +175,7 @@ UsingSvelteKit.layoutProps = {
   meta: {
     title: 'Install Tailwind CSS with SvelteKit',
     description: 'Setting up Tailwind CSS in a SvelteKit project.',
-    section: 'Getting Started',
+    section: 'Business',
   },
   Layout: DocumentationLayout,
   allowOverflow: false,

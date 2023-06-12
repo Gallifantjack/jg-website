@@ -1,6 +1,6 @@
+import { Steps } from '@/components/Steps'
 import { DocumentationLayout } from '@/layouts/DocumentationLayout'
 import { FrameworkGuideLayout } from '@/layouts/FrameworkGuideLayout'
-import { Steps } from '@/components/Steps'
 
 let steps = [
   {
@@ -204,7 +204,7 @@ UsingEmberJs.layoutProps = {
   meta: {
     title: 'Install Tailwind CSS With Ember.js',
     description: 'Setting up Tailwind CSS in an Ember.js project.',
-    section: 'Getting Started',
+    section: 'Business',
   },
   Layout: DocumentationLayout,
   allowOverflow: false,

@@ -1,6 +1,6 @@
+import { Steps } from '@/components/Steps'
 import { DocumentationLayout } from '@/layouts/DocumentationLayout'
 import { FrameworkGuideLayout } from '@/layouts/FrameworkGuideLayout'
-import { Steps } from '@/components/Steps'
 
 let steps = [
   {

@@ -86,7 +86,7 @@ UsingAstro.layoutProps = {
   meta: {
     title: 'Install Tailwind CSS with Astro',
     description: 'Setting up Tailwind CSS in an Astro project.',
-    section: 'Getting Started',
+    section: 'Business',
   },
   Layout: DocumentationLayout,
   allowOverflow: false,
