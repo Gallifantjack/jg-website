@@ -1,15 +1,14 @@
-import { CodeWindow } from '@/components/CodeWindow'
 import { Token } from '@/components/Code'
+import { CodeWindow } from '@/components/CodeWindow'
+import { useMedia } from '@/hooks/useMedia'
+import { createInViewPromise } from '@/utils/createInViewPromise'
+import { fit } from '@/utils/fit'
+import { wait } from '@/utils/wait'
+import clsx from 'clsx'
+import { debounce } from 'debounce'
 import { AnimateSharedLayout, motion, useAnimation } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
-import clsx from 'clsx'
-import { fit } from '@/utils/fit'
-import { debounce } from 'debounce'
-import { useMedia } from '@/hooks/useMedia'
-import { wait } from '@/utils/wait'
-import { createInViewPromise } from '@/utils/createInViewPromise'
-import { tokens, code } from '../../samples/hero.html?highlight'
-import colors from 'tailwindcss/colors'
+import { code, tokens } from '../../samples/hero.html?highlight'
 
 const CHAR_DELAY = 75
 const GROUP_DELAY = 1000
@@ -339,8 +338,7 @@ export function Hero() {
                 >
                   <motion.div layout={layout} className="mb-4" transition={TRANSITION}>
                     <Words bolder={step >= 3} layout={layout} transition={TRANSITION}>
-                      “Tailwind CSS is the only framework that I've seen scale on large teams. It’s
-                      easy to customize, adapts to any design, and the build size is tiny.”
+                      “Find what you love, and let it kill you”
                     </Words>
                   </motion.div>
                   <motion.div
@@ -363,7 +361,7 @@ export function Hero() {
                           : 'text-black dark:text-slate-300'
                       )}
                     >
-                      Sarah Dayan
+                      Charles Bukowski
                     </motion.p>
                     <motion.p
                       layout={layout}
@@ -376,7 +374,7 @@ export function Hero() {
                           : 'text-black dark:text-slate-300'
                       )}
                     >
-                      Staff Engineer, Algolia
+                      Writer
                     </motion.p>
                   </motion.div>
                 </motion.div>
