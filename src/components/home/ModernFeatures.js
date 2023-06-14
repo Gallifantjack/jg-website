@@ -132,7 +132,7 @@ export function ModernFeatures() {
           light={require('@/img/icons/home/modern-features.png').default.src}
           dark={require('@/img/icons/home/dark/modern-features.png').default.src}
         />
-        <Caption className="text-indigo-500 dark:text-indigo-400">Modern features</Caption>
+        <Caption className="text-indigo-500 dark:text-indigo-400">Featured Minds</Caption>
         <BigText>
           <Widont>Cutting-edge is our comfort zone.</Widont>
         </BigText>
