@@ -2,7 +2,14 @@
 
 ## TODO
 
-- Create quote database that could cycle through on homepage
+- problem with navbar to fix
+- tailwind cli 1 2 3 
+  -  ? use for process or explain
+- tabs in installationlayout
+- what to read next features equivalent
+  - similar below - books/authors
+- multiple icons smaller in framework guides
+  -> turn into authors / books 
 
 Based off:
 
