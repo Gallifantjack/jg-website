@@ -105,18 +105,19 @@ export function InstallationLayout({ children }) {
       <header id="header" className="mb-10 md:flex md:items-start">
         <div className="flex-auto max-w-4xl">
           <p className="mb-4 text-sm leading-6 font-semibold text-sky-500 dark:text-sky-400">
-            Installation
+            About P2P
           </p>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight dark:text-slate-200">
-            Get started with Tailwind CSS
+            Get started with P2P
           </h1>
           <p className="mt-4 text-lg text-slate-700 dark:text-slate-400">
-            Tailwind CSS works by scanning all of your HTML files, JavaScript components, and any
-            other templates for class names, generating the corresponding styles and then writing
-            them to a static CSS file.
+          At P2P, our mission is to distill short and simple principles from the world's most influential thinkers. 
+          We understand that books are filled with a wealth of knowledge, but we also recognize that 90% of the value and impact can come from just a few pages. 
+          That's why we meticulously filter, distill and design concise principles that capture the essence of what you need to know. 
+          
           </p>
           <p className="mt-4 text-lg text-slate-700 dark:text-slate-400">
-            It's fast, flexible, and reliable — with zero-runtime.
+          Short actionable insights that you can apply to your life.
           </p>
         </div>
       </header>

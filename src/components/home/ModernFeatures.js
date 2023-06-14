@@ -16,6 +16,33 @@ import { GridLockup } from '../GridLockup'
 import { lines as gridSample } from '../../samples/grid.html?highlight'
 import { lines as transformsSample } from '../../samples/transforms.html?highlight'
 import { lines as filtersSample } from '../../samples/filters.html?highlight'
+import { DocumentationLayout } from '@/layouts/DocumentationLayout'
+import { InstallationLayout } from '@/layouts/InstallationLayout'
+
+import { ReactComponent as AdonisLogo } from '@/img/guides/adonis.svg'
+import { ReactComponent as AngularLogoWhite } from '@/img/guides/angular-white.svg'
+import { ReactComponent as AngularLogo } from '@/img/guides/angular.svg'
+import { ReactComponent as AstroLogoWhite } from '@/img/guides/astro-white.svg'
+import { ReactComponent as AstroLogo } from '@/img/guides/astro.svg'
+import { ReactComponent as CraLogo } from '@/img/guides/cra.svg'
+import { ReactComponent as EmberLogo } from '@/img/guides/ember.svg'
+import { ReactComponent as GatsbyLogo } from '@/img/guides/gatsby.svg'
+import { ReactComponent as LaravelLogo } from '@/img/guides/laravel.svg'
+import { ReactComponent as MeteorLogo } from '@/img/guides/meteor.svg'
+import { ReactComponent as NextJsLogoWhite } from '@/img/guides/nextjs-white.svg'
+import { ReactComponent as NextJsLogo } from '@/img/guides/nextjs.svg'
+import { ReactComponent as NuxtJsLogo } from '@/img/guides/nuxtjs.svg'
+import { ReactComponent as ParcelLogo } from '@/img/guides/parcel.svg'
+import { ReactComponent as PhoenixLogo } from '@/img/guides/phoenix.svg'
+import { ReactComponent as RailsLogoWhite } from '@/img/guides/rails-white.svg'
+import { ReactComponent as RailsLogo } from '@/img/guides/rails.svg'
+import { ReactComponent as RemixLogoWhite } from '@/img/guides/remix-white.svg'
+import { ReactComponent as RemixLogo } from '@/img/guides/remix.svg'
+import { ReactComponent as SolidJSLogo } from '@/img/guides/solidjs.svg'
+import { ReactComponent as SvelteLogo } from '@/img/guides/svelte.svg'
+import { ReactComponent as SymfonyLogoWhite } from '@/img/guides/symfony-white.svg'
+import { ReactComponent as SymfonyLogo } from '@/img/guides/symfony.svg'
+import { ReactComponent as ViteLogo } from '@/img/guides/vite.svg'
 
 const lines = {
   'CSS Grid': gridSample,
@@ -97,19 +124,6 @@ function Block({ src, filter, ...props }) {
 }
 
 export function ModernFeatures() {
-  const [feature, setFeature] = useState('CSS Grid')
-
-  const animate = (transforms, grid) => {
-    if (feature === 'Transforms') {
-      return {
-        animate: transforms,
-      }
-    }
-    return {
-      animate: grid,
-    }
-  }
-
   return (
     <section id="modern-features">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
@@ -136,125 +150,121 @@ export function ModernFeatures() {
         <Link href="/docs/grid-template-columns" color="indigo" darkColor="gray">
           Learn more<span className="sr-only">, grid template columns</span>
         </Link>
-        <div className="mt-10">
-          <Tabs
-            tabs={tabs}
-            selected={feature}
-            onChange={setFeature}
-            className="text-indigo-600 dark:text-indigo-400"
-            iconClassName="text-indigo-500 dark:text-indigo-400"
-          />
-        </div>
+        <ul className="grid mt-10 grid-cols-1 gap-x-3 gap-y-5 sm:grid-cols-2 xl:grid-cols-3">
+          {[
+            {
+              name: 'Naval Ravikant',
+              slug: 'nextjs',
+              description: 'Full-featured React framework with great developer experience.',
+              logo: NextJsLogo,
+              logoDark: NextJsLogoWhite,
+            },
+            {
+              name: 'Steve Jobs',
+              slug: 'laravel',
+              description: 'PHP web application framework with expressive, elegant syntax.',
+              logo: LaravelLogo,
+            },
+            {
+              name: 'Mark Zuckerberg',
+              slug: 'vite',
+              description: 'Fast and modern development server and build tool.',
+              logo: ViteLogo,
+            },
+            {
+              name: 'Esther Perel',
+              slug: 'nuxtjs',
+              description: 'Intuitive Vue framework for building universal applications.',
+              logo: NuxtJsLogo,
+            },
+            {
+              name: 'TIm Ferriss',
+              slug: 'gatsby',
+              description: 'Framework for building static sites with React and GraphQL.',
+              logo: GatsbyLogo,
+            },
+            {
+              name: 'Elon Musk',
+              slug: 'solidjs',
+              description: 'A tool for building simple, performant, and reactive user interfaces.',
+              logo: SolidJSLogo,
+            },
+            {
+              name: 'Bill Gates',
+              slug: 'sveltekit',
+              description: 'The fastest way to build apps of all sizes with Svelte.js.',
+              logo: SvelteLogo,
+            },
+            {
+              name: 'Marcus Aurelius',
+              slug: 'angular',
+              description: 'Platform for building mobile and desktop web applications.',
+              logo: AngularLogo,
+              logoDark: AngularLogoWhite,
+            },
+            {
+              name: 'Ryan Holiday',
+              slug: 'ruby-on-rails',
+              description:
+                'Full-stack framework with all the tools needed to build amazing web apps.',
+              logo: RailsLogo,
+              logoDark: RailsLogoWhite,
+            },
+            ,
+          ].map(({ name, description, logo: Logo, logoDark: LogoDark, slug }) => (
+            <li key={name} className="relative flex flex-row-reverse">
+              <div className="peer group ml-6 flex-auto">
+                <h4 className="mb-2 leading-6 text-slate-900 font-semibold dark:text-slate-200">
+                  <Link
+                    href={`/docs/guides/${slug}`}
+                    className="before:absolute before:-inset-3 before:rounded-2xl"
+                  >
+                    {name}
+                    <svg
+                      viewBox="0 0 3 6"
+                      className="ml-3 w-auto h-1.5 overflow-visible inline -mt-px text-slate-400 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100"
+                    >
+                      <path
+                        d="M0 0L3 3L0 6"
+                        fill="none"
+                        strokeWidth="2"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </Link>
+                </h4>
+                <p className="text-sm leading-6 text-slate-700 dark:text-slate-400">
+                  {description}
+                </p>
+              </div>
+              <div className="flex-none w-14 h-14 rounded-full bg-white ring-1 ring-slate-900/5 shadow flex items-center justify-center overflow-hidden dark:bg-slate-800 dark:highlight-white/5">
+                {LogoDark !== undefined ? (
+                  <>
+                    <Logo className="block dark:hidden" />
+                    <LogoDark className="hidden dark:block" />
+                  </>
+                ) : (
+                  <Logo className="dark:block" />
+                )}
+              </div>
+              <div className="absolute -z-10 -inset-3 rounded-2xl bg-slate-50 dark:bg-slate-800/50 opacity-0 peer-hover:opacity-100" />
+            </li>
+          ))}
+        </ul>
       </div>
-      <GridLockup
-        className="mt-10 xl:mt-2"
-        beams={0}
-        left={
-          <div className="flex text-4xl font-black lg:mt-10 xl:mt-18">
-            <div className="w-full flex-none grid grid-cols-3 grid-rows-2 gap-8">
-              <Block
-                src={require('@/img/modern-features/1.jpg').default.src}
-                filter={feature === 'Filters' && 'blur'}
-                {...animate(
-                  { scaleX: 1.1, scaleY: 1.1, rotate: -6, x: 0, y: 0 },
-                  { scaleX: 1, scaleY: 1, rotate: 0, x: 0, y: 0 }
-                )}
-              />
-              <Block
-                className="col-start-3 col-end-4 row-start-2 row-end-3"
-                src={require('@/img/modern-features/2.jpg').default.src}
-                filter={feature === 'Filters' && 'sepia'}
-                {...animate(
-                  {
-                    scaleX: 0.75,
-                    scaleY: 0.75,
-                    rotate: 6,
-                    y: 60,
-                    x: 8,
-                  },
-                  { scaleX: 1, scaleY: 1, rotate: 0, y: 0, x: 0 }
-                )}
-              />
-              <Block
-                className="origin-right"
-                src={require('@/img/modern-features/3.jpg').default.src}
-                filter={feature === 'Filters' && 'saturate-200'}
-                {...animate(
-                  { scaleX: 1.5, x: 0, y: 44, rotate: 0 },
-                  { scaleX: 1, x: 0, y: 0, rotate: 0 }
-                )}
-              />
-              <Block
-                src={require('@/img/modern-features/4.jpg').default.src}
-                filter={feature === 'Filters' && 'grayscale'}
-                {...animate({ x: 0, y: 96, rotate: 0 }, { x: 0, y: 0, rotate: 0 })}
-              />
-              <motion.div
-                className={clsx(
-                  'relative bg-white rounded-lg shadow-lg overflow-hidden col-start-2 col-end-4 row-start-1 row-end-2 transition-[filter] duration-500',
-                  feature === 'Filters' && 'invert'
-                )}
-                initial={false}
-                {...animate(
-                  { opacity: 1, x: 80, y: 16, rotate: 0 },
-                  { opacity: 1, x: 0, y: 0, rotate: 0 }
-                )}
-              >
-                <img
-                  src={require('@/img/modern-features/5.jpg').default.src}
-                  alt=""
-                  className="absolute inset-0 w-full h-full object-cover"
-                  decoding="async"
-                  loading="lazy"
-                />
-              </motion.div>
-            </div>
-          </div>
-        }
-        right={
-          <CodeWindow>
-            <AnimatePresence initial={false} exitBeforeEnter>
-              <motion.div
-                key={feature}
-                className="w-full flex-auto flex min-h-0"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-              >
-                <CodeWindow.Code2 lines={lines[feature].length}>
-                  {lines[feature].map((tokens, lineIndex) => (
-                    <Fragment key={lineIndex}>
-                      {tokens.map((token, tokenIndex) => {
-                        if (token.types[token.types.length - 1] === 'attr-value') {
-                          return (
-                            <span key={tokenIndex} className={getClassNameForToken(token)}>
-                              {token.content.split(/\[([^\]]+)\]/).map((part, i) =>
-                                i % 2 === 0 ? (
-                                  part
-                                ) : (
-                                  <span key={i} className="code-highlight bg-code-highlight">
-                                    {part}
-                                  </span>
-                                )
-                              )}
-                            </span>
-                          )
-                        }
-                        return (
-                          <span key={tokenIndex} className={getClassNameForToken(token)}>
-                            {token.content}
-                          </span>
-                        )
-                      })}
-                      {'\n'}
-                    </Fragment>
-                  ))}
-                </CodeWindow.Code2>
-              </motion.div>
-            </AnimatePresence>
-          </CodeWindow>
-        }
-      />
     </section>
   )
+}
+
+ModernFeatures.layoutProps = {
+  meta: {
+    title: 'Framework Guides',
+    description:
+      'Framework-specific guides that cover our recommended approach to installing Tailwind CSS in a number of popular environments.',
+    section: 'Business',
+  },
+  Layout: DocumentationLayout,
+  allowOverflow: false,
 }
