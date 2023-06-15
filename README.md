@@ -3,14 +3,18 @@
 ## TODO
 
 - problem with navbar to fix
+- small logos are not bounded like other index components when on wide etc
 - add logos to modernfeatures (jpg->svg adobeexpress online)
-- tailwind cli 1 2 3 
+- installation doc -> about or explaining
+  - use tailwind cli 1 2 3 
   -  ? use for process or explain
-- tabs in installationlayout
-- what to read next features equivalent
-  - similar below - books/authors
-- multiple icons smaller in framework guides
-  -> turn into authors / books 
+- Hero image
+- fill in theme txt files
+
+##
+Create short snappy principles in the docs
+Then expand on some of them in the Blog bit
+
 
 Based off:
 

@@ -10,4 +10,5 @@ export const documentationNav = {
   History: [pages['managing_oneself_drucker_99']],
   Philosophy: [pages['managing_oneself_drucker_99']],
   Economics: [pages['history_test']],
+  Autobiographies: [pages['greenlights_mcconaughey_20']],
 }
