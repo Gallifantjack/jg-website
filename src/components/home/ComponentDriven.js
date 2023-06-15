@@ -5,7 +5,6 @@ import {
   Paragraph,
   Link,
   Widont,
-  InlineCode,
 } from '@/components/home/common'
 import { GridLockup } from '@/components/GridLockup'
 import { CodeWindow, getClassNameForToken } from '@/components/CodeWindow'
@@ -14,34 +13,6 @@ import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayoutEffect'
 import { AnimatePresence, motion } from 'framer-motion'
 import clsx from 'clsx'
 
-import { useInView } from 'react-intersection-observer'
-
-import { lines as reactMoviesSample } from '../../samples/react/movies.jsx?highlight'
-import { lines as reactNavSample } from '../../samples/react/nav.jsx?highlight'
-import { lines as reactNavItemSample } from '../../samples/react/nav-item.jsx?highlight'
-import { lines as reactListSample } from '../../samples/react/list.jsx?highlight'
-import { lines as reactListItemSample } from '../../samples/react/list-item.jsx?highlight'
-
-import { lines as vueMoviesSample } from '../../samples/vue/movies.html?highlight'
-import { lines as vueNavSample } from '../../samples/vue/nav.html?highlight'
-import { lines as vueNavItemSample } from '../../samples/vue/nav-item.html?highlight'
-import { lines as vueListSample } from '../../samples/vue/list.html?highlight'
-import { lines as vueListItemSample } from '../../samples/vue/list-item.html?highlight'
-
-import { lines as angularMoviesSample } from '../../samples/angular/movies.js?highlight'
-import { lines as angularNavSample } from '../../samples/angular/nav.js?highlight'
-import { lines as angularNavItemSample } from '../../samples/angular/nav-item.js?highlight'
-import { lines as angularListSample } from '../../samples/angular/list.js?highlight'
-import { lines as angularListItemSample } from '../../samples/angular/list-item.js?highlight'
-
-import { lines as bladeMoviesSample } from '../../samples/blade/movies.html?highlight'
-import { lines as bladeNavSample } from '../../samples/blade/nav.html?highlight'
-import { lines as bladeNavItemSample } from '../../samples/blade/nav-item.html?highlight'
-import { lines as bladeListSample } from '../../samples/blade/list.html?highlight'
-import { lines as bladeListItemSample } from '../../samples/blade/list-item.html?highlight'
-
-import { lines as css } from '../../samples/apply.txt?highlight=css'
-import { lines as html } from '../../samples/apply.html?highlight'
 
 function ComponentExample({ framework }) {
   const [activeTab, setActiveTab] = useState(0)
@@ -211,7 +182,6 @@ export function ComponentDriven() {
           Learn more<span className="sr-only">, reusing styles</span>
         </Link>
       </div>
-      <GridLockup.Container className="mt-10 xl:mt-2" beams={8}>
         <GridLockup.Grid
           left={
             <div className="relative z-10 bg-white rounded-xl shadow-xl ring-1 ring-slate-900/5 divide-y divide-slate-100 my-auto xl:mt-18 dark:bg-slate-800 dark:divide-slate-200/5 dark:highlight-white/10">
@@ -336,7 +306,6 @@ export function ComponentDriven() {
           }
           right={<ComponentExample framework={framework} />}
         />
-      </GridLockup.Container>
     </section>
   )
 }

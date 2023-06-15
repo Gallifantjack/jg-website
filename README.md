@@ -3,6 +3,7 @@
 ## TODO
 
 - problem with navbar to fix
+- add logos to modernfeatures (jpg->svg adobeexpress online)
 - tailwind cli 1 2 3 
   -  ? use for process or explain
 - tabs in installationlayout

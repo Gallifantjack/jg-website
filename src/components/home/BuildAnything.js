@@ -78,6 +78,8 @@ const content = {
 
 export function BuildAnything() {
   const [theme, setTheme] = useState('Simple')
+  const [themeContent, setThemeContent] = useState('') // New state variable for theme content
+
   let classIndex = 0
   let contentIndex = 0
 
@@ -86,6 +88,19 @@ export function BuildAnything() {
   useEffect(() => {
     initial.current = false
   }, [])
+
+  // New useEffect hook for fetching the theme.txt file
+  useEffect(() => {
+    // Ensure theme value is capitalized for fetch path
+    const themeCapitalized = theme.charAt(0).toUpperCase() + theme.slice(1);
+    
+    fetch(`/themes/${themeCapitalized}.txt`) 
+      .then((response) => response.text())
+      .then((data) => {
+        setThemeContent(data);
+      });
+  }, [theme]);  // <- Dependency array. Fetch will run every time `theme` changes.
+  
 
   return (
     <section id="build-anything">
@@ -123,10 +138,7 @@ export function BuildAnything() {
         right={
           <CodeWindow>
             <CodeWindow.Code2>
-              Principles can go in here <br />
-              1. Principle number one
-              <br />
-              The logic behind principle number one is <br />
+              {themeContent} {/* Display the content of theme.txt */}
             </CodeWindow.Code2>
           </CodeWindow>
         }

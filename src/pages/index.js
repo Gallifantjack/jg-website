@@ -198,7 +198,6 @@ export default function Home() {
         <BuildAnything />
         <ComponentDriven />
         <ModernFeatures />
-        <ReadyMadeComponents />
       </div>
       <Footer />
     </>

@@ -545,24 +545,6 @@ export function HtmlZenGarden({ theme }) {
                     </motion.div>
                   </div>
                 </div>
-                <div className={`relative w-full ${getThemeValue('smallprint.container') || ''}`}>
-                  {Object.keys(themes).map((name) => (
-                    <motion.p
-                      layout
-                      key={name}
-                      className={`inline-flex align-top ${themes[name].smallprint.inner || ''} ${
-                        theme === name ? '' : 'absolute bottom-0 left-0'
-                      }`}
-                      initial={false}
-                      animate={{ opacity: theme === name ? 1 : 0 }}
-                    >
-                      <span>
-                        Principle in here? <br />
-                        Or some text on what can learn from him
-                      </span>
-                    </motion.p>
-                  ))}
-                </div>
               </div>
             </motion.div>
           </motion.div>
