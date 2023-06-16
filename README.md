@@ -4,10 +4,8 @@
 
 - problem with navbar to fix
 - small logos are not bounded like other index components when on wide etc
-- add logos to modernfeatures (jpg->svg adobeexpress online)
-- installation doc -> about or explaining
-  - use tailwind cli 1 2 3 
-  -  ? use for process or explain
+- add logos to modernfeatures (jpg->svg adobeexpress online) ? working right
+- installation doc -> why slow load vs raw slug
 - Hero image
 - fill in theme txt files
 

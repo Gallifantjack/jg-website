@@ -13,6 +13,7 @@ import clsx from 'clsx'
 import Head from 'next/head'
 import NextLink from 'next/link'
 import styles from './index.module.css'
+import { EditorTools } from '@/components/home/EditorTools'
 
 function Header() {
   return (
@@ -140,7 +141,6 @@ function Header() {
           </div>
         </div>
       </div>
-      <Hero />
     </header>
   )
 }

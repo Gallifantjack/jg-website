@@ -42,3 +42,11 @@
   font-style: normal;
   src: url('../fonts/Ubuntu-Mono-bold.woff2') format('woff2');
 }
+
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 600;
+  src: url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+}

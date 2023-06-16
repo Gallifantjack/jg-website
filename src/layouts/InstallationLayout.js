@@ -5,20 +5,16 @@ import Link from 'next/link'
 import { IconContainer } from '@/components/home/common'
 
 let tabs = {
-  'Tailwind CLI': '/docs/installation',
-  'Using PostCSS': '/docs/installation/using-postcss',
-  'Framework Guides': '/docs/installation/framework-guides',
-  'Play CDN': '/docs/installation/play-cdn',
+  'P2P\'s Goal': '/docs/installation',
 }
 
 let readNext = [
   {
-    title: 'Utility-First Fundamentals',
-    href: '/docs/utility-first',
+    title: 'Naval Ravikant',
+    href: '/docs/navalmanack_naval_ravikant_22',
     body: () => (
       <p>
-        Using a utility-first workflow to build complex components from a constrained set of
-        primitive utilities.
+        The co-founder, chairman and former CEO of AngelList.
       </p>
     ),
     icon: {
@@ -28,71 +24,73 @@ let readNext = [
     },
   },
   {
-    title: 'Responsive Design',
-    href: '/docs/responsive-design',
+    title: 'Naval Ravikant',
+    href: '/docs/navalmanack_naval_ravikant_22',
     body: () => (
       <p>
-        Build fully responsive user interfaces that adapt to any screen size using responsive
-        modifiers.
+        The co-founder, chairman and former CEO of AngelList.
       </p>
     ),
     icon: {
       className: 'dark:bg-indigo-500 dark:highlight-white/20',
-      light: require('@/img/icons/home/mobile-first.png').default.src,
-      dark: require('@/img/icons/home/dark/mobile-first.png').default.src,
+      light: require('@/img/icons/home/utility-first.png').default.src,
+      dark: require('@/img/icons/home/dark/utility-first.png').default.src,
     },
   },
   {
-    title: 'Hover, Focus & Other States',
-    href: '/docs/hover-focus-and-other-states',
+    title: 'Naval Ravikant',
+    href: '/docs/navalmanack_naval_ravikant_22',
     body: () => (
       <p>
-        Style elements in interactive states like hover, focus, and more using conditional
-        modifiers.
+        The co-founder, chairman and former CEO of AngelList.
       </p>
     ),
     icon: {
-      className: 'dark:bg-blue-500 dark:highlight-white/20',
-      light: require('@/img/icons/home/state-variants.png').default.src,
-      dark: require('@/img/icons/home/dark/state-variants.png').default.src,
+      className: 'dark:bg-indigo-500 dark:highlight-white/20',
+      light: require('@/img/icons/home/utility-first.png').default.src,
+      dark: require('@/img/icons/home/dark/utility-first.png').default.src,
     },
   },
   {
-    title: 'Dark Mode',
-    href: '/docs/dark-mode',
-    body: () => (
-      <p>Optimize your site for dark mode directly in your HTML using the dark mode modifier.</p>
-    ),
-    icon: {
-      className: 'dark:bg-slate-600 dark:highlight-white/20',
-      light: require('@/img/icons/home/dark-mode.png').default.src,
-      dark: require('@/img/icons/home/dark/dark-mode.png').default.src,
-    },
-  },
-  {
-    title: 'Reusing Styles',
-    href: '/docs/reusing-styles',
+    title: 'Naval Ravikant',
+    href: '/docs/navalmanack_naval_ravikant_22',
     body: () => (
       <p>
-        Manage duplication and keep your projects maintainable by creating reusable abstractions.
+        The co-founder, chairman and former CEO of AngelList.
       </p>
     ),
     icon: {
-      className: 'dark:bg-sky-500 dark:highlight-white/20',
-      light: require('@/img/icons/home/component-driven.png').default.src,
-      dark: require('@/img/icons/home/dark/component-driven.png').default.src,
+      className: 'dark:bg-indigo-500 dark:highlight-white/20',
+      light: require('@/img/icons/home/utility-first.png').default.src,
+      dark: require('@/img/icons/home/dark/utility-first.png').default.src,
     },
   },
   {
-    title: 'Customizing the Framework',
-    href: '/docs/adding-custom-styles',
+    title: 'Naval Ravikant',
+    href: '/docs/navalmanack_naval_ravikant_22',
     body: () => (
-      <p>Customize the framework to match your brand and extend it with your own custom styles.</p>
+      <p>
+        The co-founder, chairman and former CEO of AngelList.
+      </p>
     ),
     icon: {
-      className: 'dark:bg-pink-500 dark:highlight-white/30',
-      light: require('@/img/icons/home/customization.png').default.src,
-      dark: require('@/img/icons/home/dark/customization.png').default.src,
+      className: 'dark:bg-indigo-500 dark:highlight-white/20',
+      light: require('@/img/icons/home/utility-first.png').default.src,
+      dark: require('@/img/icons/home/dark/utility-first.png').default.src,
+    },
+  },
+  {
+    title: 'Naval Ravikant',
+    href: '/docs/navalmanack_naval_ravikant_22',
+    body: () => (
+      <p>
+        The co-founder, chairman and former CEO of AngelList.
+      </p>
+    ),
+    icon: {
+      className: 'dark:bg-indigo-500 dark:highlight-white/20',
+      light: require('@/img/icons/home/utility-first.png').default.src,
+      dark: require('@/img/icons/home/dark/utility-first.png').default.src,
     },
   },
 ]
@@ -123,12 +121,6 @@ export function InstallationLayout({ children }) {
       </header>
       <section className="mb-16 relative">
         <div className="relative z-10">
-          <h2
-            data-docsearch-ignore
-            className="text-slate-900 text-xl tracking-tight font-bold mb-3 dark:text-slate-200"
-          >
-            Installation
-          </h2>
           <div className="flex overflow-auto mb-6 -mx-4 sm:-mx-6">
             <div className="flex-none min-w-full px-4 sm:px-6">
               <ul className="border-b border-slate-200 space-x-6 flex whitespace-nowrap dark:border-slate-200/5">
@@ -159,12 +151,11 @@ export function InstallationLayout({ children }) {
 
       <section className="relative">
         <h2 className="text-slate-900 text-xl tracking-tight font-bold mb-3 dark:text-slate-200">
-          What to read next
+          Where to start
         </h2>
         <div className="mb-10 max-w-2xl prose prose-slate xl:mb-0 dark:prose-dark">
           <p>
-            Get familiar with some of the core concepts that make Tailwind CSS different from
-            writing traditional CSS.
+            Get familiar with some of the core concepts from these 6 great minds.
           </p>
         </div>
         <ul className="mt-10 grid grid-cols-1 gap-x-16 gap-y-8 xl:grid-cols-2 xl:gap-y-10">

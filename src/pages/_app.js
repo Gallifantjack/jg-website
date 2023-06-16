@@ -87,6 +87,7 @@ export default function App({ Component, pageProps, router }) {
         <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/feeds/feed.xml" />
         <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="/feeds/atom.xml" />
         <link rel="alternate" type="application/json" title="JSON Feed" href="/feeds/feed.json" />
+        <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
       </Head>
       <SearchProvider>
         {showHeader && (

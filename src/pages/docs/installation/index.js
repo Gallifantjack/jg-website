@@ -5,86 +5,55 @@ import Link from 'next/link'
 
 let steps = [
   {
-    title: 'Install Tailwind CSS',
+    title: 'All Signal, No Noise',
     body: () => (
       <p>
-        Install <code>tailwindcss</code> via npm, and create your <code>tailwind.config.js</code>{' '}
-        file.
+        We live in a world of  <strong>increasing noise</strong> that maximises consumption. 
+        But how much of what we consume do we remember, let alone use?
       </p>
     ),
     code: {
-      name: 'Terminal',
+      name: 'P2P',
       lang: 'terminal',
-      code: 'npm install -D tailwindcss\nnpx tailwindcss init',
+      code: 'Modern life focuses on increasing input',
     },
   },
   {
-    title: 'Configure your template paths',
+    title: 'Principles are timeless',
     body: () => (
       <p>
-        Add the paths to all of your template files in your <code>tailwind.config.js</code> file.
+        It is not about <code>how many</code> books you read but <strong>how</strong> you read.  
       </p>
     ),
     code: {
-      name: 'tailwind.config.js',
-      lang: 'js',
-      code: `  /** @type {import('tailwindcss').Config} */
-  module.exports = {
->   content: ["./src/**/*.{html,js}"],
-    theme: {
-      extend: {},
-    },
-    plugins: [],
-  }`,
-    },
-  },
-  {
-    title: 'Add the Tailwind directives to your CSS',
-    body: () => (
-      <p>
-        Add the <code>@tailwind</code> directives for each of Tailwind’s layers to your main CSS
-        file.
-      </p>
-    ),
-    code: {
-      name: 'src/input.css',
-      lang: 'css',
-      code: '@tailwind base;\n@tailwind components;\n@tailwind utilities;',
-    },
-  },
-  {
-    title: 'Start the Tailwind CLI build process',
-    body: () => <p>Run the CLI tool to scan your template files for classes and build your CSS.</p>,
-    code: {
-      name: 'Terminal',
+      name: 'P2P',
       lang: 'terminal',
-      code: 'npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch',
+      code: `Principles maximise output`,
     },
   },
   {
-    title: 'Start using Tailwind in your HTML',
+    title: 'Re-focussing on output',
     body: () => (
       <p>
-        Add your compiled CSS file to the <code>{'<head>'}</code> and start using Tailwind’s utility
-        classes to style your content.
+        We <strong>condense and clarify</strong> foundational topics starting from first principles, giving you guides to navigating complex topics.
       </p>
     ),
     code: {
-      name: 'src/index.html',
-      lang: 'html',
-      code: `  <!doctype html>
-  <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
->   <link href="/dist/output.css" rel="stylesheet">
-  </head>
-  <body>
->   <h1 class="text-3xl font-bold underline">
->     Hello world!
->   </h1>
-  </body>
-  </html>`,
+      name: 'P2P',
+      lang: 'terminal',
+      code: 'The goal is not facts but understanding.',
+    },
+  },
+  {
+    title: 'Re-focussing on output',
+    body: () => (
+    <p>Hard-earned lessons that have been transformed into timeless wisdom. Save yourself hours of reading, and learn just what is essential.
+    </p>
+    ),
+    code: {
+      name: 'P2P',
+      lang: 'terminal',
+      code: 'P2P\'s goal is not knowledge but action.', 
     },
   },
 ]
@@ -96,13 +65,6 @@ export default function TailwindCli({ code }) {
         id="content-wrapper"
         className="relative z-10 max-w-3xl mb-16 prose prose-slate dark:prose-dark"
       >
-        <h3 className="sr-only">Installing Tailwind CLI</h3>
-        <p>
-          The simplest and fastest way to get up and running with Tailwind CSS from scratch is with
-          the Tailwind CLI tool. The CLI is also available as a{' '}
-          <Link href="/blog/standalone-cli">standalone executable</Link> if you want to use it
-          without installing Node.js.
-        </p>
       </div>
       <Steps level={4} steps={steps} code={code} />
       {/*
