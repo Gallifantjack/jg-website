@@ -1,6 +1,8 @@
 import { CodeWindow } from '@/components/CodeWindow'
 import { HtmlZenGarden } from '@/components/HtmlZenGarden'
 import { Tabs } from '@/components/Tabs'
+import ReactMarkdown from 'react-markdown'
+
 import {
   BigText,
   Caption,
@@ -94,7 +96,7 @@ export function BuildAnything() {
     // Ensure theme value is capitalized for fetch path
     const themeCapitalized = theme.charAt(0).toUpperCase() + theme.slice(1);
     
-    fetch(`/themes/${themeCapitalized}.txt`) 
+    fetch(`/themes/${themeCapitalized}.md`) 
       .then((response) => response.text())
       .then((data) => {
         setThemeContent(data);
@@ -138,7 +140,7 @@ export function BuildAnything() {
         right={
           <CodeWindow>
             <CodeWindow.Code2>
-              {themeContent} {/* Display the content of theme.txt */}
+              <ReactMarkdown>{themeContent}</ReactMarkdown>
             </CodeWindow.Code2>
           </CodeWindow>
         }

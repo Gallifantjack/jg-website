@@ -424,7 +424,7 @@ export function HtmlZenGarden({ theme }) {
                       initial={false}
                       animate={{ opacity: theme === 'Simple' ? 1 : 0 }}
                     >
-                      <span className="hidden sm:inline whitespace-pre">Ray Dalio </span>
+                      <span className="hidden sm:inline whitespace-pre">Naval Ravikant </span>
                     </motion.h2>
                     <motion.h2
                       layout
@@ -435,7 +435,7 @@ export function HtmlZenGarden({ theme }) {
                       initial={false}
                       animate={{ opacity: theme === 'Economics' ? 1 : 0 }}
                     >
-                      <span className="hidden sm:inline whitespace-pre">Warren Buffett </span>
+                      <span className="hidden sm:inline whitespace-pre">Ray Dalio </span>
                     </motion.h2>
                     <motion.h2
                       layout
@@ -457,7 +457,7 @@ export function HtmlZenGarden({ theme }) {
                       initial={false}
                       animate={{ opacity: theme === 'History' ? 1 : 0 }}
                     >
-                      <span className="hidden sm:inline whitespace-pre">Steve Jobs </span>
+                      <span className="hidden sm:inline whitespace-pre">Matthew McConaughey </span>
                     </motion.h2>
                   </div>
                   <div className={clsx('relative', themes[theme].price)}>
@@ -511,7 +511,7 @@ export function HtmlZenGarden({ theme }) {
                         theme === 'Simple' ? '' : 'absolute bottom-0 left-0'
                       }`}
                     >
-                      Founder of Bridgewater Associates
+                      Founder of AngelList
                     </motion.div>
                     <motion.div
                       layout
@@ -521,7 +521,7 @@ export function HtmlZenGarden({ theme }) {
                         theme === 'Business' ? '' : 'absolute bottom-0 left-0'
                       }`}
                     >
-                      Founder of Berkshire Hathaway
+                      Emperor of Rome
                     </motion.div>
                     <motion.div
                       layout
@@ -531,7 +531,7 @@ export function HtmlZenGarden({ theme }) {
                         theme === 'Economics' ? '' : 'absolute bottom-0 left-0'
                       }`}
                     >
-                      Emperor of Rome
+                      Founder of Bridgewater Associates
                     </motion.div>
                     <motion.div
                       layout
@@ -541,7 +541,7 @@ export function HtmlZenGarden({ theme }) {
                         theme === 'History' ? '' : 'absolute bottom-0 left-0'
                       }`}
                     >
-                      Founder of Apple
+                      Actor/Writer
                     </motion.div>
                   </div>
                 </div>
