@@ -72,34 +72,35 @@ export default function Resources() {
     <BasicLayout>
       <header className="mb-20 max-w-xl">
         <p className="mb-4 text-sm leading-6 font-semibold text-sky-500 dark:text-sky-400">
-          Resources
+          About
         </p>
         <h1 className="mb-2 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-slate-200">
-          Everything else you need to build awesome Tailwind CSS websites
+          P2P's Goal
         </h1>
         <p className="text-lg text-slate-700 dark:text-slate-400">
-          We think Tailwind is an amazing CSS framework, but you need more than just a CSS framework
-          to produce visually awesome work.
+          Our mission is to distill short and simple principles from the world's most influential thinkers.
         </p>
       </header>
 
       <div className="space-y-16">
         <section>
           <h2 className="mb-2 text-2xl leading-7 tracking-tight text-slate-900 font-bold dark:text-slate-200">
-            Design resources
+            As simple as possible, but no simpler.
           </h2>
           <div className="mb-10 prose prose-slate text-slate-600 max-w-3xl dark:prose-dark">
+            <p> 
+            We understand that books are filled with a wealth of knowledge, but we also recognize that 90% of the value and impact can come from just a few pages. 
+            That's why we meticulously filter, distill and design concise principles that capture the essence of what you need to know.
+            </p>
             <p>
-              Design is hard so we made a few resources to help you with it. These resources are a
-              great way to help you with your designs and a great way to support the development of
-              the framework.
+            Short actionable insights that you can apply to your life.
             </p>
           </div>
 
           <ul className="sm:space-y-6">
             {[
               {
-                title: 'Refactoring UI',
+                title: 'Shifting the focus from input to output',
                 description: 'Learn UI Design',
                 images: [
                   require('@/img/resources/refactoringui-small@75.jpg').default.src,
@@ -110,19 +111,18 @@ export default function Resources() {
                 body: (
                   <>
                     <p>
-                      Refactoring UI is a design-for-developers book + video series put together by
-                      Adam Wathan and Steve Schoger. It covers literally everything we know about
-                      making things look awesome.
+                    We live in a world of increasing noise that maximises consumption. 
+                    But how much of what we consume do we remember, let alone use?
                     </p>
                     <p>
-                      Almost 10,000 people have picked it up so far and have all sorts of awesome
-                      things to say about how it helped them improve their work.
+                    It is not about how many books you read, 
+                    <span className="font-semibold"> but how you read.</span>
                     </p>
                   </>
                 ),
               },
               {
-                title: 'Tailwind UI',
+                title: 'Not facts but frameworks',
                 description: 'Beautiful UI components, crafted by the creators of Tailwind CSS',
                 images: [
                   require('@/img/resources/tailwindui-small@75.jpg').default.src,
@@ -133,13 +133,10 @@ export default function Resources() {
                 body: (
                   <>
                     <p>
-                      Tailwind UI is a collection of professionally designed, pre-built, fully
-                      responsive HTML snippets you can drop into your Tailwind projects.
+                    We condense and clarify foundational topics starting from first principles, giving you guides to navigating complex topics.
                     </p>
                     <p>
-                      There are currently over 550 components available in three different
-                      categories (Marketing, Application UI and E-commerce) and we’re always adding
-                      more.
+                    Hard-earned lessons that have been transformed into timeless wisdom. Save yourself hours of reading, and learn just what is essential.
                     </p>
                   </>
                 ),
@@ -187,8 +184,7 @@ export default function Resources() {
           </h2>
           <div className="mb-10 prose prose-slate text-slate-600 max-w-3xl dark:prose-dark">
             <p>
-              Tailwind isn’t the only open-source project we maintain. We’ve made a few other
-              resources to help you with your design and development workflow.
+            Our goal is not knowledge but action. Get familiar with some of the core concepts from these great minds.
             </p>
           </div>
 

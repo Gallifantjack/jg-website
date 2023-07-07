@@ -125,8 +125,8 @@ export function NavItems() {
   return (
     <>
       <li>
-        <Link href="/docs/installation" className="hover:text-sky-500 dark:hover:text-sky-400">
-          Docs
+        <Link href="/resources" className="hover:text-sky-500 dark:hover:text-sky-400">
+          Get Started
         </Link>
       </li>
       <li>
@@ -134,17 +134,17 @@ export function NavItems() {
           href="https://tailwindui.com/?ref=top"
           className="hover:text-sky-500 dark:hover:text-sky-400"
         >
-          Components
+          What's New
         </a>
       </li>
       <li>
         <Link href="/blog" className="hover:text-sky-500 dark:hover:text-sky-400">
-          Blog
+          Pages
         </Link>
       </li>
       <li>
         <Link href="/showcase" className="hover:text-sky-500 dark:hover:text-sky-400">
-          Showcase
+          Principles
         </Link>
       </li>
     </>

@@ -221,7 +221,7 @@
   },
   { "source": "/docs/editor-support", "destination": "/docs/editor-setup", "permanent": false },
   { "source": "/docs/breakpoints", "destination": "/docs/screens", "permanent": false },
-  { "source": "/docs", "destination": "/docs/installation", "permanent": false },
+  { "source": "/docs", "destination": "/resources", "permanent": false },
   {
     "source": "/docs/placeholder-color",
     "destination": "/docs/hover-focus-and-other-states#placeholder-text",
