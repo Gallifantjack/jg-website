@@ -8,10 +8,7 @@ export default function Home() {
     <>
       <Head>
         <title>Jack Gallifant</title>
-        <meta
-          name="description"
-          content="Building a better future with AI | Health Equity | Physiology."
-        />
+        <meta name="description" content="Building a better future with AI." />
       </Head>
       <TransitionEffect />
       <main className="flex items-center w-full min-h-screen sm:items-start">
