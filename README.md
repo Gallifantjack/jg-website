@@ -2,31 +2,25 @@
 
 ## TODO
 
-- problem with navbar to fix
-- small logos are not bounded like other index components when on wide etc
-- add logos to modernfeatures (jpg->svg adobeexpress online) ? working right
-- installation doc -> why slow load vs raw slug
-- Hero image
-- fill in theme txt files
+- Home page
+  - Hero image 
+  - About
+    - if move to about page then need new one
+  - images for projects about
+  - sort footer (may need different for each page)
+  - TEDx video
+  - Search
+    - See if can filter what is searched
+    - If not, then remove all unnecessary links so search is not screwed up
+- About
+  - create dedicated about page
+  - maybe use current home version??
+  - need to sort doc sidebar for current one
+  - add experience section from old website
+- Projects
+  - make videos for projects
+  - add thumbnails square
+- navbar
+  - Logo 
+  - google scholar / linked in / git
 
-##
-Create short snappy principles in the docs
-Then expand on some of them in the Blog bit
-
-
-Based off:
-
-- https://tailwindcss.com/
-- https://tx.shadcn.com/
-
-- react email
-
-## Plan
-
-- find old website for info
-- find old website for images
-- sketch out new website here in markdown
-- think about setting up for p2p.jackgallifant.com and ai.jackgallifant.com and jackgallifant.com
-  - can integrate new website with this +
-- need to think about distribution
-  - convertkit worth more than react email? how disseminate easiest?

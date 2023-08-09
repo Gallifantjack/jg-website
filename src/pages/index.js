@@ -14,6 +14,7 @@ import Head from 'next/head'
 import NextLink from 'next/link'
 import styles from './index.module.css'
 import { EditorTools } from '@/components/home/EditorTools'
+import Resources from './resources'
 
 function Header() {
   return (
@@ -81,23 +82,21 @@ function Header() {
         </div>
         <div className="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32">
           <h1 className="text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white">
-            A more permanent solution to timeless wisdom.
+            Dr. Jack Gallifant
           </h1>
           <p className="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">
-            The principles of great minds like{' '}
+            AI can unlock clinical insights but also
+            {'  '}
             <code className="font-mono font-medium text-sky-500 dark:text-sky-400">
-              Warren Buffett
+             perpetuate biases at scale.
+            {' '}
+            </code> 
+            I work to identify, map, and reduce disparities, facilitating 
+            {'  '}
+            <code className="font-mono font-medium text-sky-500 dark:text-sky-400">
+            safe AI deployment for all.
+            {' '}
             </code>
-            ,{' '}
-            <code className="font-mono font-medium text-sky-500 dark:text-sky-400">Ray Dalio</code>,{' '}
-            <code className="font-mono font-medium text-sky-500 dark:text-sky-400">
-              Charlie Munger
-            </code>{' '}
-            and{' '}
-            <code className="font-mono font-medium text-sky-500 dark:text-sky-400">
-              Marcus Aurelius
-            </code>{' '}
-            that are quick to read and easy to remember.
           </p>
           <div className="mt-6 sm:mt-10 flex justify-center space-x-6 text-sm">
             <NextLink
@@ -152,52 +151,20 @@ export default function Home() {
         <meta
           key="twitter:title"
           name="twitter:title"
-          content="Pages2Principles - A more permanent solution to timeless wisdom."
+          content="Jack Gallifant"
         />
         <meta
           key="og:title"
           property="og:title"
-          content="Pages2Principles - A more permanent solution to timeless wisdom."
+          content="Jack Gallifant"
         />
-        <title>Pages2Principles - A more permanent solution to timeless wisdom.</title>
+        <title>Jack Gallifant</title>
       </Head>
       <div className="mb-20 overflow-hidden sm:mb-32 md:mb-40">
         <Header />
-        <section className="text-center px-8 mt-20 sm:mt-32 md:mt-40">
-          <h2 className="text-slate-900 text-4xl tracking-tight font-extrabold sm:text-5xl dark:text-white">
-            All Signal, No Noise.
-          </h2>
-          <figure>
-            <blockquote>
-              <p className="mt-6 max-w-3xl mx-auto text-lg">
-                I’ve read{' '}
-                <a className="text-sky-500 font-semibold dark:text-sky-400">hundreds of books</a>{' '}
-                from history's greatest minds, only to realize that the key lessons often fade
-                within weeks. Frustratingly, this insight is always buried in hundreds of pages that
-                could often be explained in a few minutes. P2P is my response to this challenge:
-                distilling the principles of these leaders into succinct, transferable wisdom.
-              </p>
-            </blockquote>
-            <figcaption className="mt-6 flex items-center justify-center space-x-4 text-left">
-              <img
-                src={require('@/img/adam.jpg').default.src}
-                alt=""
-                className="w-14 h-14 rounded-full"
-                loading="lazy"
-                decoding="async"
-              />
-              <div>
-                <div className="text-slate-900 font-semibold dark:text-white">Jack Gallifant</div>
-                <div className="mt-0.5 text-sm leading-6">Creator of P2P</div>
-              </div>
-            </figcaption>
-          </figure>
-        </section>
       </div>
       <div className="pt-20 mb-20 flex flex-col gap-y-20 overflow-hidden sm:pt-32 sm:mb-32 sm:gap-y-32 md:pt-40 md:mb-40 md:gap-y-40">
-        <BuildAnything />
-        <ComponentDriven />
-        <ModernFeatures />
+        <Resources />
       </div>
       <Footer />
     </>

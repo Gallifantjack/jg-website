@@ -180,18 +180,17 @@ export default function Showcase() {
           unoptimized
         />
         <div className="relative max-w-3xl px-4 sm:px-6 lg:px-8 mx-auto sm:text-center">
-          <h1 className="text-sm leading-6 font-semibold text-sky-500">Showcase</h1>
+          <h1 className="text-sm leading-6 font-semibold text-sky-500">Research</h1>
           <p className="mt-6 text-[2.5rem] leading-none sm:text-6xl tracking-tight font-bold text-slate-900 dark:text-white">
-            You can build anything with Tailwind CSS.
+            Recent Work
           </p>
           <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">
-            Well not quite <em>anything</em>, like you can't build a spaceship with it. But you can
-            definitely build the website for the spaceship —{' '}
+            Here is a catalogue <em>recent publications</em>- if you see something you like{'  '}
             <Link
-              href="/showcase/nasa"
+              href="mailto:jack.gallifant@outlook.com"
               className="font-semibold border-b border-sky-300 text-gray-900 hover:border-b-2 dark:text-white dark:border-sky-400"
             >
-              NASA did
+              contact me
             </Link>
             .
           </p>

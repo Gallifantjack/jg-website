@@ -125,26 +125,18 @@ export function NavItems() {
   return (
     <>
       <li>
-        <Link href="/resources" className="hover:text-sky-500 dark:hover:text-sky-400">
-          Get Started
+        <Link href="/" className="hover:text-sky-500 dark:hover:text-sky-400">
+          Home
         </Link>
       </li>
       <li>
-        <a
-          href="https://tailwindui.com/?ref=top"
-          className="hover:text-sky-500 dark:hover:text-sky-400"
-        >
-          What's New
-        </a>
-      </li>
-      <li>
-        <Link href="/blog" className="hover:text-sky-500 dark:hover:text-sky-400">
-          Pages
+        <Link href="/resources" className="hover:text-sky-500 dark:hover:text-sky-400">
+          About
         </Link>
       </li>
       <li>
         <Link href="/showcase" className="hover:text-sky-500 dark:hover:text-sky-400">
-          Principles
+          Research
         </Link>
       </li>
     </>
