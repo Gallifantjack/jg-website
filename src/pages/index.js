@@ -10,7 +10,7 @@ export default function Home() {
         <title>Jack Gallifant</title>
         <meta
           name="description"
-          content="Building a Cathedral with AI | Health Equity | Physiology."
+          content="Building a better future with AI | Health Equity | Physiology."
         />
       </Head>
       <TransitionEffect />
