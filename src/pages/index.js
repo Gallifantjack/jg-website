@@ -5,7 +5,6 @@ import { ThemeToggle } from '@/components/ThemeToggle'
 import { BuildAnything } from '@/components/home/BuildAnything'
 import { ComponentDriven } from '@/components/home/ComponentDriven'
 import { Footer } from '@/components/home/Footer'
-import { Hero } from '@/components/home/Hero'
 import { ModernFeatures } from '@/components/home/ModernFeatures'
 import { ReadyMadeComponents } from '@/components/home/ReadyMadeComponents'
 import socialCardLarge from '@/img/social-card-large.jpg'
@@ -15,6 +14,8 @@ import NextLink from 'next/link'
 import styles from './index.module.css'
 import { EditorTools } from '@/components/home/EditorTools'
 import Resources from './resources'
+import About_index from '@/pages/docs/about_index'
+import Tedx_index from '@/pages/docs/tedx_index'
 
 function Header() {
   return (
@@ -164,7 +165,8 @@ export default function Home() {
         <Header />
       </div>
       <div className="pt-20 mb-20 flex flex-col gap-y-20 overflow-hidden sm:pt-32 sm:mb-32 sm:gap-y-32 md:pt-40 md:mb-40 md:gap-y-40">
-        <Resources />
+        <About_index />
+        <Tedx_index />
       </div>
       <Footer />
     </>

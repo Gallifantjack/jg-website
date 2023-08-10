@@ -39,7 +39,7 @@ export function Steps({ intro, steps, code, level = 2 }) {
                 {step.title}
               </StepHeading>
               <div className="prose prose-slate prose-sm dark:prose-dark">
-                <step.body />
+                <step.body/>
               </div>
             </div>
             {step.code && <Snippet code={step.code} highlightedCode={code[index]} />}

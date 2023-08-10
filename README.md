@@ -1,26 +1,33 @@
-# P2P v2
+# JG #2
 
-## TODO
+## Phase 1
 
 - Home page
   - Hero image 
+    - ? Tedx image vs vid
   - About
-    - if move to about page then need new one
-  - images for projects about
-  - sort footer (may need different for each page)
-  - TEDx video
-  - Search
-    - See if can filter what is searched
-    - If not, then remove all unnecessary links so search is not screwed up
+    - change to more topic focussed squares/tabs
+  - Featured Research
+    - TEDx video
+
 - About
-  - create dedicated about page
-  - maybe use current home version??
-  - need to sort doc sidebar for current one
-  - add experience section from old website
+  - add image
+  - change resources name to about
+  - add MSc etc vs timeline
+  - consider timeline for main page? like karpathy
+  
 - Projects
   - make videos for projects
   - add thumbnails square
+
 - navbar
   - Logo 
   - google scholar / linked in / git
 
+#### Phase 2
+- Search
+  - See if can filter what is searched
+  - If not, then remove all unnecessary links so search is not screwed up
+- Footer 
+  - add made using vercel tss next js etc
+  - sort columns

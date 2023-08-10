@@ -1,15 +1,15 @@
 import { Steps } from '@/components/Steps'
+import { BasicLayout } from '@/layouts/BasicLayout'
 import { DocumentationLayout } from '@/layouts/DocumentationLayout'
 import { InstallationLayout } from '@/layouts/InstallationLayout'
 import Link from 'next/link'
 
 let steps = [
   {
-    title: 'All Signal, No Noise',
+    title: 'Post-Doctoral Researcher @MIT Lab For Computational Physiology',
     body: () => (
       <p>
-        We live in a world of  <strong>increasing noise</strong> that maximises consumption. 
-        But how much of what we consume do we remember, let alone use?
+        2023-Present | Boston, USA
       </p>
     ),
     code: {
@@ -97,9 +97,9 @@ export function getStaticProps() {
 
 TailwindCli.layoutProps = {
   meta: {
-    title: 'Installation',
+    title: 'Background',
     description:
-      'The simplest and fastest way to get up and running with Tailwind CSS from scratch is with the Tailwind CLI tool.',
+      'I am a Postdoctoral researcher at MIT working at the Lab for Computational Physiology. I am interested in understanding AI and developing tools to deploy AI safely.',
   },
   Layout: DocumentationLayout,
   allowOverflow: false,

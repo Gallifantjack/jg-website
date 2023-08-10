@@ -3,17 +3,20 @@ import { documentationNav } from '@/navs/documentation'
 import Link from 'next/link'
 
 const footerNav = [
-  {
-    Business: documentationNav['Business'],
-    History: documentationNav['History'],
-  },
-  {
-    Philosophy: documentationNav['Philosophy'],
-    Community: [
+  {About: [
+      { title: 'Background', href: '/about' },
+      { title: 'Experience', href: '/about' },
+      { title: 'Research Interests', href: '/contact' },
+  ],
+  Research: [
+      { title: 'Catalogue', href: '/about' },
+      { title: 'Featured', href: '/about' },
+      { title: 'Featured', href: '/contact' },
+  ],
+    Contact: [
       { title: 'GitHub', href: 'https://github.com/tailwindlabs/tailwindcss' },
-      { title: 'Discord', href: '/discord' },
-      { title: 'Twitter', href: 'https://twitter.com/tailwindcss' },
-      { title: 'YouTube', href: 'https://www.youtube.com/tailwindlabs' },
+      { title: 'LinkedIn', href: '/discord' },
+      { title: 'Email', href: 'https://twitter.com/tailwindcss' },
     ],
   },
 ]
