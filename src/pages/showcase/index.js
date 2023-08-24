@@ -1,9 +1,9 @@
-import { useRef } from 'react'
-import Link from 'next/link'
-import { showcase } from '@/showcase'
-import Image from 'next/image'
 import { Footer } from '@/components/Footer'
+import { showcase } from '@/showcase'
 import clsx from 'clsx'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useRef } from 'react'
 
 function Site({ site, priority = false }) {
   let videoContainerRef = useRef()

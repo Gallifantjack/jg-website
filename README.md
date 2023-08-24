@@ -3,31 +3,28 @@
 ## Phase 1
 
 - Home page
-  - Hero image 
-    - ? Tedx image vs vid
-  - About
-    - change to more topic focussed squares/tabs
-  - Featured Research
-    - TEDx video
+
+  - finalise text
+  - finalise images
 
 - About
-  - add image
-  - change resources name to about
-  - add MSc etc vs timeline
-  - consider timeline for main page? like karpathy
-  
+
+  - consider timeline for about page? like karpathy
+  - currently removed and moved most to home page
+
 - Projects
+
   - make videos for projects
   - add thumbnails square
 
 - navbar
-  - Logo 
+
+  - Logo
   - google scholar / linked in / git
 
-#### Phase 2
 - Search
   - See if can filter what is searched
   - If not, then remove all unnecessary links so search is not screwed up
-- Footer 
+- Footer
   - add made using vercel tss next js etc
   - sort columns

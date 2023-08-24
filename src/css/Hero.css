@@ -1,0 +1,30 @@
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.carousel-container {
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.carousel-item {
+  flex: 0 0 calc(33.33% - 16px);
+  /* Subtract the total left and right margin */
+  margin-left: 8px;
+  margin-right: 8px;
+  transition: transform 1s ease;
+}
+
+.card:hover {
+  box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+

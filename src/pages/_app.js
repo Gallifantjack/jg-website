@@ -1,13 +1,14 @@
-import '../css/fonts.css'
-import '../css/main.css'
-import 'focus-visible'
-import { useState, useEffect, Fragment } from 'react'
 import { Header } from '@/components/Header'
 import { Description, OgDescription, OgTitle, Title } from '@/components/Meta'
-import Router from 'next/router'
-import ProgressBar from '@badrap/bar-of-progress'
-import Head from 'next/head'
 import { SearchProvider } from '@/components/Search'
+import ProgressBar from '@badrap/bar-of-progress'
+import 'focus-visible'
+import Head from 'next/head'
+import Router from 'next/router'
+import { Fragment, useEffect, useState } from 'react'
+import '../css/Hero.css'
+import '../css/fonts.css'
+import '../css/main.css'
 
 const progress = new ProgressBar({
   size: 2,

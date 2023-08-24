@@ -41,7 +41,7 @@ export function BigText({ className = '', ...props }) {
 }
 
 export function Paragraph({ as: Component = 'p', className = '', ...props }) {
-  return <Component className={`mt-4 max-w-3xl space-y-6 ${className}`} {...props} />
+  return <Component className={`mt-4 max-w-3xl space-y-6 text-justify ${className}`} {...props} />
 }
 
 export function Link({ className, ...props }) {

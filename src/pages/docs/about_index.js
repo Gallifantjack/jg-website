@@ -1,76 +1,97 @@
-import React, { useState } from 'react';
-import {
-    BigText,
-    Caption,
-    IconContainer,
-    Link,
-    Paragraph,
-    Widont
-  } from '@/components/home/common'
+import { BigText, Caption, IconContainer, Link, Paragraph, Widont } from '@/components/home/common'
+import { useState } from 'react'
 
 function About_index() {
-  const [visiblePopover, setVisiblePopover] = useState(null);
+  const [visiblePopover, setVisiblePopover] = useState(null)
 
   const cards = [
-    { id: 1, imageUrl: require('@/img/resources/refactoringui-small@75.jpg').default.src, title: 'AI', description: 'I am fascinated by the potential of AI to improve outcomes for all.' },
-    { id: 2, imageUrl: require('@/img/resources/refactoringui-small@75.jpg').default.src, title: 'Physiology', description: 'I love understanding the fundamental laws that govern how the human body works, then using this to tackle disease.' },
-    { id: 3, imageUrl: require('@/img/resources/refactoringui-small@75.jpg').default.src, title: 'MLOps', description: 'The development of systems that can safely manage and oversee deployment of Machine Learning and care more generally excites me.' },
-    { id: 4, imageUrl: require('@/img/resources/refactoringui-small@75.jpg').default.src, title: 'Equality', description: 'I believe we should be constantly striving to produce a system that gives everyone the opportunity to reach their full health potential.' },
-  ];
-
+    {
+      id: 1,
+      imageUrl: require('@/img/resources/refactoringui-small@75.jpg').default.src,
+      title: 'Causal Inference in AI',
+      description:
+        'Exploring the role of causality in machine learning algorithms and AI systems. The focus is on understanding how causal inference can be integrated to make more robust and interpretable models.',
+    },
+    {
+      id: 2,
+      imageUrl: require('@/img/resources/refactoringui-small@75.jpg').default.src,
+      title: 'MLOps for Health Equity',
+      description:
+        'Investigating the application of MLOps in the healthcare industry with a focus on equity. The objective is to develop machine learning systems that can be deployed to improve healthcare outcomes for all demographic groups.',
+    },
+    {
+      id: 3,
+      imageUrl: require('@/img/resources/refactoringui-small@75.jpg').default.src,
+      title: 'Consciousness, Thought, and Memory in Biological Artificial Systems',
+      description:
+        'Studying the integration of consciousness, thought, and memory in biological artificial systems. This involves understanding the mechanics of thought and memory in both biological entities and AI models.',
+    },
+    {
+      id: 4,
+      imageUrl: require('@/img/resources/refactoringui-small@75.jpg').default.src,
+      title: 'Interaction of Biological and Artificial Systems',
+      description:
+        'Researching the interfaces and interactions between biological and artificial systems, with a focus on how these two types of systems can complement, enhance, or inhibit each other.',
+    },
+  ]
 
   return (
     <section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-            <div className='mb-20 md:mb-10'>
-                <IconContainer
-                className="dark:bg-pink-500 dark:highlight-white/30"
-                light={require('@/img/icons/home/build-anything.png').default.src}
-                dark={require('@/img/icons/home/dark/build-anything.png').default.src}
-                />
-                <Caption className="text-pink-500 dark:text-pink-400">About</Caption>
-                <BigText>
-                <Widont>Creating A Data-Centered Future That Benefits Everyone.</Widont>
-                </BigText>
-                <Paragraph>
-                I am a {' '}
-                <a className="text-pink-500 font-semibold dark:text-pink-400">Postdoctoral researcher at MIT </a>{' '}
-                working at the Lab for Computational Physiology. I am interested in understanding AI and developing tools to deploy AI safely.
-                </Paragraph>
-                <Paragraph>
-                I also work as an honorary researcher at Guys and St Thomas NHS Trust in the department of Critical Care and am an active mentor for MIT Critical Data.
-                Clinically, I have previously worked as a full-time physician in Imperial College London NHS Trust. 
-                </Paragraph>
-                <Link href="/showcase" color="pink" darkColor="gray">
-                See the full portfolio<span className="sr-only">, showcase</span>
-                </Link>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {cards.map(card => (
-            <div 
-                key={card.id} 
-                className="relative h-48 overflow-hidden"
-                onMouseEnter={() => setVisiblePopover(card.id)}
-                onMouseLeave={() => setVisiblePopover(null)}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+        <div className="mb-20 md:mb-10">
+          <IconContainer
+            className="dark:bg-pink-500 dark:highlight-white/30"
+            light={require('@/img/icons/home/build-anything.png').default.src}
+            dark={require('@/img/icons/home/dark/build-anything.png').default.src}
+          />
+          <Caption className="text-pink-500 dark:text-pink-400">About</Caption>
+          <BigText>
+            <Widont> Recoding Neural Networks.</Widont>
+          </BigText>
+          <Paragraph>
+            As a
+            <a className="text-pink-500 font-semibold dark:text-pink-400">
+              {' '}
+              Postdoctoral researcher at MIT,
+            </a>{' '}
+            I specialize in leveraging AI and causal inference to improve healthcare systems. My
+            work aims to understand factors driving biological and artificial systems decisions;
+            exploring the confluence of consciousness and technology, focusing on ethical and
+            efficient AI deployment.
+          </Paragraph>
+          <Paragraph>
+            With a clinical background, I also contribute to Guys and St Thomas NHS Trust, adding a
+            real-world perspective to computational innovations.
+          </Paragraph>
+          <Link href="/showcase" color="pink" darkColor="gray">
+            See recent publications<span className="sr-only">, showcase</span>
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {cards.map((card) => (
+            <div
+              key={card.id}
+              className="relative h-72 overflow-hidden bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-                <img 
-                src={card.imageUrl} 
-                alt="Description" 
-                className="w-full h-full object-cover transition-transform duration-300 transform scale-100 hover:scale-105 z-10"
+              <div className="absolute top-0 left-0 w-full flex justify-center bg-gray-200 text-gray-700 p-2 rounded-t-lg">
+                <h2 className="text-lg font-semibold">{card.title}</h2>
+              </div>
+              <div className="absolute top-10 bottom-0 left-0 right-0">
+                <img
+                  src={require('@/img/resources/refactoringui-small@75.jpg').default.src}
+                  alt="Description"
+                  className="w-full h-full object-cover transition-opacity duration-300 hover:opacity-50"
                 />
-                <div 
-                className={`absolute top-0 left-0 w-full h-full p-4 flex flex-col justify-start items-start transition-opacity duration-300 ${visiblePopover === card.id ? 'opacity-100' : 'opacity-0 pointer-events-none'} z-20 backdrop-blur-md`}
-                style={{ background: 'rgba(255, 255, 255, 0.7)' }}
-                >
-                    <h2 className="text-2xl mb-2">{card.title}</h2>
-                    <p className="text-justify">{card.description}</p>
-                </div>
+              </div>
+              <div className="absolute top-10 bottom-0 left-0 right-0 p-4 flex flex-col justify-center items-start backdrop-blur-md transition-opacity duration-300 hover:opacity-100 opacity-0">
+                <p className="text-white text-lg text-justify">{card.description}</p>
+              </div>
             </div>
-            ))}
+          ))}
         </div>
-        </div>
+      </div>
     </section>
-  );
+  )
 }
 
-export default About_index;
+export default About_index

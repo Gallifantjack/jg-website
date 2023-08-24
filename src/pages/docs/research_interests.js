@@ -1,15 +1,8 @@
-import { DocumentationLayout } from '@/layouts/DocumentationLayout'
 import { Button } from '@/components/Button'
+import { DocumentationLayout } from '@/layouts/DocumentationLayout'
 import clsx from 'clsx'
 
-import {
-  BigText,
-  Caption,
-  IconContainer,
-  Link,
-  Paragraph,
-  Widont
-} from '@/components/home/common'
+import { BigText, Caption, IconContainer, Link, Paragraph, Widont } from '@/components/home/common'
 
 function CardGroup({ children, className }) {
   return (
@@ -87,13 +80,17 @@ export function Research_interests() {
           <Widont>Creating A Data-Centered Future That Benefits Everyone.</Widont>
         </BigText>
         <Paragraph>
-          I am a {' '}
-          <a className="text-pink-500 font-semibold dark:text-pink-400">Postdoctoral researcher at MIT </a>{' '}
-          working at the Lab for Computational Physiology. I am interested in understanding AI and developing tools to deploy AI safely.
+          I am a{' '}
+          <a className="text-pink-500 font-semibold dark:text-pink-400">
+            Postdoctoral researcher at MIT{' '}
+          </a>{' '}
+          working at the Lab for Computational Physiology. I am interested in understanding AI and
+          developing tools to deploy AI safely.
         </Paragraph>
         <Paragraph>
-          I also work as an honorary researcher at Guys and St Thomas NHS Trust in the department of Critical Care and am an active mentor for MIT Critical Data.
-          Clinically, I have previously worked as a full-time physician in Imperial College London NHS Trust. 
+          I also work as an honorary researcher at Guys and St Thomas NHS Trust in the department of
+          Critical Care and am an active mentor for MIT Critical Data. Clinically, I have previously
+          worked as a full-time physician in Imperial College London NHS Trust.
         </Paragraph>
         <Link href="/showcase" color="pink" darkColor="gray">
           See the full portfolio<span className="sr-only">, showcase</span>
@@ -114,12 +111,13 @@ export function Research_interests() {
               body: (
                 <>
                   <p>
-                  Continous evaluation of AI models is essential to ensure that they are safe to deploy in the real world. 
+                    Continous evaluation of AI models is essential to ensure that they are safe to
+                    deploy in the real world.
                   </p>
                   <p>
-                  Disparity Dashboards
-                  <span className="font-semibold"> systematically and contiously</span>
-                  {' '} evaluate the impact of AI models on different subgroups of the population.
+                    Disparity Dashboards
+                    <span className="font-semibold"> systematically and contiously</span> evaluate
+                    the impact of AI models on different subgroups of the population.
                   </p>
                 </>
               ),
@@ -135,11 +133,10 @@ export function Research_interests() {
               href: 'https://tailwindui.com/?ref=resources',
               body: (
                 <>
+                  <p>AI models are only as good as the data they are trained on.</p>
                   <p>
-                  AI models are only as good as the data they are trained on.
-                  </p>
-                  <p>
-                  It is essential to understand who is represented in the data, and what opinions are able to contribute to the model.
+                    It is essential to understand who is represented in the data, and what opinions
+                    are able to contribute to the model.
                   </p>
                 </>
               ),
@@ -186,7 +183,8 @@ export function Research_interests() {
         </h2>
         <div className="mb-10 prose prose-slate text-slate-600 max-w-3xl dark:prose-dark">
           <p>
-          I work on a number of projects that all aim to further the safe and effective deployment of AI in healthcare.
+            I work on a number of projects that all aim to further the safe and effective deployment
+            of AI in healthcare.
           </p>
         </div>
 
@@ -197,7 +195,8 @@ export function Research_interests() {
               title: 'Evaluating the downstream impact on AI models',
               body: (
                 <p>
-                  Device biases across subgroups of the population can lead to downstream biases in AI models.
+                  Device biases across subgroups of the population can lead to downstream biases in
+                  AI models.
                 </p>
               ),
               href: 'https://headlessui.dev',
@@ -209,7 +208,8 @@ export function Research_interests() {
               title: 'Designing regulatory frameworks for LLMs',
               body: (
                 <p>
-                  Questions of transparency, liability, and privacy are all raised by the use of LLMs in healthcare.
+                  Questions of transparency, liability, and privacy are all raised by the use of
+                  LLMs in healthcare.
                 </p>
               ),
               href: 'https://heroicons.com',
@@ -221,7 +221,8 @@ export function Research_interests() {
               title: 'Safeguards for the deployment of AI models',
               body: (
                 <p>
-                  Standards for the deployment of AI models are essential to ensure that they are safe and effective.
+                  Standards for the deployment of AI models are essential to ensure that they are
+                  safe and effective.
                 </p>
               ),
               href: 'https://heropatterns.com',
@@ -229,13 +230,12 @@ export function Research_interests() {
               color: 'text-cyan-500',
             },
           ].map((card) => (
-            <Card
-              key={card.title}
-              {...card}
-            />
+            <Card key={card.title} {...card} />
           ))}
         </CardGroup>
-        <Button className= 'my-10' href="/showcase">See the full research portfolio</Button>
+        <Button className="my-10" href="/showcase">
+          See the full research portfolio
+        </Button>
       </div>
     </section>
   )

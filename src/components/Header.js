@@ -1,11 +1,11 @@
-import Link from 'next/link'
-import { VersionSwitcher } from '@/components/VersionSwitcher'
-import { SearchButton } from '@/components/Search'
-import Router from 'next/router'
 import { Logo } from '@/components/Logo'
+import { SearchButton } from '@/components/Search'
+import { VersionSwitcher } from '@/components/VersionSwitcher'
 import { Dialog } from '@headlessui/react'
-import { useEffect, useState } from 'react'
 import clsx from 'clsx'
+import Link from 'next/link'
+import Router from 'next/router'
+import { useEffect, useState } from 'react'
 import { ThemeSelect, ThemeToggle } from './ThemeToggle'
 
 function Featured() {
@@ -127,11 +127,6 @@ export function NavItems() {
       <li>
         <Link href="/" className="hover:text-sky-500 dark:hover:text-sky-400">
           Home
-        </Link>
-      </li>
-      <li>
-        <Link href="/resources" className="hover:text-sky-500 dark:hover:text-sky-400">
-          About
         </Link>
       </li>
       <li>
