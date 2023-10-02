@@ -1,7 +1,5 @@
 # JG #2
 
-## Phase 1
-
 - Home page
 
   - finalise text
@@ -10,21 +8,23 @@
 - About
 
   - consider timeline for about page? like karpathy
-  - currently removed and moved most to home page
 
 - Projects
 
-  - make videos for projects
-  - add thumbnails square
+  - clean up videos and thumbnails
+  - add new ones e.g. cms
+  - add filter button for type
+  - add sort for featured, most recent etc.
 
 - navbar
 
   - Logo
-  - google scholar / linked in / git
+  - google scholar / linked in
 
 - Search
+
   - See if can filter what is searched
   - If not, then remove all unnecessary links so search is not screwed up
+
 - Footer
-  - add made using vercel tss next js etc
-  - sort columns
+  - finalise footer text

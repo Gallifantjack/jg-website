@@ -1,5 +1,6 @@
-import clsx from 'clsx'
 import { Logo } from '@/components/Logo'
+import clsx from 'clsx'
+import Link from 'next/link'
 
 export function Footer({ className }) {
   return (
@@ -16,7 +17,14 @@ function FooterContent() {
     <div className="text-center">
       <Logo className="h-4 w-auto mx-auto" />
       <p className="mt-4 text-sm leading-6 text-slate-500">
-        &copy; {new Date().getFullYear()} Tailwind Labs Inc. All rights reserved.
+        &copy; {new Date().getFullYear()} Developed using of Tailwind CSS, Typescript, Next.js and
+        Vercel; code is freely available
+        <Link
+          href="https://github.com/gallifantjack"
+          className="hover:text-sky-500 dark:hover:text-sky-400 pl-1"
+        >
+          here.
+        </Link>
       </p>
     </div>
   )
