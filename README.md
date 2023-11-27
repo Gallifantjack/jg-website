@@ -28,3 +28,16 @@
 
 - Footer
   - finalise footer text
+
+
+---
+Simplif the gimmicks 
+- see -> https://baulab.info/ 
+- Code is here -> https://github.com/davidbau/webhome
+- they then use a separate repo for key projects -> https://github.com/davidbau/unifiedweb
+
+
+goal is to reformat to similar style as above
+set a standard for key projects like above
+
+move away from listing all and only show key projects
