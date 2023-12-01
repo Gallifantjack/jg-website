@@ -62,7 +62,7 @@ function Card({ title, superTitle, href, color, body, image, video }) {
   )
 }
 
-function TedxIndex() {
+function Featured_work() {
   return (
     <section>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
@@ -75,17 +75,14 @@ function TedxIndex() {
 
           <Caption className="text-indigo-500 dark:text-indigo-400">Featured Work</Caption>
 
-          <BigText>
-            <Widont>Highlighting Innovation in AI and Healthcare</Widont>
+          <BigText className='text-white'>
+            <Widont>Bridging AI and Healthcare</Widont>
           </BigText>
 
           <Paragraph>
-            A collection of groundbreaking research and projects that focus on ethical AI
+            A collection of research and projects that focus on ethical AI
             deployment, healthcare equity, and understanding biological systems.
           </Paragraph>
-          <Link href="/showcase" color="indigo" darkColor="gray">
-            Explore Featured Work<span className="sr-only">, showcase</span>
-          </Link>
         </div>
         <div className="mt-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <ul className="sm:space-y-6">
@@ -113,6 +110,27 @@ function TedxIndex() {
                   </>
                 ),
               },
+              // new card from here
+              { 
+                title: 'Characterising the knowledge landscape',
+                description: 'Medical Knowledge Graphs',
+                images: [
+                  require('@/img/resources/tailwindui-small@75.jpg').default.src,
+                  require('@/img/resources/tailwindui@75.jpg').default.src,
+                ],
+                color: 'text-sky-500',
+                href: 'https://tailwindui.com/?ref=resources',
+                body: (
+                  <>
+                    <p>AI models are only as good as the data they are trained on.</p>
+                    <p>
+                      It is essential to understand who is represented in the data, and what
+                      opinions are able to contribute to the model.
+                    </p>
+                  </>
+                ),
+              },
+              // new card to here
               {
                 title: 'Characterising the knowledge landscape',
                 description: 'Medical Knowledge Graphs',
@@ -168,68 +186,9 @@ function TedxIndex() {
             ))}
           </ul>
         </div>
-        <div className="mt-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-          <h2 className="mb-2 text-2xl leading-7 tracking-tight text-slate-900 font-bold dark:text-slate-200">
-            Additional Projects
-          </h2>
-          <div className="mb-10 prose prose-slate text-slate-600 max-w-3xl dark:prose-dark">
-            <p>
-              I work on a number of projects that all aim to further the safe and effective
-              deployment of AI in healthcare.
-            </p>
-          </div>
-          <CardGroup>
-            {[
-              {
-                superTitle: 'Device Bias',
-                title: 'Evaluating the downstream impact on models',
-                body: (
-                  <p>
-                    Effects of racial bias in pulse oximeters on the National Early Warning Scores
-                    ability to predict Cardiac Arrest, ICU, and death.
-                  </p>
-                ),
-                href: 'https://headlessui.dev',
-                image: require('@/img/resources/headlessui@75.jpg').default.src,
-                color: 'text-indigo-500',
-              },
-              {
-                superTitle: 'External Validation',
-                title: 'Discovering the mechanism behind generalization',
-                body: (
-                  <p>
-                    Questions of transparency, liability, and privacy are all raised by the use of
-                    LLMs in healthcare.
-                  </p>
-                ),
-                href: 'https://heroicons.com',
-                image: require('@/img/resources/heroicons@75.jpg').default.src,
-                color: 'text-purple-500',
-              },
-              {
-                superTitle: 'TEDx Talk',
-                title: 'Whose life will AI save?',
-                body: (
-                  <p>
-                    Exploring the hidden drivers behind model performance, and who our AI is
-                    learning from.
-                  </p>
-                ),
-                href: 'https://youtube.com',
-                video: 'https://www.youtube.com/embed/seUxBboIxDk',
-                color: 'text-cyan-500',
-              },
-            ].map((card) => (
-              <Card key={card.title} {...card} />
-            ))}
-          </CardGroup>
-          <Button className="my-10" href="/showcase">
-            See the full research portfolio
-          </Button>
-        </div>
       </div>
     </section>
   )
 }
 
-export default TedxIndex
+export default Featured_work
