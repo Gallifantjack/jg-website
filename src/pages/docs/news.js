@@ -92,7 +92,7 @@ function Card({ title, superTitle, href, color, body, image, video }) {
               left: 0,
               width: '100%',
               height: '100%',
-              objectFit: 'cover',
+              objectFit: 'contain',
             }}
           />
         )}
@@ -155,29 +155,63 @@ function News_section() {
         <div className="mt-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <Slider {...settings}>            {[
               {
-                superTitle: 'November 2023',
-                title: 'Evaluating the downstream impact on models',
+                superTitle: 'December 2023',
+                title: 'PRIMR 23 - Generative AI impact on IRB',
                 body: (
                   <p>
-                    Effects of racial bias in pulse oximeters on the National Early Warning Scores
-                    ability to predict Cardiac Arrest, ICU, and death.
+                    Panel discussion on challenges faced by the IRB in the wake of generative AI.
                   </p>
                 ),
                 href: 'https://headlessui.dev',
-                image: require('@/img/resources/headlessui@75.jpg').default.src,
-                color: 'text-indigo-500',
+                image: require('@/img/resources/primr_logo.png').default.src,
+                color: 'text-cyan-500',
               },
               {
-                superTitle: 'October 2023',
-                title: 'Discovering the mechanism behind generalization',
+                superTitle: 'November 2023',
+                title: 'Quantifying digital inequality published in BMJ HCI',
                 body: (
                   <p>
-                    Questions of transparency, liability, and privacy are all raised by the use of
-                    LLMs in healthcare.
+                    Our paper that looks at NHS app usage across the UK has been published in BMJ HCI.
                   </p>
                 ),
                 href: 'https://heroicons.com',
-                image: require('@/img/resources/heroicons@75.jpg').default.src,
+                image: require('@/img/resources/dig_ineq.jpg').default.src,
+                color: 'text-purple-500', 
+              },
+              {
+                superTitle: 'November 2023',
+                title: 'Disparity Dashboards published in LDH',
+                body: (
+                  <p>
+                    Our paper on health equity dashboards has been published in Lancet Digital Health.
+                  </p>
+                ),
+                href: 'https://heroicons.com',
+                image: require('@/img/resources/landig.jpg').default.src,
+                color: 'text-purple-500',
+              },
+              {
+                superTitle: 'October 2023',
+                title: 'Promises and Pitfalls of Generative AI',
+                body: (
+                  <p>
+                    Invited talk at Texas Children's Hospital on what 2024 holds for generative AI in healthcare.
+                  </p>
+                ),
+                href: 'https://heroicons.com',
+                image: require('@/img/resources/TCH_Logo_Color.jpg').default.src,
+                color: 'text-pink-500',
+              },
+              {
+                superTitle: 'October 2023',
+                title: 'Mapping NHS data flows accepted to LDH',
+                body: (
+                  <p>
+                    Our paper on evaluating NHS data flows has been accepted to Lancet Digital Health.
+                  </p>
+                ),
+                href: 'https://heroicons.com',
+                image: require('@/img/resources/map_ball_chart.jpg').default.src,
                 color: 'text-purple-500',
               },
               {
@@ -191,33 +225,7 @@ function News_section() {
                 ),
                 href: 'https://youtube.com',
                 video: 'https://www.youtube.com/embed/seUxBboIxDk',
-                color: 'text-cyan-500',
-              },
-              {
-                superTitle: 'February 2023',
-                title: 'TEDx- Whose life will AI save?',
-                body: (
-                  <p>
-                    Exploring the hidden drivers behind model performance, and who our AI is
-                    learning from.
-                  </p>
-                ),
-                href: 'https://youtube.com',
-                video: 'https://www.youtube.com/embed/seUxBboIxDk',
-                color: 'text-cyan-500',
-              },
-              {
-                superTitle: 'February 2023',
-                title: 'TEDx- Whose life will AI save?',
-                body: (
-                  <p>
-                    Exploring the hidden drivers behind model performance, and who our AI is
-                    learning from.
-                  </p>
-                ),
-                href: 'https://youtube.com',
-                video: 'https://www.youtube.com/embed/seUxBboIxDk',
-                color: 'text-cyan-500',
+                color: 'text-blue-500',
               },
             ].map((card) => (
               <div key={card.title}>

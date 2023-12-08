@@ -88,6 +88,26 @@ function Featured_work() {
           <ul className="sm:space-y-6">
             {[
               {
+                title: 'Characterizing UK Health Data Flow',
+                description: 'Mapping NHS Data',
+                images: [
+                  require('@/img/resources/map_clusters.jpg').default.src,
+                  require('@/img/resources/map_clusters.jpg').default.src,
+                ],
+                color: 'text-blue-500',
+                href: '/feat_nhs_map',
+                body: (
+                  <>
+                  <p>
+                    The study explores the UK's NHS data management, uncovering a vast network of data flows across healthcare and research sectors.
+                  </p>
+                  <p>
+                    Key findings highlight transparency issues and trust concerns in data handling, alongside prevalent non-compliance with safe data access practices.
+                  </p>
+                  </>
+                ),
+              },
+              {
                 title: 'Developing tools to deploy AI safely',
                 description: 'Disparity Dashboards',
                 images: [
@@ -95,7 +115,7 @@ function Featured_work() {
                   require('@/img/resources/refactoringui@75.jpg').default.src,
                 ],
                 color: 'text-blue-500',
-                href: 'https://refactoringui.com/?ref=resources',
+                href: '/feat_disp_dash',
                 body: (
                   <>
                     <p>
@@ -112,14 +132,14 @@ function Featured_work() {
               },
               // new card from here
               { 
-                title: 'Characterising the knowledge landscape',
-                description: 'Medical Knowledge Graphs',
+                title: 'Quantifying digital health inequality across the NHS',
+                description: 'Digital Inequality',
                 images: [
                   require('@/img/resources/tailwindui-small@75.jpg').default.src,
                   require('@/img/resources/tailwindui@75.jpg').default.src,
                 ],
                 color: 'text-sky-500',
-                href: 'https://tailwindui.com/?ref=resources',
+                href: '/feat_dig_ineq',
                 body: (
                   <>
                     <p>AI models are only as good as the data they are trained on.</p>
@@ -132,14 +152,14 @@ function Featured_work() {
               },
               // new card to here
               {
-                title: 'Characterising the knowledge landscape',
-                description: 'Medical Knowledge Graphs',
+                title: 'New tools to monitor Health equity',
+                description: 'Diversity Factor',
                 images: [
                   require('@/img/resources/tailwindui-small@75.jpg').default.src,
                   require('@/img/resources/tailwindui@75.jpg').default.src,
                 ],
                 color: 'text-sky-500',
-                href: 'https://tailwindui.com/?ref=resources',
+                href: '/feat_div_fact',
                 body: (
                   <>
                     <p>AI models are only as good as the data they are trained on.</p>

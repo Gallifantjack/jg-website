@@ -47,27 +47,27 @@ function Research_index() {
          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Block 1 */}
           <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-gray-900 p-8 lg:w-full lg:max-w-sm lg:flex-auto lg:flex-col lg:items-start">
-            <p className="flex-none text-3xl font-bold tracking-tight text-white">Decentralize Medical Knowledge</p>
+            <p className="flex-none text-3xl font-bold tracking-tight text-white">Mechanistic Interpretability</p>
             <div>
-              <p className="text-lg font-semibold tracking-tight text-white">Develop AI capacity globally</p>
-              <p className="mt-2 text-base leading-7 text-slate-300">Working with teams worldwide to build AI capacity in healthcare.</p>
+              <p className="text-lg font-semibold tracking-tight text-white">Improving safety of clinical predictions </p>
+              <p className="mt-2 text-base leading-7 text-slate-300">Working to understand what models learn and how they make decisions.</p>
             </div>
           </div>
 
           {/* Block 2 */}
           <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-slate-200 p-8 lg:w-72 lg:max-w-none lg:flex-none lg:flex-col lg:items-start">
-            <p className="flex-none text-3xl font-bold tracking-tight text-gray-900">Democratize Clinical Data Sharing</p>
+            <p className="flex-none text-3xl font-bold tracking-tight text-gray-900">MLOps</p>
             <div>
-              <p className="text-lg font-semibold tracking-tight text-gray-900">Advocate for open data sharing</p>
-              <p className="mt-2 text-base leading-7 text-slate-600">Promoting the sharing of clinical data for healthcare innovation.</p>
+              <p className="text-lg font-semibold tracking-tight text-gray-900">Building capacity for safe deployment</p>
+              <p className="mt-2 text-base leading-7 text-slate-600">Developing tools to track data shifts and model calibration.</p>
             </div>
           </div>
 
           {/* Block 3 */}
           <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-red-800 p-8 lg:w-full lg:max-w-none lg:flex-auto lg:flex-col lg:items-start">
-            <p className="flex-none text-3xl font-bold tracking-tight text-white">Drive Health Equity Research</p>
+            <p className="flex-none text-3xl font-bold tracking-tight text-white">Health Equity</p>
             <div>
-              <p className="text-lg font-semibold tracking-tight text-white">Promote health equity</p>
+              <p className="text-lg font-semibold tracking-tight text-white">Identifying drivers of differences in patient outcomes</p>
               <p className="mt-2 text-base leading-7 text-red-200">Using data science to address disparities in healthcare.</p>
             </div>
           </div>
