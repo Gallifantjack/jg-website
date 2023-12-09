@@ -69,12 +69,12 @@ function Header() {
             Jack Gallifant
           </h1>
           <p className="mt-6 text-2xl text-slate-700 text-center max-w-3xl mx-auto dark:text-slate-300">
-            Bridging the gap between{' '}
-            <code className="font-mono font-medium text-sky-500 dark:text-sky-400">
-              Human and AI{' '}
+            I like to break language models  {' '}
+            <code className="font-mono font-medium text-sky-400">
+              for safety reasons{' '}
             </code>
           </p>
-          <p className="mt-3 text-lg text-slate-700 text-center max-w-3xl mx-auto dark:text-slate-300">
+          <p className="mt-3 text-lg text-center max-w-3xl mx-auto text-slate-300">
             Massachusetts Institute of Technology
           </p>
         </div>

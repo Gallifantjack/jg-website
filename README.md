@@ -2,33 +2,39 @@
 
 - Home page
 
-  - finalise text
+  - hero text to center
+  - ? image or something to make it more interesting
+  - remove research tab
+  - remove light vs dark
+  - remove home tab
+  - add google scholar
+  - add linkedin
+  - swap tailwind logo
   - finalise images
 
 - About
+  - Boxes / image for these 2 blocks--> see mitcritical data
+  - shorten text and make relevant
 
-  - consider timeline for about page? like karpathy
+- Research Focus
+  - sort boxes shapes 
 
-- Projects
+Featured work
+  - Add images to each of the boxes
+  - finalise text inside
 
-  - clean up videos and thumbnails
-  - add new ones e.g. cms
-  - add filter button for type
-  - add sort for featured, most recent etc.
 
-- navbar
+Features pages
+  - sort colour ? white
+  - sort boxes
+  - add images
+  - sort latest banner thing
+  - sort version control thing
+  - sort see more work thing
 
-  - Logo
-  - google scholar / linked in
 
-- Search
-
-  - See if can filter what is searched
-  - If not, then remove all unnecessary links so search is not screwed up
-
-- Footer
-  - finalise footer text
-
+- Sort compatibility build
+  - when done start removing old pages and components from the repo 
 
 ---
 Simplif the gimmicks 

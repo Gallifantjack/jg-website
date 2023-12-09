@@ -5,28 +5,70 @@ export default function ProjectPage() {
   return (
     <>
       <Head>
-        <title>Unified Concept Editing in Diffusion Models</title>
+        <title>Disparity Dashboards: An Evaluation of the Literature and Framework for Health Equity Improvement</title>
         {/* Add other relevant meta tags here */}
       </Head>
 
-    
-      {/* Author details */}
+      {/* Author details with hover-over for affiliations using Tailwind CSS */}
       <div className="container mx-auto px-4 py-8">
         <div className="text-center">
-          <h1 className="text-3xl font-bold mb-4">Unified Concept Editing in Diffusion Models</h1>
+          <h1 className="text-3xl font-bold mb-4">Disparity Dashboards: An Evaluation of the Literature and Framework for Health Equity Improvement</h1>
           <p className="mb-4">
-            <Link href="/template">Rohit Gandikota<sup>1</sup></Link>,{' '}
-            <Link href="/template">Hadas Orad<sup>2</sup></Link>,{' '}
-            <Link href="/template">Yonatan Belinkov<sup>2</sup></Link>,{' '}
-            <Link href="/template">Joanna Materzyńska<sup>3</sup></Link>,{' '}
-            <Link href="/template">David Bau<sup>1</sup></Link>
-            <br />
-            <span><sup>1</sup>Northeastern University, </span>
-            <span><sup>2</sup>Technion - IIT; </span>
-            <span><sup>3</sup>MIT CSAIL</span>
+            {/* Authors with hover-over tooltips for affiliations */}
+            <span className="relative cursor-pointer group">Jack Gallifant<sup>1</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Laboratory for Computational Physiology, Massachusetts Institute of Technology, Cambridge, MA, USA
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Emmett Alexander Kistler<sup>2</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Division of Pulmonary, Critical Care, and Sleep Medicine, Beth Israel Deaconess Medical Center, Boston, MA, USA
+              </span>
+            </span>,{' '}
+            {/* Repeat for each author */}
+            <span className="relative cursor-pointer group">Luis Filipe Nakayama<sup>1,3</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Laboratory for Computational Physiology, Massachusetts Institute of Technology, Cambridge, MA, USA; Department of Ophthalmology, São Paulo Federal University, São Paulo, Brazil
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Chloe Zera<sup>2</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Department of Obstetrics, Gynecology and Reproductive Biology, Beth Israel Deaconess Medical Center, Boston, MA, USA 
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Sunil Kripalani<sup>4</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Department of Medicine, Vanderbilt University Medical Center, Nashville, TN, USA
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Adelline Ntatin<sup>5</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Department of Health Equity, Beth Israel Lahey Health, Boston, MA, USA
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Leonor Fernandez<sup>2</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Department of Medicine Beth Israel Deaconess Medical Center, Boston, MA, USA
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">David Bates<sup>2,6</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Department of Medicine, Harvard Medical School, Boston, MA, USA; Division of General Internal Medicine and Primary Care, Brigham and Womens Hospital, Boston, MA, USA; 
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Irene Dankwa-Mullan<sup>7,8</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Merative & Center for AI, Research, and Evaluation, IBM Watson Health, Cambridge, MA, USA; Department of Health Policy and Management, Milken Institute School of Public Health, George Washington University, Washington, DC, USA
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Leo Anthony Celi<sup>1,2,9</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Laboratory for Computational Physiology, Massachusetts Institute of Technology, Cambridge, MA, USA; Division of Pulmonary, Critical Care, and Sleep Medicine, Beth Israel Deaconess Medical Center, Boston, MA, USA; Department of Biostatistics, Harvard T.H. Chan School of Public Health, Boston, MA, USA
+              </span>
+            </span>
           </p>
         </div>
-
+    
         <div className="flex justify-center space-x-4 mb-8">
           {/* Link to ArXiv Preprint */}
           <a href="https://arxiv.org/pdf/2308.14761.pdf" target="_blank" className="block text-center">

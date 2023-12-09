@@ -5,25 +5,51 @@ export default function ProjectPage() {
   return (
     <>
       <Head>
-        <title>Unified Concept Editing in Diffusion Models</title>
+        <title>Quantifying Digital Health Inequality Across a National Healthcare System</title>
         {/* Add other relevant meta tags here */}
       </Head>
 
-    
-      {/* Author details */}
+      {/* Author details with hover-over for affiliations using Tailwind CSS */}
       <div className="container mx-auto px-4 py-8">
         <div className="text-center">
-          <h1 className="text-3xl font-bold mb-4">Unified Concept Editing in Diffusion Models</h1>
+          <h1 className="text-3xl font-bold mb-4">Quantifying Digital Health Inequality Across a National Healthcare System</h1>
           <p className="mb-4">
-            <Link href="/template">Rohit Gandikota<sup>1</sup></Link>,{' '}
-            <Link href="/template">Hadas Orad<sup>2</sup></Link>,{' '}
-            <Link href="/template">Yonatan Belinkov<sup>2</sup></Link>,{' '}
-            <Link href="/template">Joanna Materzyńska<sup>3</sup></Link>,{' '}
-            <Link href="/template">David Bau<sup>1</sup></Link>
-            <br />
-            <span><sup>1</sup>Northeastern University, </span>
-            <span><sup>2</sup>Technion - IIT; </span>
-            <span><sup>3</sup>MIT CSAIL</span>
+            {/* Authors with hover-over tooltips for affiliations */}
+            <span className="relative cursor-pointer group">Joe Zhang<sup>1,2</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Institute of Global Health Innovation, Imperial College London, London, UK; Department of Critical Care, Guy's and St. Thomas' Hospital, London, UK
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Jack Gallifant<sup>2,3</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Department of Critical Care, Guy's and St. Thomas' Hospital, London, UK; Institute for Medical Engineering and Science, Massachusetts Institute of Technology, Cambridge, Massachusetts, USA
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Robin L Pierce<sup>4</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                University of Exeter Law School, University of Exeter, Exeter, UK
+              </span>
+            </span>,{' '}
+                        <span className="relative cursor-pointer group">Aoife Fordham<sup>5</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Transformation Directorate, NHS England, London, UK
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">James Teo<sup>6,7</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Department of Neurology, Kings College Hospital NHS Foundation Trust, London, UK; London Medical Imaging & AI Centre, Guy's and St. Thomas' Hospital, London, UK
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Leo Celi<sup>3,8</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Institute for Medical Engineering and Science, Massachusetts Institute of Technology, Cambridge, Massachusetts, USA; Division of Pulmonary, Critical Care and Sleep Medicine, Beth Israel Deaconess Medical Center, Boston, Massachusetts, USA
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Hutan Ashrafian<sup>1,9</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Institute of Global Health Innovation, Imperial College London, London, UK; Leeds Business School, University of Leeds, Leeds, UK
+              </span>
+            </span>
           </p>
         </div>
 

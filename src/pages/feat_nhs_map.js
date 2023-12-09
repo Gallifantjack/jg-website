@@ -1,35 +1,59 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
+import mapClustersImage from '@/img/resources/map_clusters.jpg';
+
+
 export default function ProjectPage() {
   return (
     <>
       <Head>
-        <title>Mapping and evaluating national data flows: transparency, privacy, and guiding infrastructural transformation</title>
+        <title>Mapping and Evaluating National Data Flows: Transparency, Privacy, and Guiding Infrastructural Transformation</title>
         {/* Add other relevant meta tags here */}
       </Head>
 
-      {/* Author details */}
+      {/* Author details with hover-over for affiliations using Tailwind CSS */}
       <div className="container mx-auto px-4 py-8">
         <div className="text-center">
           <h1 className="text-3xl font-bold mb-4">Mapping and Evaluating National Data Flows: Transparency, Privacy, and Guiding Infrastructural Transformation</h1>
           <p className="mb-4">
-            Joe Zhang, BMBCh<sup>1,2</sup>,{' '}
-            Jess Morley, MS<sup>3</sup>,{' '}
-            Jack Gallifant, MSc<sup>4,5</sup>,{' '}
-            Chris Oddy, MBBS<sup>6</sup>,{' '}
-            Prof James T Teo, PhD<sup>2,7</sup>,{' '}
-            Prof Hutan Ashrafian, PhD<sup>1,8</sup>,{' '}
-            Prof A Darzi PhD<sup>1</sup>
+            {/* Authors with hover-over tooltips for affiliations */}
+            <span className="relative cursor-pointer group">Joe Zhang, BMBCh<sup>1,2</sup>
+              <span className="absolute bottom-full mb-2 w-80 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Institute of Global Health Innovation, Imperial College London, London, UK; Department of Critical Care, Guys and St Thomas NHS Foundation Trust, London, UK
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Jess Morley, MS<sup>3</sup>
+              <span className="absolute bottom-full mb-2 w-80 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Oxford Internet Institute, University of Oxford, Oxford, UK
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Jack Gallifant, MSc<sup>4,5</sup>
+              <span className="absolute bottom-full mb-2 w-80 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Department of Intensive Care, Imperial College Healthcare NHS Trust, London, UK; Laboratory for Computational Physiology, Massachusetts Institute of Technology, Cambridge, MA, USA
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Chris Oddy, MBBS<sup>6</sup>
+              <span className="absolute bottom-full mb-2 w-80 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Department of Anaesthesia, Critical Care and Pain, St Georges Healthcare NHS Trust, London, UK
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Prof James T Teo, PhD<sup>2,7</sup>
+              <span className="absolute bottom-full mb-2 w-80 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Department of Critical Care, Guys and St Thomas NHS Foundation Trust, London, UK; Department of Neurology, Kings College Hospital NHS Foundation Trust, London, UK
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Prof Hutan Ashrafian, PhD<sup>1,8</sup>
+              <span className="absolute bottom-full mb-2 w-80 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Institute of Global Health Innovation, Imperial College London, London, UK; Leeds University Business School, Leeds, UK
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Prof A Darzi PhD<sup>1</sup>
+              <span className="absolute bottom-full mb-2 w-80 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Institute of Global Health Innovation, Imperial College London, London, UK
+              </span>
+            </span>
             <br />
-            <span><sup>1</sup>Institute of Global Health Innovation, Imperial College London, London, UK</span><br />
-            <span><sup>2</sup>Department of Critical Care, Guys and St Thomas NHS Foundation Trust, London, UK</span><br />
-            <span><sup>3</sup>Oxford Internet Institute, University of Oxford, Oxford, UK</span><br />
-            <span><sup>4</sup>Department of Intensive Care, Imperial College Healthcare NHS Trust, London, UK</span><br />
-            <span><sup>5</sup>Laboratory for Computational Physiology, Massachusetts Institute of Technology, Cambridge, MA, USA</span><br />
-            <span><sup>6</sup>Department of Anaesthesia, Critical Care and Pain, St Georges Healthcare NHS Trust, London, UK</span><br />
-            <span><sup>7</sup>Department of Neurology, Kings College Hospital NHS Foundation Trust, London, UK</span><br />
-            <span><sup>8</sup>Leeds University Business School, Leeds, UK</span><br />
             <a href="https://doi.org/10.1016/S2589-7500(23)00157-7">DOI: 10.1016/S2589-7500(23)00157-7</a>
             <br />
             <a href="mailto:joe.zhang@imperial.ac.uk">joe.zhang@imperial.ac.uk</a>
@@ -57,7 +81,12 @@ export default function ProjectPage() {
         </div>
 
         {/* Images and Figures */}
-
+        <div className="max-w-2xl mx-auto bg-white shadow-md p-4 rounded-lg mt-4">
+          <h2 className="text-2xl font-bold mb-4">Data Clusters</h2>
+          <div className="card bg-white shadow-md p-4 rounded-lg">
+            <img src={mapClustersImage} alt="Data Clusters" className="mx-auto" />
+          </div>
+        </div>
 
         {/* More content */}
 

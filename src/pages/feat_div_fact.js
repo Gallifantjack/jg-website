@@ -5,25 +5,106 @@ export default function ProjectPage() {
   return (
     <>
       <Head>
-        <title>Unified Concept Editing in Diffusion Models</title>
+        <title>A New Tool for Evaluating Health Equity in Academic Journals; the Diversity Factor</title>
         {/* Add other relevant meta tags here */}
       </Head>
 
-    
-      {/* Author details */}
+      {/* Author details with hover-over for affiliations using Tailwind CSS */}
       <div className="container mx-auto px-4 py-8">
         <div className="text-center">
-          <h1 className="text-3xl font-bold mb-4">Unified Concept Editing in Diffusion Models</h1>
+          <h1 className="text-3xl font-bold mb-4">A New Tool for Evaluating Health Equity in Academic Journals; the Diversity Factor</h1>
           <p className="mb-4">
-            <Link href="/template">Rohit Gandikota<sup>1</sup></Link>,{' '}
-            <Link href="/template">Hadas Orad<sup>2</sup></Link>,{' '}
-            <Link href="/template">Yonatan Belinkov<sup>2</sup></Link>,{' '}
-            <Link href="/template">Joanna Materzyńska<sup>3</sup></Link>,{' '}
-            <Link href="/template">David Bau<sup>1</sup></Link>
-            <br />
-            <span><sup>1</sup>Northeastern University, </span>
-            <span><sup>2</sup>Technion - IIT; </span>
-            <span><sup>3</sup>MIT CSAIL</span>
+            {/* Authors with hover-over tooltips for affiliations */}
+            <span className="relative cursor-pointer group">Jack Gallifant<sup>1</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Department of Intensive Care, Imperial College London NHS Trust, London, United Kingdom
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Joe Zhang<sup>2</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Institute of Global Health Innovation, Imperial College London, London, United Kingdom
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Stephen Whebell<sup>3</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Intensive Care Unit, Townsville University Hospital, Townsville, Queensland, Australia
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Justin Quion<sup>4</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                University of the East Ramon Magsaysay Memorial Medical Center, Quezon City, Philippines
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Braiam Escobar<sup>5</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Escuela de Ingeniería de Antioquia, Envigado, Colombia
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Judy Gichoya<sup>6</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                School of Medicine, Emory University, Atlanta, Georgia, United States of America
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Karen Herrera<sup>7</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Faculty of Medicine, Military Hospital, Managua, Nicaragua
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Ruxana Jina<sup>8,9</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                The Epidemiology and Surveillance Section, National Institute for Occupational Health, National Health Laboratory Services, Gauteng Region, South Africa; The Wits School of Public Health, Faculty of Health Sciences, University of the Witwatersrand, Johannesburg, South Africa
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Swathikan Chidambaram<sup>10</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Department of Surgery and Cancer, Imperial College London, London, United Kingdom
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Abha Mehndiratta<sup>11</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Center for Global Development, Washington, DC, United States of America
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Richard Kimera<sup>12,13</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Department of Information Technology, Faculty of Computing and Informatics, Mbarara University of Science and Technology, Mbarara, Uganda; Department of Advanced Convergence, Handong Global University, Pohang-si, South Korea
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Alvin Marcelo<sup>14</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                University of the Philippines Manila, Manila, Philippines
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Portia Grace Fernandez-Marcelo<sup>15</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Department of Family and Community Medicine, College of Medicine, University of the Philippines Manila, Manila, Philippines
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Juan Sebastian Osorio<sup>16</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                ScienteLab, Bogota, Colombia
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Cleva Villanueva<sup>17</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Instituto Politecnico Nacional, Escuela Superior de Medicina, Mexico City, Mexico
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Lama Nazer<sup>18</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Department of Pharmacy, King Hussein Cancer Center, Amman, Jordan
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Irene Dankwa-Mullan<sup>19,20</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Merative, & Center for AI, Research, and Evaluation, IBM Watson Health, Cambridge, Massachusetts, United States of America; Department of Health Policy and Management, Milken Institute School of Public Health, George Washington University, Washington, DC, United States of America
+              </span>
+            </span>,{' '}
+            <span className="relative cursor-pointer group">Leo Anthony Celi<sup>21,22,23</sup>
+              <span className="absolute bottom-full mb-2 w-64 bg-black text-white text-xs rounded py-1 px-2 left-1/2 transform -translate-x-1/2 invisible group-hover:visible">
+                Massachusetts Institute of Technology, Laboratory for Computational Physiology, Cambridge, Massachusetts, United States of America; Beth Israel Deaconess Medical Center, Division of Pulmonary, Critical Care, and Sleep Medicine, Boston, Massachusetts, United States of America; Department of Biostatistics, Harvard T.H. Chan School of Public Health, Boston, Massachusetts, United States of America
+              </span>
+            </span>
           </p>
         </div>
 
