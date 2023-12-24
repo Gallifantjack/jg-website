@@ -14,74 +14,66 @@ import News_section from './docs/news'
 import Research_index from './docs/research_focus'
 import Featured_work from './docs/Featured_work_index'
 
-
 function Header() {
-  
   return (
     <header className="relative">
-      <div className="min-h-screen px-4 sm:px-6 md:px-8">
-        <div
-          className={clsx(
-            'absolute inset-0 bottom-10 bg-bottom bg-no-repeat bg-slate-50 dark:bg-[#0B1120]',
-            styles.beams
-          )}
-        >
-        <div
-          className="absolute inset-0 bg-grid-slate-900/[0.04] bg-[bottom_1px_center] dark:bg-grid-slate-400/[0.05] dark:bg-bottom dark:border-b dark:border-slate-100/5"
-          style={{
-            maskImage: 'linear-gradient(to bottom, transparent, black)',
-            WebkitMaskImage: 'linear-gradient(to bottom, transparent, black)',
-          }}
-        />
-        </div>
-        <div className="relative pt-6 lg:pt-8 flex items-center justify-between text-slate-700 font-semibold text-sm leading-6 dark:text-slate-200">
-          <Logo className="w-auto h-5" />
-          <div className="flex items-center">
-            <NavPopover className="-my-1 ml-2 -mr-1" display="md:hidden" />
-            <div className="hidden md:flex items-center">
-              <nav className="text-sm leading-6 font-semibold text-slate-700 dark:text-slate-200">
-                <ul className="flex space-x-8">
-                  <NavItems />
-                </ul>
-              </nav>
-              <div className="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-slate-800">
-                <ThemeToggle panelClassName="mt-8" />
-                <a
-                  href="https://github.com/gallifantjack"
-                  className="ml-6 block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
-                >
-                  <span className="sr-only">Tailwind CSS on GitHub</span>
-                  <svg
-                    viewBox="0 0 16 16"
-                    className="w-5 h-5"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
-                  </svg>
-                </a>
-              </div>
+      {/* Navigation Bar at the Top */}
+      <div className="relative z-10 pt-6 lg:pt-8 flex items-center justify-between text-slate-700 font-semibold text-sm leading-6 dark:text-slate-200">
+        {/* Logo */}
+        <Logo className="w-auto h-5" />
+
+        {/* Navigation Items */}
+        <div className="flex items-center">
+          <NavPopover className="-my-1 ml-2 -mr-1" display="md:hidden" />
+          <div className="hidden md:flex items-center">
+            <nav className="text-sm leading-6 font-semibold text-slate-700 dark:text-slate-200">
+              <ul className="flex space-x-8">
+                <NavItems />
+              </ul>
+            </nav>
+            <div className="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-slate-800">
+              <ThemeToggle panelClassName="mt-8" />
+              <a href="https://github.com/gallifantjack" className="ml-6 block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300">
+                {/* GitHub Icon and Link */}
+              </a>
             </div>
           </div>
         </div>
-        <div className="relative max-w-5xl mx-auto pt-20 mb-10 sm:pt-24 lg:pt-32">
-          <h1 className="text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white">
+      </div>
+
+      {/* Full-Screen Background with Centered Hero Text */}
+      <div className="flex flex-col min-h-screen">
+        <div
+          className={clsx(
+            'flex-grow flex items-center justify-center',
+            'absolute inset-0 bg-bottom bg-no-repeat bg-slate-50 dark:bg-[#0B1120]',
+            styles.beams
+          )}
+        >
+          <div className="bg-grid-slate-900/[0.04] bg-[bottom_1px_center] dark:bg-grid-slate-400/[0.05] dark:bg-bottom dark:border-b dark:border-slate-100/5"
+            style={{
+              maskImage: 'linear-gradient(to bottom, transparent, black)',
+              WebkitMaskImage: 'linear-gradient(to bottom, transparent, black)',
+            }}
+          />
+        {/* Hero Text */}
+        <div className="relative max-w-5xl mx-auto text-center">
+          <h1 className="font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-gray-200">
             Jack Gallifant
           </h1>
-          <p className="mt-6 text-2xl text-slate-700 text-center max-w-3xl mx-auto dark:text-slate-300">
-            I like to break language models  {' '}
-            <code className="font-mono font-medium text-sky-400">
-              for safety reasons{' '}
-            </code>
+          <p className="mt-6 text-2xl max-w-3xl mx-auto text-sky-500">
+            Superalignment | Health Equity | Superintelligence
           </p>
-          <p className="mt-3 text-lg text-center max-w-3xl mx-auto text-slate-300">
+          <p className="mt-3 text-lg max-w-3xl mx-auto text-gray-300">
             Massachusetts Institute of Technology
           </p>
         </div>
+        </div>
       </div>
     </header>
-  )
+  );
 }
+
 
 export default function Home() {
   return (
@@ -89,12 +81,12 @@ export default function Home() {
       <Head>
         <meta key="twitter:title" name="twitter:title" content="Jack Gallifant" />
         <meta key="og:title" property="og:title" content="Jack Gallifant" />
-        <title>Jack Gallifant</title>
+        <title>Jack Gallifant | AI Alignment</title>
       </Head>
       <div>
         <Header />
       </div>
-      <div className="pt-20 mb-20 flex flex-col gap-y-20 overflow-hidden sm:pt-32 sm:mb-32 sm:gap-y-32 md:pt-40 md:mb-40 md:gap-y-40">
+      <div className="flex flex-col overflow-hidden">
         <About_index />
         <Research_index />
         <News_section />

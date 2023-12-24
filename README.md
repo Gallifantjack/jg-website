@@ -1,5 +1,6 @@
 # JG #2
 
+https://heroicons.com/solid
 - Home page
 
   - hero text to center

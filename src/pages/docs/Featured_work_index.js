@@ -64,19 +64,17 @@ function Card({ title, superTitle, href, color, body, image, video }) {
 
 function Featured_work() {
   return (
-    <section>
+    <section className='min-h-screen py-24 sm:py-32'>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         <div className="mb-20 md:mb-10">
-          <IconContainer
-            className="dark:bg-indigo-500 dark:highlight-white/10"
-            light={require('@/img/icons/home/constraint-based.png').default.src}
-            dark={require('@/img/icons/home/dark/constraint-based.png').default.src}
-          />
+          <div class="bg-blue-600 text-white p-4 text-xl font-bold rounded-full w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] flex items-center justify-center flex-shrink-0">
+          4
+          </div>
 
-          <Caption className="text-indigo-500 dark:text-indigo-400">Featured Work</Caption>
+          <Caption className="text-blue-500">Featured Work</Caption>
 
           <BigText className='text-white'>
-            <Widont>Bridging AI and Healthcare</Widont>
+            <Widont>Selected Projects</Widont>
           </BigText>
 
           <Paragraph>
@@ -111,8 +109,7 @@ function Featured_work() {
                 title: 'Developing tools to deploy AI safely',
                 description: 'Disparity Dashboards',
                 images: [
-                  require('@/img/resources/refactoringui-small@75.jpg').default.src,
-                  require('@/img/resources/refactoringui@75.jpg').default.src,
+                  require('@/img/resources/dash_example.png').default.src,
                 ],
                 color: 'text-blue-500',
                 href: '/feat_disp_dash',
@@ -130,15 +127,13 @@ function Featured_work() {
                   </>
                 ),
               },
-              // new card from here
               { 
                 title: 'Quantifying digital health inequality across the NHS',
                 description: 'Digital Inequality',
                 images: [
-                  require('@/img/resources/tailwindui-small@75.jpg').default.src,
-                  require('@/img/resources/tailwindui@75.jpg').default.src,
+                  require('@/img/resources/dig_ineq.jpg').default.src,
                 ],
-                color: 'text-sky-500',
+                color: 'text-blue-500',
                 href: '/feat_dig_ineq',
                 body: (
                   <>
@@ -150,15 +145,13 @@ function Featured_work() {
                   </>
                 ),
               },
-              // new card to here
               {
                 title: 'New tools to monitor Health equity',
                 description: 'Diversity Factor',
                 images: [
-                  require('@/img/resources/tailwindui-small@75.jpg').default.src,
-                  require('@/img/resources/tailwindui@75.jpg').default.src,
+                  require('@/img/resources/div_fact.png').default.src,
                 ],
-                color: 'text-sky-500',
+                color: 'text-blue-500',
                 href: '/feat_div_fact',
                 body: (
                   <>
@@ -173,14 +166,14 @@ function Featured_work() {
             ].map(({ title, description, images, color, body, href }) => (
               <li
                 key={title}
-                className="-mx-4 p-4 pb-10 bg-slate-50 flex flex-col-reverse items-start sm:mx-0 sm:p-10 sm:rounded-2xl xl:flex-row dark:bg-slate-800/50"
+                className="-mx-4 p-4 pb-10 flex flex-col-reverse items-start sm:mx-0 sm:p-10 sm:rounded-2xl xl:flex-row dark:bg-slate-800/50"
               >
                 <div className="flex-auto">
                   <h3 className={clsx('mb-4 text-sm leading-6 font-semibold', color)}>{title}</h3>
-                  <p className="mb-2 text-xl font-semibold tracking-tight text-slate-900 dark:text-slate-200">
+                  <p className="mb-2 text-xl font-semibold tracking-tight  dark:text-slate-200">
                     {description}
                   </p>
-                  <div className="mb-6 text-sm leading-6 text-slate-600 space-y-4 dark:text-slate-400">
+                  <div className="mb-6 text-sm leading-6  space-y-4 dark:text-slate-400">
                     {body}
                   </div>
                   <Button
@@ -195,7 +188,7 @@ function Featured_work() {
                   </Button>
                 </div>
                 <div className="w-full flex-none mb-10 xl:mb-0 xl:ml-8 xl:w-[29rem]">
-                  <div className="aspect-w-[1216] aspect-h-[606] sm:aspect-w-[1376] sm:aspect-h-[664] shadow-lg rounded-lg bg-slate-100 overflow-hidden dark:bg-slate-800">
+                  <div className="aspect-w-[1216] aspect-h-[606] sm:aspect-w-[1376] sm:aspect-h-[664] shadow-lg rounded-lg  overflow-hidden dark:bg-slate-800">
                     <picture>
                       <source type="image/jpeg" srcSet={images[1]} media="(min-width: 640px)" />
                       <img src={images[0]} alt="" decoding="async" />

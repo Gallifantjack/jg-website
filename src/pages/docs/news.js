@@ -51,51 +51,54 @@ function SamplePrevArrow(props) {
 
 function Card({ title, superTitle, href, color, body, image, video }) {
   return (
-    <li className="relative flex flex-col sm:flex-row xl:flex-col items-start px-1">
-      <div className="order-1 sm:ml-6 xl:ml-0">
-        <h3 className="mb-1 text-slate-900 font-semibold ">
-          <a href={href} className="hover:text-slate-600">
-            <span className={clsx('mb-1 block text-sm leading-6', color)}>{superTitle}</span>
-            {title}
-          </a>
-        </h3>
-        <div className="prose prose-slate prose-sm text-slate-700 pb-5">{body}</div>
-      </div>
+    <li className="relative flex flex-col sm:flex-row xl:flex-col items-start px-5">
+      {/* Box Container */}
+      <div className="border border-slate-300 rounded-lg shadow-sm bg-cyan-100/10 p-4">
+        <div className="order-1 sm:ml-6 xl:ml-0">
+          <h3 className="mb-1 text-slate-900 font-semibold ">
+            <a href={href} className="hover:text-slate-600">
+              <span className={clsx('mb-1 block text-sm leading-6', color)}>{superTitle}</span>
+              {title}
+            </a>
+          </h3>
+          <div className="prose prose-slate prose-sm text-slate-700 pb-5">{body}</div>
+        </div>
 
-      {/* Media Wrapper */}
-      <div className="relative mb-6 sm:mb-0 xl:mb-6 w-full sm:w-[17rem] xl:w-full rounded-lg overflow-hidden">
-        {/* Placeholder to maintain aspect ratio */}
-        <div style={{ paddingTop: '56.25%' }}></div>
+        {/* Media Wrapper */}
+        <div className="relative mb-6 sm:mb-0 xl:mb-6 w-full sm:w-[17rem] xl:w-full rounded-lg overflow-hidden">
+          {/* Placeholder to maintain aspect ratio */}
+          <div style={{ paddingTop: '56.25%' }}></div>
 
-        {/* Check for video and display it; otherwise display image */}
-        {video ? (
-          <iframe
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-            }}
-            src={video}
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        ) : (
-          <img
-            src={image}
-            alt=""
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              objectFit: 'contain',
-            }}
-          />
-        )}
+          {/* Check for video and display it; otherwise display image */}
+          {video ? (
+            <iframe
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+              }}
+              src={video}
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          ) : (
+            <img
+              src={image}
+              alt=""
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                objectFit: 'contain',
+              }}
+            />
+          )}
+        </div>
       </div>
     </li>
   )
@@ -136,13 +139,11 @@ function News_section() {
     <section className='bg-white min-h-screen py-24 sm:py-32'>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         <div className="mb-20 md:mb-10">
-          <IconContainer
-            className="dark:bg-indigo-500 dark:highlight-white/10"
-            light={require('@/img/icons/home/constraint-based.png').default.src}
-            dark={require('@/img/icons/home/dark/constraint-based.png').default.src}
-          />
+          <div class="bg-cyan-500 text-white p-4 text-xl font-bold rounded-full w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] flex items-center justify-center flex-shrink-0">
+          3
+          </div>
 
-          <Caption className="text-indigo-500">News</Caption>
+          <Caption className="text-cyan-500">News</Caption>
 
           <BigText>
             <Widont>Latest Updates</Widont>
