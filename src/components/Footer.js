@@ -15,16 +15,17 @@ export function Footer({ className }) {
 function FooterContent() {
   return (
     <div className="text-center">
-      <Logo className="h-4 w-auto mx-auto" />
       <p className="mt-4 text-sm leading-6 text-slate-500">
-        &copy; {new Date().getFullYear()} Developed using of Tailwind CSS, Typescript, Next.js and
-        Vercel; code is freely available
+        Last updated 01-2024. Source code is freely available
         <Link
           href="https://github.com/gallifantjack"
           className="hover:text-sky-500 dark:hover:text-sky-400 pl-1"
         >
           here.
         </Link>
+      </p>
+      <p className="mt-4 text-sm leading-6 text-slate-500">
+        &copy; {new Date().getFullYear()} Jack Gallifant 
       </p>
     </div>
   )

@@ -39,9 +39,9 @@ function Card({ title, superTitle, href, color, body, image, video }) {
               height: '100%',
             }}
             src={video}
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         ) : (
           <img

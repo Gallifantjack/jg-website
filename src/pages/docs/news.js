@@ -80,9 +80,9 @@ function Card({ title, superTitle, href, color, body, image, video }) {
                 height: '100%',
               }}
               src={video}
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           ) : (
             <img
@@ -188,7 +188,7 @@ function News_section() {
                   </p>
                 ),
                 href: 'https://heroicons.com',
-                image: require('@/img/resources/landig.jpg').default.src,
+                image: require('@/img/resources/landig.png').default.src,
                 color: 'text-purple-500',
               },
               {
