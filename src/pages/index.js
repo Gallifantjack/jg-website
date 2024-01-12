@@ -62,7 +62,7 @@ function Header() {
             Jack Gallifant
           </h1>
           <p className="mt-6 text-2xl max-w-3xl mx-auto text-sky-500">
-            Superalignment | Health Equity | Superintelligence
+          Alignment |  AI | Healthcare 
           </p>
           <p className="mt-3 text-lg max-w-3xl mx-auto text-gray-300">
             Massachusetts Institute of Technology

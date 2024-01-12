@@ -86,6 +86,25 @@ function Featured_work() {
           <ul className="sm:space-y-6">
             {[
               {
+                title: 'Fairness of AI Metrics',
+                description: 'AUROC and AUPRC under Class Imbalance',
+                images: [
+                  require('@/img/resources/atomic_mistakes.png').default.src,
+                ],
+                color: 'text-blue-500',
+                href: '/feat_auc',
+                body: (
+                  <>
+                  <p>
+                    This study disproves popular belief that AUPRC is the best metric in class imbalance settings.
+                  </p>
+                  <p>
+                    Using a novel theoretical framework, we show that AUPRC is inherently discriminatory, favouring subgroups with higher prevalence of positive labels.
+                  </p>
+                  </>
+                ),
+              },
+              {
                 title: 'Characterizing UK Health Data Flow',
                 description: 'Mapping NHS Data',
                 images: [
