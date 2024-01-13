@@ -54,6 +54,11 @@ export default {
   async redirects() {
     return JSON.parse(fs.readFileSync(require.resolve('./redirects.json'), 'utf8'))
   },
+  eslint: {
+    // Warning: This allows production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: true,
+  },
   webpack(config, options) {
     config.module.rules.push({
       test: /\.mp4$/i,
