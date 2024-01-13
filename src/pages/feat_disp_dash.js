@@ -8,7 +8,7 @@ import atomic_mistakes from '@/img/resources/atomic_mistakes.png';
 
 
 export default function ProjectPage() {
-  const auc_thumbnail = require("@/img/resources/arxiv_thumbnails/auc_arxiv.png").default.src;
+  const disp_dash_thumbnail = require("@/img/resources/arxiv_thumbnails/disp_dash_thumb.png").default.src;
   const git_thumbnail = require("@/img/resources/git_thumbnails/auc_git.png").default.src;
   const auc_optim = require("@/img/resources/auc_optim_auroc.png").default.src;
   const auprc_optim = require("@/img/resources/auc_optim_auprc.png").default.src;
@@ -85,7 +85,7 @@ export default function ProjectPage() {
           <a href="https://arxiv.org/pdf/2401.06091.pdf" target="_blank" rel="noopener noreferrer" className="block text-center ">
             <div className="relative w-[100px] h-[120px] border border-gray-300 mx-auto">
               <Image 
-                src={auc_thumbnail} 
+                src={disp_dash_thumbnail} 
                 alt="ArXiv Preprint thumbnail"
                 layout="fill" // Use 'fill' layout to stretch the image
                 objectFit="cover" // Adjust as needed to 'cover' or 'contain'
@@ -93,20 +93,6 @@ export default function ProjectPage() {
               />
             </div>
             <span>ArXiv Preprint</span>
-          </a>
-
-          {/* Link to GitHub Repo */}
-          <a href="https://github.com/mmcdermott/AUC_is_all_you_need" target="_blank" rel="noopener noreferrer" className="block text-center">
-            <div className="relative w-[100px] h-[120px] border border-gray-300 mx-auto">
-              <Image 
-                src={git_thumbnail} 
-                alt="Github thumbnail"
-                layout="fill" // Use 'fill' layout to stretch the image
-                objectFit="cover" // Adjust as needed to 'cover' or 'contain'
-                objectPosition="center" // Optional, adjust as needed
-              />
-            </div>
-            <span>Github Repo</span>
           </a>
         </div>
 

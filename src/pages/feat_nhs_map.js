@@ -7,10 +7,9 @@ import { BigText, Caption, Paragraph, Button } from '@/components/home/common';
 import atomic_mistakes from '@/img/resources/atomic_mistakes.png';
 
 export default function ProjectPage() {
-  const auc_thumbnail = require("@/img/resources/arxiv_thumbnails/auc_arxiv.png").default.src;
-  const git_thumbnail = require("@/img/resources/git_thumbnails/auc_git.png").default.src;
-  const auc_optim = require("@/img/resources/auc_optim_auroc.png").default.src;
-  const auprc_optim = require("@/img/resources/auc_optim_auprc.png").default.src;
+  const nhs_thumbnail = require("@/img/resources/arxiv_thumbnails/nhs_flow_journal.png").default.src;
+  const map_ball = require("@/img/resources/map_ball_chart.jpg").default.src;
+  const map_clusters = require("@/img/resources/map_clusters.jpg").default.src;
   const subpop_thumbnail = require("@/img/resources/subpop_thumbnail.png").default.src;
 
 
@@ -74,28 +73,14 @@ export default function ProjectPage() {
           <a href="https://arxiv.org/pdf/2401.06091.pdf" target="_blank" rel="noopener noreferrer" className="block text-center ">
             <div className="relative w-[100px] h-[120px] border border-gray-300 mx-auto">
               <Image 
-                src={auc_thumbnail} 
+                src={nhs_thumbnail} 
                 alt="ArXiv Preprint thumbnail"
                 layout="fill" // Use 'fill' layout to stretch the image
                 objectFit="cover" // Adjust as needed to 'cover' or 'contain'
                 objectPosition="center" // Optional, adjust as needed
               />
             </div>
-            <span>ArXiv Preprint</span>
-          </a>
-
-          {/* Link to GitHub Repo */}
-          <a href="https://github.com/mmcdermott/AUC_is_all_you_need" target="_blank" rel="noopener noreferrer" className="block text-center">
-            <div className="relative w-[100px] h-[120px] border border-gray-300 mx-auto">
-              <Image 
-                src={git_thumbnail} 
-                alt="Github thumbnail"
-                layout="fill" // Use 'fill' layout to stretch the image
-                objectFit="cover" // Adjust as needed to 'cover' or 'contain'
-                objectPosition="center" // Optional, adjust as needed
-              />
-            </div>
-            <span>Github Repo</span>
+            <span>Lancet Digital Health</span>
           </a>
         </div>
 
@@ -129,7 +114,7 @@ export default function ProjectPage() {
             <a href="https://arxiv.org/pdf/2401.06091.pdf" target="_blank" rel="noopener noreferrer">
               <div className="relative w-[30vw] h-[40vh] border border-gray-300 mx-auto">
                 <Image 
-                  src={atomic_mistakes} 
+                  src={map_clusters} 
                   alt="Atomic Mistakes Diagram"
                   layout="fill"
                   objectFit="contain"
@@ -175,7 +160,7 @@ export default function ProjectPage() {
           <div className="flex justify-center space-x-4"> {/* Flex container for images */}
             <div style={{ width: '50%' }}> {/* Container for the first image */}
               <Image 
-                src={auc_optim} 
+                src={map_ball} 
                 alt="First Image Description"
                 layout="responsive"
                 width={100} // Example ratio
@@ -188,7 +173,7 @@ export default function ProjectPage() {
 
             <div style={{ width: '50%' }}> {/* Container for the second image */}
               <Image 
-                src={auprc_optim} 
+                src={map_ball} 
                 alt="Second Image Description"
                 layout="responsive"
                 width={100} // Example ratio

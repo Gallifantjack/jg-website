@@ -5,7 +5,7 @@ import React from 'react';
 import { BigText, Caption, Paragraph, Button } from '@/components/home/common';
 
 export default function ProjectPage() {
-  const dig_ineq_thumbnail = require("@/img/resources/dig_ineq.jpg").default.src;
+  const dig_ineq_thumbnail = require("@/img/resources/arxiv_thumbnails/dig_ineq_thumb.png").default.src;
   const dig_ineq = require("@/img/resources/dig_ineq.jpg").default.src;
 
   return (
@@ -64,14 +64,14 @@ export default function ProjectPage() {
           <a href="https://arxiv.org/pdf/2401.06091.pdf" target="_blank" rel="noopener noreferrer" className="block text-center ">
             <div className="relative w-[100px] h-[120px] border border-gray-300 mx-auto">
               <Image 
-                src={dig_ineq} 
+                src={dig_ineq_thumbnail} 
                 alt="ArXiv Preprint thumbnail"
                 layout="fill" // Use 'fill' layout to stretch the image
                 objectFit="cover" // Adjust as needed to 'cover' or 'contain'
                 objectPosition="center" // Optional, adjust as needed
               />
             </div>
-            <span>ArXiv Preprint</span>
+            <span>BMJ Health & Care Informatics</span>
           </a>
         </div>
 
