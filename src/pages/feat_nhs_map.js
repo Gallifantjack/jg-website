@@ -11,6 +11,7 @@ export default function ProjectPage() {
   const map_ball = require("@/img/resources/map_ball_chart.jpg").default.src;
   const map_clusters = require("@/img/resources/map_clusters.jpg").default.src;
   const subpop_thumbnail = require("@/img/resources/subpop_thumbnail.png").default.src;
+  const asset_diversity = require("@/img/resources/nhs_assets.jpg").default.src;
 
 
   return (
@@ -86,27 +87,24 @@ export default function ProjectPage() {
 
         {/* Summary box */}
         <div className="max-w-3xl mx-auto bg-white border border-gray-300 p-8 rounded-lg"> {/* Added border and increased padding */}
-          <h3 className="font-semibold text-center text-gray-900 text-2xl mb-4">How Should We Prioritize Fixing Model Mistakes?</h3>
+          <h3 className="font-semibold text-center text-gray-900 text-2xl mb-4">Navigating the Complexities of NHS Data Sharing</h3>
           <Paragraph className="text-base text-slate-900">
-            This paper critically examines the widely held belief in machine learning (ML) that the area under the precision-recall curve (AUPRC) is superior to the area under the receiver operating characteristic (AUROC) for binary classification tasks in class-imbalanced scenarios. 
-            Through novel mathematical analysis, it demonstrates that AUPRC is not inherently superior and may even be detrimental due to its tendency to overemphasize improvements in subpopulations with more frequent positive labels, potentially exacerbating algorithmic biases. 
+            This study scrutinizes the UK National Health Service's (NHS) electronic health records, revealing significant challenges in data sharing. It maps out data flows to over 460 entities, including academic, commercial, and public sectors. The findings show that multistage data flow chains obscure transparency, jeopardizing public trust. Moreover, most data interactions fail to meet best practices for secure access, raising privacy concerns. The existing infrastructure also leads to duplicate data, diminishing the diversity and value of the data. 
+            Recommendations for infrastructure transformation and a new website <a href="https://DataInsights.uk" target="_blank" rel="noopener noreferrer" className=' hover:text-blue-600'>DataInsights.uk</a> aim to enhance transparency and showcase NHS data assets.
           </Paragraph>
         </div>
+
 
         {/* Images and Figures */}
         <div className="max-w-4xl mx-auto py-8"> {/* Padding around the entire section */}
           <div className="text-left mb-4"> {/* Title with bottom margin */}
-            <p className="font-semibold text-gray-900 text-2xl">Using Atomic Mistakes</p>
+            <p className="font-semibold text-gray-900 text-2xl">Data Flow Patterns in NHS England</p>
           </div>
 
           <div className="text-center pb-2"> {/* Caption with top margin */}
             <Paragraph className="text-base text-slate-900 ">
-                Atomic mistakes occur when neighboring samples, when
-                ordered by model score, are out-of-order with respect to the classi-
-                fication label. AUROC improves by a constant amount no matter
-                which atomic mistake is corrected; AUPRC improves in descend-
-                ing order with model score due to the dependence on model firing
-                rate (Theorem 1). 
+                NHS England, comprising 216 hospital trusts and 6,544 primary care providers, manages healthcare interactions for a population of about 56 million.
+                Figure 2 illustrates the national data flows, highlighting four primary models of data extraction: 1) structured clinical codes from primary care EHRs, 2) administrative data from secondary care by NHS Digital, 3) data aggregation within regional shared care record data warehouses, and 4) proprietary secondary care data pipelines. 
             </Paragraph>
           </div>
 
@@ -115,7 +113,7 @@ export default function ProjectPage() {
               <div className="relative w-[30vw] h-[40vh] border border-gray-300 mx-auto">
                 <Image 
                   src={map_clusters} 
-                  alt="Atomic Mistakes Diagram"
+                  alt="Clusters and NHS data flows"
                   layout="fill"
                   objectFit="contain"
                   objectPosition="center"
@@ -127,25 +125,18 @@ export default function ProjectPage() {
           {/* Caption with top margin */}
           <div className="text-center my-2"> 
             <Paragraph className="italic text-sm text-slate-600">
-              Different types of mistakes a model can learn to fix. 
-              y= 0 is the negative class and y= 1 is the positive class. 
-              a= 0 is subgroup 1 and a= 1 is subgroup 2.
+              Electronic patient data flows in NHS England
+              Data flows go upwards and are coloured by destination. 
+              For data source and extractors, node size is proportional to population catchment (eg, NHS Digital=55 million). 
+              For data consumers, node size is proportional to the number of projects (eg, University of Oxford=178). 
+              NHS=National Health Service.
             </Paragraph>
           </div>
 
           <div className="text-center my-2"> {/* Caption with top margin */}
             <Paragraph className="text-base text-slate-900">
-              Which mistake you should prioritize fixing first
-              depends on usage; in a classification setting, where you do not
-              know whether the sample of interest is from a high-scoring or
-              low-scoring region, you want to use a metric that optimizes scores
-              in an unbiased manner, like AUROC. In a single-stream retrieval
-              setting, where you choose the top-k samples, regardless of group
-              membership and evaluate with those, a metric that favors mistakes
-              in high-scoring regions like AUPRC will be most impactful. But,
-              if you care about retrieving the top-k metrics from multiple distinct
-              subpopulations within your dataset, AUPRC will be dangerous as
-              it will favor the high-prevalence sub-population
+              These models vary in the resolution and type of data extracted, ranging from standard clinical codes to high-resolution data from secondary care. 
+              The visual representation in Figure 1, with data flow directions and node sizes, provides an insightful overview of the data extraction sources and their reach.
             </Paragraph>
           </div>
         </div>
@@ -154,58 +145,101 @@ export default function ProjectPage() {
         {/* More content */}
         <div className="max-w-4xl mx-auto py-8"> {/* Padding around the entire section */}
           <div className="text-left mb-4"> {/* Title with bottom margin */}
-            <p className="font-semibold text-gray-900 text-2xl">Optimizing AUPRC Introduces Disparities</p>
+            <p className="font-semibold text-gray-900 text-2xl">Secondary Use Ecosystem and Top Data Consumers </p>
           </div>
 
-          <div className="flex justify-center space-x-4"> {/* Flex container for images */}
-            <div style={{ width: '50%' }}> {/* Container for the first image */}
-              <Image 
-                src={map_ball} 
-                alt="First Image Description"
-                layout="responsive"
-                width={100} // Example ratio
-                height={100} // Maintain aspect ratio
-              />
-              <p className="text-center text-sm text-slate-900"> {/* Caption for the second image */}
-                Optimizing overall AUROC.
-              </p>
-            </div>
-
-            <div style={{ width: '50%' }}> {/* Container for the second image */}
-              <Image 
-                src={map_ball} 
-                alt="Second Image Description"
-                layout="responsive"
-                width={100} // Example ratio
-                height={100} // Maintain aspect ratio
-              />
-              <p className="text-center text-sm text-slate-900"> {/* Caption for the second image */}
-                Optimizing overall AUPRC.
-              </p>
-            </div>
+          <div className="flex justify-center pt-8">
+            <a href="https://arxiv.org/pdf/2401.06091.pdf" target="_blank" rel="noopener noreferrer">
+              <div className="relative w-[30vw] h-[40vh] border border-gray-300 mx-auto">
+                <Image 
+                  src={map_ball} 
+                  alt="Atomic Mistakes Diagram"
+                  layout="fill"
+                  objectFit="contain"
+                  objectPosition="center"
+                />
+              </div>
+            </a>
           </div>
 
           <div className="text-center mt-2"> {/* Caption with top margin */}
             <Paragraph className="italic text-sm text-slate-600">
-              Comparison of the impact of optimizing for overall AUROC and overall AUPRC on the per-group AUROC and AUPRCs of two groups in a synthetic setting, using both the sequentially fixing atomic mistakes optimization procedure. 
-              Left: Fixing atomic mistakes to optimize overall AUROC, Right: Fixing atomic mistakes to optimize overall AUPRC.  
+              Figure 3. Voronoi chart showing eight top consumers for NHS data across each of six categories, by number of discovered projects during the study period.
             </Paragraph>
           </div>
           
           <div className="text-center mt-2"> {/* Caption with top margin */}
             <Paragraph className="text-base text-slate-900">
-              These figures demonstrate the impact of the optimization metric on subpopulation disparity. In particular, 
-              on the right we observe a notable disparity introduced
-              when optimizing under the AUPRC metric. This is evident
-              in the performance metrics across the high and low preva-
-              lence subpopulations, which exhibit significant divergence
-              as the optimization process favors the group with higher
-              prevalence. In comparison, when optimizing for overall AUROC (Left), the AUROC and
-              AUPRC of both groups increase together.  
+              The NHS data, as revealed in Figure 2, feeds a diverse and extensive ecosystem of secondary uses, involving over 460 non-NHS organizations. 
+              These entities, which have accessed, maintained, or utilized NHS data since April 2021, include a wide array of sectors such as academia, pharmaceuticals, life sciences, and non-profits. Prominent among these are 216 universities, 143 companies in life sciences and data analytics, and 44 non-profit organizations. The figure also shows the eight top consumers across six categories, demonstrating the dominant forms of data use, which span research studies, publications, audits, and various forms of partnerships. 
+              This comprehensive view underlines the significant reach and impact of NHS data beyond its immediate healthcare context.            
+              </Paragraph>
+          </div>
+        </div>
+        
+        {/* More content */}
+        <div className="max-w-4xl mx-auto py-8"> {/* Padding around the entire section */}
+          <div className="text-left mb-4"> {/* Title with bottom margin */}
+            <p className="font-semibold text-gray-900 text-2xl">Balance and Diversity of NHS Data Assets </p>
+          </div>
+
+          <div className="flex justify-center pt-8">
+            <a href="https://arxiv.org/pdf/2401.06091.pdf" target="_blank" rel="noopener noreferrer">
+              <div className="relative w-[30vw] h-[40vh] border border-gray-300 mx-auto">
+                <Image 
+                  src={asset_diversity} 
+                  alt="Atomic Mistakes Diagram"
+                  layout="fill"
+                  objectFit="contain"
+                  objectPosition="center"
+                />
+              </div>
+            </a>
+          </div>
+
+          <div className="text-center mt-2"> {/* Caption with top margin */}
+            <Paragraph className="italic text-sm text-slate-600">
+              Figure 3. Individual data assets per extractor type, showing volume of data types and linkages
             </Paragraph>
+          </div>
+          
+          <div className="text-center mt-2"> {/* Caption with top margin */}
+            <Paragraph className="text-base text-slate-900">
+                    The data extractors within the NHS vary significantly in type and volume of data maintained, acting as multipliers in the data distribution network. 
+                    Figure 3 highlights this diversity, showing primary care data as the most prevalent type maintained. 
+                    Whole-population primary care data are accessible for COVID-19 research and through platforms like OpenSAFELY. 
+                    The figure also reveals an overlap in data extractions, with some primary care practices reporting data extraction by multiple databases, indicating substantial duplication.
+                    This comprehensive view underscores the complex landscape of data assets within the NHS, from primary care records to shared care and regional systems, each contributing to a vast, yet intricate web of data flows.           
+              </Paragraph>
           </div>
         </div>
 
+        <div className="max-w-4xl mx-auto py-8"> {/* Padding around the entire section */}
+          <div className="text-left mb-4"> {/* Title with bottom margin */}
+            <p className="font-semibold text-gray-900 text-2xl">NHS Data Transformation Recommendations </p>
+          </div>
+
+          <ul className="list-disc pl-5 space-y-2 text-gray-700">
+            <li>
+              <strong className="text-gray-900">Enhance Public Transparency:</strong> Ensure transparent reporting of data usage at various dissemination nodes to prevent the need for investigative discovery and protect against data breaches.
+            </li>
+            <li>
+              <strong className="text-gray-900">Revise Opt-Out Conditions:</strong> Set opt-out options at the level of data distribution to different consumer types, rather than at the point of extraction, to maintain patient autonomy and access to data-driven interventions.
+            </li>
+            <li>
+              <strong className="text-gray-900">Utilize Existing Infrastructure:</strong> Improve and expand the use of current infrastructure, like NHS Digital and OpenSAFELY, through public outreach and education, before introducing new Secure Data Environments (SDEs).
+            </li>
+            <li>
+              <strong className="text-gray-900">Develop New Data Infrastructure:</strong> Focus on extracting untapped secondary care EHR data and enhancing multimodal data availability, rather than redistributing existing data. Consider a national federated data platform for regional analytics, emphasizing privacy and reducing bulk data transfers.
+            </li>
+            <li>
+              <strong className="text-gray-900">Focus on Intervention Capabilities:</strong> Shift infrastructure development towards interventions (not just analysis), including faster data provision, improved regulatory processes, and AI production capabilities. Leverage regional centers for developing such infrastructure.
+            </li>
+            <li>
+              <strong className="text-gray-900">Assess Monetary Value Transfer:</strong> Evaluate the financial flow across data chains to determine the value return to the healthcare system and establish beneficial revenue models for both patients and providers.
+            </li>
+          </ul>
+        </div>
 
         {/* Related Work */}
         <div className="max-w-4xl mx-auto bg-white border border-gray-300 p-8 rounded-lg"> {/* Added border and increased padding */}
@@ -238,38 +272,40 @@ export default function ProjectPage() {
           </div>
         </div>
 
-
-        {/* Citation */}
-        <div className="max-w-4xl mx-auto bg-white border border-gray-300 mt-4 p-8 rounded-lg"> {/* Added border and increased padding */}
-          <div className="text-center mb-4"> {/* Title with bottom margin */}
-            <h3 className="font-semibold text-left text-gray-900 text-2xl mb-4">How To Cite</h3>
+        {/* Citation Section */}
+        <div className="max-w-4xl mx-auto bg-white border border-gray-300 mt-4 p-8 rounded-lg">
+          <div className="text-center mb-4">
+            <h3 className="font-semibold text-left text-gray-900 text-2xl mb-4">Citation Details</h3>
             <Paragraph className="italic text-sm text-slate-900">
-              This work is not yet peer-reviewed. The preprint can be cited as follows. 
+              For academic referencing, please cite this work as follows.
             </Paragraph>
           </div>
 
           <div className="mb-4">
             <h3 className="font-semibold text-slate-900 mb-2">Bibliography</h3>
             <p className="text-sm text-slate-900">
-              Matthew B. A. McDermott, Lasse Hyldig Hansen, Haoran Zhang, Giovanni Angelotti, and Jack Gallifant. "A Closer Look at AUROC and AUPRC under Class Imbalance" arXiv preprint arXiv:2401.06091 (2024).
+              Joe Zhang, Jess Morley, Jack Gallifant, Chris Oddy, James T Teo, Hutan Ashrafian, Brendan Delaney, Ara Darzi, "Mapping and evaluating national data flows: transparency, privacy, and guiding infrastructural transformation," The Lancet Digital Health, Volume 5, Issue 10, 2023, Pages e737-e748, ISSN 2589-7500, [https://doi.org/10.1016/S2589-7500(23)00157-7](https://www.sciencedirect.com/science/article/pii/S2589750023001577).
             </p>          
           </div>
 
           <div>
             <h3 className="font-semibold text-slate-900 mb-2">BibTeX</h3>
             <pre className="text-left bg-white p-3 rounded-md overflow-x-auto whitespace-pre-wrap break-words text-sm text-slate-900">
-              {`@misc{mcdermott2024closer,
-            title={A Closer Look at AUROC and AUPRC under Class Imbalance}, 
-            author={Matthew B. A. McDermott and Lasse Hyldig Hansen and Haoran Zhang and Giovanni Angelotti and Jack Gallifant},
-            year={2024},
-            eprint={2401.06091},
-            archivePrefix={arXiv},
-            primaryClass={cs.LG}
-        }`}
-            </pre>
+              {`@article{zhang2023mapping,
+                title={Mapping and evaluating national data flows: transparency, privacy, and guiding infrastructural transformation},
+                author={Zhang, Joe and Morley, Jess and Gallifant, Jack and Oddy, Chris and Teo, James T and Ashrafian, Hutan and Delaney, Brendan and Darzi, Ara},
+                journal={The Lancet Digital Health},
+                volume={5},
+                number={10},
+                pages={e737-e748},
+                year={2023},
+                publisher={Elsevier},
+                doi={10.1016/S2589-7500(23)00157-7}
+                url={https://www.sciencedirect.com/science/article/pii/S2589750023001577}
+                }`}
+                </pre>
+            </div>
           </div>
-        </div>
-
       </div>
       <footer className="bg-[#0B1120] text-center text-xl font-bold text-slate-900 p-4">
         <Link href="/" className="text-white hover:text-blue-800 p-2 rounded-lg transition duration-300 ease-in-out">
