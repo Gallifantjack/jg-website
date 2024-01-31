@@ -1,17 +1,17 @@
-import { readFileSync } from 'fs'
+// import { readFileSync } from 'fs'
 import { join } from 'path'
 import * as cheerio from 'cheerio'
 import { https } from 'follow-redirects'
-import { Canvas, Image } from '@napi-rs/canvas'
-import opentype from 'opentype.js'
+// import { Canvas, Image } from '@napi-rs/canvas'
+// import opentype from 'opentype.js'
 
 const WIDTH = 1200
 const HEIGHT = 630
 const PADDING = { x: 96, y: 96 }
 
-const fontMedium = opentype.loadSync(resolve('Inter-Medium.otf'))
-const fontSemiBold = opentype.loadSync(resolve('Inter-SemiBold.otf'))
-const fontExtraBold = opentype.loadSync(resolve('Inter-ExtraBold.otf'))
+// const fontMedium = opentype.loadSync(resolve('Inter-Medium.otf'))
+// const fontSemiBold = opentype.loadSync(resolve('Inter-SemiBold.otf'))
+// const fontExtraBold = opentype.loadSync(resolve('Inter-ExtraBold.otf'))
 
 const colors = {
   sky500: '#0EA5E9',
