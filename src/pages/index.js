@@ -12,7 +12,7 @@ import Featured_work from './docs/Featured_work_index'
 
 function Header() {
   return (
-    <header className="relative">
+    <header className="relative dark">
       {/* Navigation Bar at the Top */}
       <div className="relative z-10 pt-6 lg:pt-8 flex items-center justify-between font-semibold text-sm leading-6 text-slate-200">
         {/* Logo */}
@@ -57,7 +57,7 @@ function Header() {
             Jack Gallifant
           </h1>
           <p className="mt-6 text-2xl max-w-3xl mx-auto text-sky-500">
-          Alignment |  AI | Healthcare 
+          Alignment | AI | Healthcare 
           </p>
           <p className="mt-3 text-lg max-w-3xl mx-auto text-gray-300">
             Massachusetts Institute of Technology
@@ -83,7 +83,7 @@ export default function Home() {
       </div>
       <div className="flex flex-col overflow-hidden">
         <About_index />
-        <Research_index />
+        <Research_index/>
         <News_section />
         <Featured_work />
       </div>

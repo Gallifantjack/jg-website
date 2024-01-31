@@ -6,7 +6,6 @@ import clsx from 'clsx'
 import Link from 'next/link'
 import Router from 'next/router'
 import { useEffect, useState } from 'react'
-import { ThemeSelect, ThemeToggle } from './ThemeToggle'
 
 function Featured() {
   return (
@@ -112,9 +111,6 @@ export function NavPopover({ display = 'md:hidden', className, ...props }) {
               </a>
             </li>
           </ul>
-          <div className="mt-6 pt-6 border-t border-slate-200 dark:border-slate-200/10">
-            <ThemeSelect />
-          </div>
         </div>
       </Dialog>
     </div>
