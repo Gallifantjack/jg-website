@@ -1,66 +1,7 @@
 import { Button } from '@/components/Button'
-import { BigText, Caption, IconContainer, Link, Paragraph, Widont } from '@/components/home/common'
+import { BigText, Caption, Paragraph, Widont } from '@/components/home/common'
 import clsx from 'clsx'
 
-function CardGroup({ children, className }) {
-  return (
-    <ul className={clsx('grid grid-cols-1 xl:grid-cols-3 gap-y-10 gap-x-6 items-start', className)}>
-      {children}
-    </ul>
-  )
-}
-
-function Card({ title, superTitle, href, color, body, image, video }) {
-  return (
-    <li className="relative flex flex-col sm:flex-row xl:flex-col items-start">
-      <div className="order-1 sm:ml-6 xl:ml-0">
-        <h3 className="mb-1 text-slate-900 font-semibold dark:text-slate-200">
-          <a href={href} className="hover:text-slate-600 dark:hover:text-white">
-            <span className={clsx('mb-1 block text-sm leading-6', color)}>{superTitle}</span>
-            {title}
-          </a>
-        </h3>
-        <div className="prose prose-slate prose-sm text-slate-600 dark:prose-dark">{body}</div>
-      </div>
-
-      {/* Media Wrapper */}
-      <div className="relative mb-6 sm:mb-0 xl:mb-6 w-full sm:w-[17rem] xl:w-full rounded-lg overflow-hidden">
-        {/* Placeholder to maintain aspect ratio */}
-        <div style={{ paddingTop: '56.25%' }}></div>
-
-        {/* Check for video and display it; otherwise display image */}
-        {video ? (
-          <iframe
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-            }}
-            src={video}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        ) : (
-          <img
-            src={image}
-            alt=""
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-            }}
-          />
-        )}
-      </div>
-    </li>
-  )
-}
 
 function Featured_work() {
   return (

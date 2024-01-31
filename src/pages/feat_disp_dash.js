@@ -2,9 +2,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
-import { BigText, Caption, Paragraph, Button } from '@/components/home/common';
+import { BigText, Paragraph} from '@/components/home/common';
 
-import atomic_mistakes from '@/img/resources/atomic_mistakes.png';
 
 
 export default function ProjectPage() {

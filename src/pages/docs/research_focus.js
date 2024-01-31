@@ -1,6 +1,4 @@
-import { Button } from '@/components/Button'
-import { BigText, Caption, IconContainer, Link, Paragraph, Widont } from '@/components/home/common'
-import clsx from 'clsx'
+import { BigText, Caption, Paragraph, Widont } from '@/components/home/common'
 
 function Research_index() {
   return (

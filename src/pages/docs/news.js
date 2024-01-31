@@ -1,9 +1,8 @@
-import { Button } from '@/components/Button'
 import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import { BigText, Caption, IconContainer, Link, Paragraph, Widont } from '@/components/home/common'
+import { BigText, Caption, Paragraph, Widont } from '@/components/home/common'
 import clsx from 'clsx'
 
 
