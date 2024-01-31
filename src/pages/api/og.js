@@ -225,126 +225,77 @@ export default async function handler(req, res) {
       return res.end('Error')
     }
 
-    let canvas = new Canvas(WIDTH, HEIGHT)
-    let ctx = canvas.getContext('2d')
+    // let canvas = new Canvas(WIDTH, HEIGHT)
+    // let ctx = canvas.getContext('2d')
 
-    let bgImage = new Image()
-    bgImage.src = readFileSync(resolve('og-background.png'))
-    bgImage.width = WIDTH
-    bgImage.height = HEIGHT
-    ctx.drawImage(bgImage, 0, 0, WIDTH, HEIGHT)
+    // let bgImage = new Image()
+    // bgImage.src = readFileSync(resolve('og-background.png'))
+    // bgImage.width = WIDTH
+    // bgImage.height = HEIGHT
+    // ctx.drawImage(bgImage, 0, 0, WIDTH, HEIGHT)
 
-    let logoImage = new Image()
-    logoImage.src = readFileSync(resolve('logo.svg'))
-    logoImage.width = 404
-    logoImage.height = 50
-    ctx.drawImage(logoImage, PADDING.x, PADDING.y, 404, 50)
+    // let logoImage = new Image()
+    // logoImage.src = readFileSync(resolve('logo.svg'))
+    // logoImage.width = 404
+    // logoImage.height = 50
+    // ctx.drawImage(logoImage, PADDING.x, PADDING.y, 404, 50)
 
-    if (path.startsWith('/blog/')) {
-      let date = $('article time').attr('datetime')
+    // let eyebrow = $('#nav li[data-active="true"]')
+    //   .parents('li')
+    //   .first()
+    //   .children('h5')
+    //   .first()
+    //   .text()
+    //   .trim()
+    // let description = $('meta[property="og:description"]').attr('content')
 
-      let eyebrowText = getText('What’s new', { font: fontSemiBold, size: 28, lineHeight: 48 })
-      let titleText = getText(title, {
-        font: fontExtraBold,
-        size: 48,
-        lineHeight: 72,
-        letterSpacing: -0.025,
-        maxLines: 3,
-      })
+    // let eyebrowText = eyebrow
+    //   ? getText(eyebrow, { font: fontSemiBold, size: 28, lineHeight: 48 })
+    //   : null
+    // let titleText = getText(title, {
+    //   font: fontExtraBold,
+    //   size: 72,
+    //   lineHeight: 80,
+    //   letterSpacing: -0.025,
+    //   maxLines: 3,
+    // })
+    // let descriptionText =
+    //   description && titleText.lines < 3
+    //     ? getText(description, {
+    //         font: fontMedium,
+    //         size: 32,
+    //         lineHeight: 56,
+    //         maxLines: titleText.lines === 2 ? 1 : 2,
+    //       })
+    //     : null
 
-      titleText.draw(ctx, PADDING.x, HEIGHT - PADDING.y - titleText.height)
-      eyebrowText.draw(
-        ctx,
-        PADDING.x,
-        HEIGHT - PADDING.y - titleText.height - 16 - eyebrowText.height,
-        { color: colors.sky500 }
-      )
+    // let offset = PADDING.y
 
-      if (date) {
-        date = new Date(date).toLocaleDateString('en-US', {
-          day: 'numeric',
-          month: 'short',
-          year: 'numeric',
-          timeZone: 'UTC',
-        })
-        let dateText = getText(date, { font: fontSemiBold, size: 28, lineHeight: 48 })
-        let eyebrowWidth = eyebrowText.measureLines()[0]
-        dateText.draw(
-          ctx,
-          PADDING.x + eyebrowWidth + 54,
-          HEIGHT - PADDING.y - titleText.height - 16 - eyebrowText.height,
-          { color: colors.slate400 }
-        )
+    // if (descriptionText) {
+    //   descriptionText.draw(ctx, PADDING.x, HEIGHT - offset - descriptionText.height, {
+    //     color: colors.slate500,
+    //   })
+    //   offset += descriptionText.height + 16
+    // }
 
-        ctx.beginPath()
-        ctx.arc(
-          PADDING.x + eyebrowWidth + 24 + 3,
-          HEIGHT - PADDING.y - titleText.height - 16 - 24,
-          3,
-          0,
-          2 * Math.PI
-        )
-        ctx.fillStyle = colors['slate500/30']
-        ctx.fill()
-      }
-    } else {
-      let eyebrow = $('#nav li[data-active="true"]')
-        .parents('li')
-        .first()
-        .children('h5')
-        .first()
-        .text()
-        .trim()
-      let description = $('meta[property="og:description"]').attr('content')
+    // titleText.draw(ctx, PADDING.x, HEIGHT - offset - titleText.height)
 
-      let eyebrowText = eyebrow
-        ? getText(eyebrow, { font: fontSemiBold, size: 28, lineHeight: 48 })
-        : null
-      let titleText = getText(title, {
-        font: fontExtraBold,
-        size: 72,
-        lineHeight: 80,
-        letterSpacing: -0.025,
-        maxLines: 3,
-      })
-      let descriptionText =
-        description && titleText.lines < 3
-          ? getText(description, {
-              font: fontMedium,
-              size: 32,
-              lineHeight: 56,
-              maxLines: titleText.lines === 2 ? 1 : 2,
-            })
-          : null
+    // if (eyebrowText) {
+    //   eyebrowText.draw(
+    //     ctx,
+    //     PADDING.x,
+    //     HEIGHT - offset - titleText.height - 16 - eyebrowText.height,
+    //     { color: colors.sky500 }
+    //   )
+    // }
 
-      let offset = PADDING.y
-
-      if (descriptionText) {
-        descriptionText.draw(ctx, PADDING.x, HEIGHT - offset - descriptionText.height, {
-          color: colors.slate500,
-        })
-        offset += descriptionText.height + 16
-      }
-
-      titleText.draw(ctx, PADDING.x, HEIGHT - offset - titleText.height)
-
-      if (eyebrowText) {
-        eyebrowText.draw(
-          ctx,
-          PADDING.x,
-          HEIGHT - offset - titleText.height - 16 - eyebrowText.height,
-          { color: colors.sky500 }
-        )
-      }
-    }
-
-    res.statusCode = 200
-    res.setHeader('Content-Type', 'image/png')
-    res.setHeader(
-      'Cache-Control',
-      'public, immutable, no-transform, s-maxage=31536000, max-age=600'
-    )
-    res.end(canvas.toBuffer('image/png'))
+    // res.statusCode = 200
+    // res.setHeader('Content-Type', 'image/png')
+    // res.setHeader(
+    //   'Cache-Control',
+    //   'public, immutable, no-transform, s-maxage=31536000, max-age=600'
+    // )
+    // res.end(canvas.toBuffer('image/png'))
   } catch (e) {
     res.statusCode = 500
     console.error(e)
