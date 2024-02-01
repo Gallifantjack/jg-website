@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react'
 function Featured() {
   return (
     <a
-      href="https://connect.tailwindcss.com"
+      href="/feat_nhs_map"
       target="_blank"
       className="ml-3 text-xs leading-5 font-medium text-sky-600 dark:text-sky-400 bg-sky-400/10 rounded-full py-1 px-3 hidden xl:flex items-center hover:bg-sky-400/20"
     >
@@ -204,7 +204,7 @@ export function Header({ hasNav = false, navIsOpen, onNavToggle, title, section 
                   Router.push('/brand')
                 }}
               >
-                <span className="sr-only">Tailwind CSS home page</span>
+                <span className="sr-only">JG home page</span>
                 <Logo className="w-auto h-5" />
               </Link>
               <Featured />
