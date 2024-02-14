@@ -10,7 +10,7 @@ export default function ProjectPage() {
   const nhs_thumbnail = require("@/img/resources/arxiv_thumbnails/nhs_flow_journal.png").default.src;
   const map_ball = require("@/img/resources/map_ball_chart.jpg").default.src;
   const map_clusters = require("@/img/resources/map_clusters.jpg").default.src;
-  const subpop_thumbnail = require("@/img/resources/subpop_thumbnail.png").default.src;
+  const odiao_thumbnail = require("@/img/resources/odiao.jpg").default.src;
   const asset_diversity = require("@/img/resources/nhs_assets.jpg").default.src;
 
 
@@ -253,7 +253,7 @@ export default function ProjectPage() {
           <div className="flex justify-center space-x-4"> {/* Flex container for images */}
             <div style={{ width: '33%' }}> {/* Container for the first image */}
               <Image 
-                src={subpop_thumbnail} 
+                src={odiao_thumbnail} 
                 alt="First Image Description"
                 layout="responsive"
                 width={100} // Example ratio
@@ -263,10 +263,15 @@ export default function ProjectPage() {
 
             {/* Entry 1 */}
             <div style={{ width: '66%' }}> {/* Container for the first image */}
-              <h3 className="font-semibold text-gray-900"> Yang, Zhang*, Katabi, and Ghassemi. Change is Hard: A Closer Look at Subpopulation Shift. 2023.</h3>
+              <Link
+                href="https://doi.org/10.1136/bmjhci-2023-100771"
+              >
+              <h3 className="font-semibold text-gray-900 hover:text-blue-600"> Watson, Hope*, Gallifant, Jack, Lai, Yuan et al., Delivering on NIH data sharing requirements: avoiding Open Data in Appearance Only. 2023.</h3>
+              </Link>
               <p className="text-base text-justify mt-1 text-slate-900">
               <span className='font-bold'> Notes</span>: 
-              This work is a fine-grained analysis of the variation in mechanisms that cause subpopulation shifts, and how algorithms generalize across such diverse shifts at scale. 
+              This work proposes a framework that states the main risks associated with data sharing, systematically presents risk mitigation strategies and provide examples through a healthcare lens
+              In order to move towards Open Data, the creation of mechanisms for incentivisation, beginning with recentring data sharing on patient benefits, is required.
               </p>
             </div>
           </div>
@@ -309,7 +314,7 @@ export default function ProjectPage() {
       </div>
       <footer className="bg-[#0B1120] text-center text-xl font-bold text-slate-900 p-4">
         <Link href="/" className="text-white hover:text-blue-800 p-2 rounded-lg transition duration-300 ease-in-out">
-        See more work
+        Home
         </Link>
     </footer>
     </section>

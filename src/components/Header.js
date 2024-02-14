@@ -129,11 +129,11 @@ export function NavItems() {
           Home
         </Link>
       </li>
-      <li>
+      {/* <li>
         <Link href="/showcase" className="hover:text-sky-500 dark:hover:text-sky-400">
           Research
         </Link>
-      </li>
+      </li> */}
     </>
   )
 }
@@ -211,7 +211,6 @@ export function Header({ hasNav = false, navIsOpen, onNavToggle, title, section 
                 <span className="sr-only">Tailwind CSS home page</span>
                 <Logo className="w-auto h-5" />
               </Link>
-              <VersionSwitcher />
               <Featured />
               <div className="relative hidden lg:flex items-center ml-auto">
                 <nav className="text-sm leading-6 font-semibold text-slate-700 dark:text-slate-200">
@@ -220,12 +219,25 @@ export function Header({ hasNav = false, navIsOpen, onNavToggle, title, section 
                   </ul>
                 </nav>
                 <div className="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-slate-800">
-                  <ThemeToggle panelClassName="mt-8" />
                   <a
-                    href="https://github.com/tailwindlabs/tailwindcss"
+                    href="https://www.linkedin.com/in/jackgallifant/"
                     className="ml-6 block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
                   >
-                    <span className="sr-only">Tailwind CSS on GitHub</span>
+                    <span className="sr-only">Github</span>
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="w-5 h-5"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://github.com/gallifantjack"
+                    className="ml-6 block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
+                  >
+                    <span className="sr-only">Github</span>
                     <svg
                       viewBox="0 0 16 16"
                       className="w-5 h-5"
@@ -237,22 +249,6 @@ export function Header({ hasNav = false, navIsOpen, onNavToggle, title, section 
                   </a>
                 </div>
               </div>
-              <SearchButton className="ml-auto text-slate-500 w-8 h-8 -my-1 flex items-center justify-center hover:text-slate-600 lg:hidden dark:text-slate-400 dark:hover:text-slate-300">
-                <span className="sr-only">Search</span>
-                <svg
-                  width="24"
-                  height="24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="m19 19-3.5-3.5" />
-                  <circle cx="11" cy="11" r="6" />
-                </svg>
-              </SearchButton>
               <NavPopover className="ml-2 -my-1" display="lg:hidden" />
             </div>
           </div>

@@ -9,7 +9,7 @@ import atomic_mistakes from '@/img/resources/atomic_mistakes.png';
 export default function ProjectPage() {
   const div_fact_thumbnail = require("@/img/resources/arxiv_thumbnails/div_fact_thumb.png").default.src;
   const git_thumbnail = require("@/img/resources/git_thumbnails/auc_git.png").default.src;
-  const auc_optim = require("@/img/resources/auc_optim_auroc.png").default.src;
+  const equity_thumbnail = require("@/img/resources/equity_fundamental.png").default.src;
   const auprc_optim = require("@/img/resources/auc_optim_auprc.png").default.src;
   const subpop_thumbnail = require("@/img/resources/subpop_thumbnail.png").default.src;
 
@@ -122,7 +122,7 @@ export default function ProjectPage() {
 
         <div className="flex justify-center space-x-4 mb-8 text-base text-slate-700">
           {/* Link to ArXiv Preprint */}
-          <a href="https://arxiv.org/pdf/2401.06091.pdf" target="_blank" rel="noopener noreferrer" className="block text-center ">
+          <a href="https://doi.org/10.1136/bmjhci-2023-100809 " target="_blank" rel="noopener noreferrer" className="block text-center ">
             <div className="relative w-[100px] h-[120px] border border-gray-300 mx-auto">
               <Image 
                 src={div_fact_thumbnail} 
@@ -152,125 +152,120 @@ export default function ProjectPage() {
 
         {/* Summary box */}
         <div className="max-w-3xl mx-auto bg-white border border-gray-300 p-8 rounded-lg"> {/* Added border and increased padding */}
-          <h3 className="font-semibold text-center text-gray-900 text-2xl mb-4">How Should We Prioritize Fixing Model Mistakes?</h3>
+          <h3 className="font-semibold text-center text-gray-900 text-2xl mb-4">Diversity Factor in Journal Impact Evaluation</h3>
           <Paragraph className="text-base text-slate-900">
-            This paper critically examines the widely held belief in machine learning (ML) that the area under the precision-recall curve (AUPRC) is superior to the area under the receiver operating characteristic (AUROC) for binary classification tasks in class-imbalanced scenarios. 
-            Through novel mathematical analysis, it demonstrates that AUPRC is not inherently superior and may even be detrimental due to its tendency to overemphasize improvements in subpopulations with more frequent positive labels, potentially exacerbating algorithmic biases. 
+          This study critiques the current Impact Factor model used for evaluating journal impact, highlighting its limitations in reflecting the contribution to health outcomes globally. 
+          We propose a novel tool the "Diversity Factor," incorporating four distinct elements: dataset properties, author country, author gender, and departmental affiliation. 
+          </Paragraph>
+          <Paragraph className="text-base text-slate-900">
+          The findings, displayed on a <span className='italic hover:text-blue-600'> <Link href="www.equitablescience.com">static dashboard</Link> </span> to emphasize the need for ongoing, detailed analysis of diversity in scientific research. The Diversity Factor aims to highlight knowledge gaps and build confidence in research translation across diverse groups. As the definition of at-risk groups evolves, this metric's continuous measurement will remain crucial. 
+          We advocate for further refinements by diverse author groups to enhance the Diversity Factor's efficacy.          
           </Paragraph>
         </div>
 
-        {/* Images and Figures */}
+        {/* Introduction and Background */}
         <div className="max-w-4xl mx-auto py-8"> {/* Padding around the entire section */}
           <div className="text-left mb-4"> {/* Title with bottom margin */}
-            <p className="font-semibold text-gray-900 text-2xl">Using Atomic Mistakes</p>
+            <p className="font-semibold text-gray-900 text-2xl"> Rethinking Journal Impact Evaluation </p>
           </div>
 
           <div className="text-center pb-2"> {/* Caption with top margin */}
             <Paragraph className="text-base text-slate-900 ">
-                Atomic mistakes occur when neighboring samples, when
-                ordered by model score, are out-of-order with respect to the classi-
-                fication label. AUROC improves by a constant amount no matter
-                which atomic mistake is corrected; AUPRC improves in descend-
-                ing order with model score due to the dependence on model firing
-                rate (Theorem 1). 
+              In the last decade, the exponential growth in health data storage, analysis, and distribution, particularly with the advent of artificial intelligence (AI), has not been paralleled by its successful implementation in healthcare. Current AI models are either in prototype stages or exhibit substandard performance, often compounded by inherent biases affecting minorities. This calls for greater transparency in model development, improved data sharing, and diverse research groups to mitigate biases. However, such considerations are yet to be reflected in journal evaluation metrics, which still predominantly rely on the Impact Factor (IF). The IF, originally designed to track citations, now inaccurately reflects a journal's impact on community health and is susceptible to manipulation through practices like self-citation. 
+              <br/><br/>
+              The need for a comprehensive measure of health research's significance and relevance led to the proposal of the Diversity Factor (DF). This concept aims to supplement existing metrics by incorporating dataset characteristics, author country, gender, and departmental affiliation, evaluated independently rather than as a composite score. This approach addresses the lack of diversity in research, which is essential for comprehensive problem-solving and understanding. Our proposed DF is a foundational step towards a more inclusive, representative, and impactful scientific research landscape.
             </Paragraph>
           </div>
+        </div>
 
-          <div className="flex justify-center pt-8">
-            <a href="https://arxiv.org/pdf/2401.06091.pdf" target="_blank" rel="noopener noreferrer">
-              <div className="relative w-[30vw] h-[40vh] border border-gray-300 mx-auto">
-                <Image 
-                  src={atomic_mistakes} 
-                  alt="Atomic Mistakes Diagram"
-                  layout="fill"
-                  objectFit="contain"
-                  objectPosition="center"
-                />
-              </div>
-            </a>
-          </div>
+        {/* Table Content Box */}
+        <div className="max-w-4xl mx-auto bg-white border border-gray-300 p-8 mt-4 rounded-lg"> {/* Added margin top and increased padding */}
+          <h4 className="font-semibold text-center text-gray-900 text-xl mb-4">Elements for Assessing Journal Contribution to Scientific Excellence in Diversity, Equity, and Inclusion</h4>
+          <table className="min-w-full leading-normal text-gray-700">
+            <thead>
+              <tr>
+                <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Category</th>
+                <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Element</th>
+                <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Guiding Questions</th>
+              </tr>
+            </thead>
+            <tbody className='text-gray-700'>
+              <tr>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Publications</td>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Diversity</td>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Do studies explore health, determinants of health, and underlying factors driving improved outcomes for diverse population groups?</td>
+              </tr>
+              <tr>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm"></td>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Equity</td>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Do publications showcase research relevant to under-represented communities and populations?</td>
+              </tr>
+              <tr>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm"></td>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Inclusion</td>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Have publications promoted inclusive and multidisciplinary research methods?</td>
+              </tr>
+              <tr>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm"></td>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Datasets</td>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">What are the definitions and distributions of age, race, ethnicity, gender, language, and geography included in the study participants?</td>
+              </tr>
+              <tr>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Authorship</td>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Author identity, country or origin</td>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Is there a wide range of author cultures, experience, and expertise, including country or origin and LMICs?</td>
+              </tr>
+              <tr>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm"></td>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Author Gender</td>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Is there a balanced gender distribution on average among authors, and first/last authors?</td>
+              </tr>
+              <tr>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm"></td>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Author Organization and Affiliation</td>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Is there a diverse range of organizations, including minority-serving institutions, industry, and academia?</td>
+              </tr>
+              <tr>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm"></td>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Community experts</td>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Has the published research been conducted with community experts, and are they named co-authors?</td>
+              </tr>
+              <tr>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Research Oversight</td>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Journal Editors and Reviewers</td>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Has the journal developed an accountability system to measure and ensure diversity among editors and reviewers?</td>
+              </tr>
+              <tr>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm"></td>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Review Process</td>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Does a journal have a system to identify and respond to potential bias in the review process?</td>
+              </tr>
+              <tr>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm"></td>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Communication and Dissemination</td>
+                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Are the results of the above questions easily accessible and transparent for researchers and the general public to review?</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-          {/* Caption with top margin */}
-          <div className="text-center my-2"> 
-            <Paragraph className="italic text-sm text-slate-600">
-              Different types of mistakes a model can learn to fix. 
-              y= 0 is the negative class and y= 1 is the positive class. 
-              a= 0 is subgroup 1 and a= 1 is subgroup 2.
-            </Paragraph>
+
+        {/* Conclusion Section */}
+        <div className="max-w-4xl mx-auto py-8"> {/* Padding around the entire section */}
+          <div className="text-left mb-4"> {/* Title with bottom margin */}
+            <p className="font-semibold text-gray-900 text-2xl">Addressing Diversity in Scientific Research</p>
           </div>
 
           <div className="text-center my-2"> {/* Caption with top margin */}
             <Paragraph className="text-base text-slate-900">
-              Which mistake you should prioritize fixing first
-              depends on usage; in a classification setting, where you do not
-              know whether the sample of interest is from a high-scoring or
-              low-scoring region, you want to use a metric that optimizes scores
-              in an unbiased manner, like AUROC. In a single-stream retrieval
-              setting, where you choose the top-k samples, regardless of group
-              membership and evaluate with those, a metric that favors mistakes
-              in high-scoring regions like AUPRC will be most impactful. But,
-              if you care about retrieving the top-k metrics from multiple distinct
-              subpopulations within your dataset, AUPRC will be dangerous as
-              it will favor the high-prevalence sub-population
+              The introduction of the Diversity Factor represents a significant paradigm shift in assessing the impact of academic research, particularly in the healthcare domain. This study exposes the stark underrepresentation of female authors and those from low and middle-income countries (LMICs) in current academic literature. Despite gradual improvements, entrenched biases and a trend towards centralization in academia present formidable challenges to equitable representation. The Diversity Factor's approach, focusing on dataset characteristics, author diversity, and research oversight, reveals the limitations of traditional citation-based metrics and underscores the need for a more inclusive and representative scientific community.
             </Paragraph>
-          </div>
-        </div>
-
-
-        {/* More content */}
-        <div className="max-w-4xl mx-auto py-8"> {/* Padding around the entire section */}
-          <div className="text-left mb-4"> {/* Title with bottom margin */}
-            <p className="font-semibold text-gray-900 text-2xl">Optimizing AUPRC Introduces Disparities</p>
-          </div>
-
-          <div className="flex justify-center space-x-4"> {/* Flex container for images */}
-            <div style={{ width: '50%' }}> {/* Container for the first image */}
-              <Image 
-                src={auc_optim} 
-                alt="First Image Description"
-                layout="responsive"
-                width={100} // Example ratio
-                height={100} // Maintain aspect ratio
-              />
-              <p className="text-center text-sm text-slate-900"> {/* Caption for the second image */}
-                Optimizing overall AUROC.
-              </p>
-            </div>
-
-            <div style={{ width: '50%' }}> {/* Container for the second image */}
-              <Image 
-                src={auprc_optim} 
-                alt="Second Image Description"
-                layout="responsive"
-                width={100} // Example ratio
-                height={100} // Maintain aspect ratio
-              />
-              <p className="text-center text-sm text-slate-900"> {/* Caption for the second image */}
-                Optimizing overall AUPRC.
-              </p>
-            </div>
-          </div>
-
-          <div className="text-center mt-2"> {/* Caption with top margin */}
-            <Paragraph className="italic text-sm text-slate-600">
-              Comparison of the impact of optimizing for overall AUROC and overall AUPRC on the per-group AUROC and AUPRCs of two groups in a synthetic setting, using both the sequentially fixing atomic mistakes optimization procedure. 
-              Left: Fixing atomic mistakes to optimize overall AUROC, Right: Fixing atomic mistakes to optimize overall AUPRC.  
-            </Paragraph>
-          </div>
-          
-          <div className="text-center mt-2"> {/* Caption with top margin */}
             <Paragraph className="text-base text-slate-900">
-              These figures demonstrate the impact of the optimization metric on subpopulation disparity. In particular, 
-              on the right we observe a notable disparity introduced
-              when optimizing under the AUPRC metric. This is evident
-              in the performance metrics across the high and low preva-
-              lence subpopulations, which exhibit significant divergence
-              as the optimization process favors the group with higher
-              prevalence. In comparison, when optimizing for overall AUROC (Left), the AUROC and
-              AUPRC of both groups increase together.  
+              The findings call for an urgent restructuring of how scientific efforts are evaluated, moving beyond citation impact to consider the diversity of voices contributing to healthcare discussions. By doing so, we can avoid perpetuating biases against specific subgroups and ensure that health research serves all populations equitably. The Diversity Factor is not just a metric but a call to action for journals, researchers, and institutions to prioritize diversity and inclusivity. It challenges us to reflect on the sources of our data and ideas, striving to create a more diverse and inclusive environment that reflects the populations served by healthcare research. The goal is to break free from the echo chamber of limited perspectives and advance a field of medicine that is truly informed by and for the diverse global community.
             </Paragraph>
           </div>
         </div>
+
 
 
         {/* Related Work */}
@@ -278,14 +273,14 @@ export default function ProjectPage() {
           <div className="text-center mb-4"> {/* Title with bottom margin */}
             <h3 className="font-semibold text-left text-gray-900 text-2xl mb-4">Related Work</h3>
             <Paragraph className="text-base text-slate-900">
-              Our work builds upon insights in other work that has examined robustness of models and metrics among subpopulations:
+              Our work builds upon insights related to the impact of diversity in scientific research.
             </Paragraph>
           </div>
 
           <div className="flex justify-center space-x-4"> {/* Flex container for images */}
             <div style={{ width: '33%' }}> {/* Container for the first image */}
               <Image 
-                src={subpop_thumbnail} 
+                src={equity_thumbnail} 
                 alt="First Image Description"
                 layout="responsive"
                 width={100} // Example ratio
@@ -295,10 +290,11 @@ export default function ProjectPage() {
 
             {/* Entry 1 */}
             <div style={{ width: '66%' }}> {/* Container for the first image */}
-              <h3 className="font-semibold text-gray-900"> Yang, Zhang*, Katabi, and Ghassemi. Change is Hard: A Closer Look at Subpopulation Shift. 2023.</h3>
+              <h3 className="font-semibold text-gray-900"> Gallifant J, Nakayama LF, Gichoya JW, Pierce R, Celi LA. Equity should be fundamental to the emergence of innovation. 2023.</h3>
               <p className="text-base text-justify mt-1 text-slate-900">
               <span className='font-bold'> Notes</span>: 
-              This work is a fine-grained analysis of the variation in mechanisms that cause subpopulation shifts, and how algorithms generalize across such diverse shifts at scale. 
+                We propose that health equity is a vital component of healthcare and should not be compromised to expedite the advancement of results for the few at the expense of vulnerable populations. 
+                A data-centered future that works for all will require funding bodies to incentivize equity-focused AI, and organizations must be held accountable for the differential impact of such algorithms post-deployment.
               </p>
             </div>
           </div>
@@ -310,36 +306,40 @@ export default function ProjectPage() {
           <div className="text-center mb-4"> {/* Title with bottom margin */}
             <h3 className="font-semibold text-left text-gray-900 text-2xl mb-4">How To Cite</h3>
             <Paragraph className="italic text-sm text-slate-900">
-              This work is not yet peer-reviewed. The preprint can be cited as follows. 
+              This work can be cited as follows: 
             </Paragraph>
           </div>
 
           <div className="mb-4">
             <h3 className="font-semibold text-slate-900 mb-2">Bibliography</h3>
             <p className="text-sm text-slate-900">
-              Matthew B. A. McDermott, Lasse Hyldig Hansen, Haoran Zhang, Giovanni Angelotti, and Jack Gallifant. "A Closer Look at AUROC and AUPRC under Class Imbalance" arXiv preprint arXiv:2401.06091 (2024).
+              Gallifant J, Zhang J, Whebell S, Quion J, Escobar B, Gichoya J, Herrera K, Jina R, Chidambaram S, Mehndiratta A, Kimera R, Marcelo A, Fernandez-Marcelo PG, Osorio JS, Villanueva C, Nazer L, Dankwa-Mullan I, Celi LA. "A new tool for evaluating health equity in academic journals; the Diversity Factor." PLOS Glob Public Health. 2023 Aug 14;3(8):e0002252. doi: 10.1371/journal.pgph.0002252. PMID: 37578942; PMCID: PMC10424852.
             </p>          
           </div>
 
           <div>
             <h3 className="font-semibold text-slate-900 mb-2">BibTeX</h3>
             <pre className="text-left bg-white p-3 rounded-md overflow-x-auto whitespace-pre-wrap break-words text-sm text-slate-900">
-              {`@misc{mcdermott2024closer,
-            title={A Closer Look at AUROC and AUPRC under Class Imbalance}, 
-            author={Matthew B. A. McDermott and Lasse Hyldig Hansen and Haoran Zhang and Giovanni Angelotti and Jack Gallifant},
-            year={2024},
-            eprint={2401.06091},
-            archivePrefix={arXiv},
-            primaryClass={cs.LG}
-        }`}
+              {`@article{gallifant2023new,
+                title={A new tool for evaluating health equity in academic journals; the Diversity Factor},
+                author={Gallifant, J and Zhang, J and Whebell, S and Quion, J and Escobar, B and Gichoya, J and Herrera, K and Jina, R and Chidambaram, S and Mehndiratta, A and Kimera, R and Marcelo, A and Fernandez-Marcelo, PG and Osorio, JS and Villanueva, C and Nazer, L and Dankwa-Mullan, I and Celi, LA},
+                journal={PLOS Glob Public Health},
+                volume={3},
+                number={8},
+                pages={e0002252},
+                year={2023},
+                publisher={Public Library of Science},
+                doi={10.1371/journal.pgph.0002252},
+                PMID={37578942},
+                PMCID={PMC10424852}
+              }`}
             </pre>
           </div>
         </div>
-
       </div>
       <footer className="bg-[#0B1120] text-center text-xl font-bold text-slate-900 p-4">
         <Link href="/" className="text-white hover:text-blue-800 p-2 rounded-lg transition duration-300 ease-in-out">
-        See more work
+        Home
         </Link>
     </footer>
     </section>

@@ -9,10 +9,8 @@ import atomic_mistakes from '@/img/resources/atomic_mistakes.png';
 
 export default function ProjectPage() {
   const disp_dash_thumbnail = require("@/img/resources/arxiv_thumbnails/disp_dash_thumb.png").default.src;
-  const git_thumbnail = require("@/img/resources/git_thumbnails/auc_git.png").default.src;
-  const auc_optim = require("@/img/resources/auc_optim_auroc.png").default.src;
-  const auprc_optim = require("@/img/resources/auc_optim_auprc.png").default.src;
-  const subpop_thumbnail = require("@/img/resources/subpop_thumbnail.png").default.src;
+  const dig_ineq_thumbnail = require("@/img/resources/dig_ineq.jpg").default.src;
+  const disp_dash = require("@/img/resources/dash_example.png").default.src;
 
   return (
     <section className='bg-white min-h-screen pt-24 sm:pt-32'>
@@ -82,52 +80,54 @@ export default function ProjectPage() {
         </div>
             <div className="flex justify-center space-x-4 mb-8 text-base text-slate-700">
           {/* Link to ArXiv Preprint */}
-          <a href="https://arxiv.org/pdf/2401.06091.pdf" target="_blank" rel="noopener noreferrer" className="block text-center ">
+          <a href="https://doi.org/10.1016/S2589-7500(23)00150-4" target="_blank" rel="noopener noreferrer" className="block text-center ">
             <div className="relative w-[100px] h-[120px] border border-gray-300 mx-auto">
               <Image 
                 src={disp_dash_thumbnail} 
-                alt="ArXiv Preprint thumbnail"
+                alt="Lancet Digital Health"
                 layout="fill" // Use 'fill' layout to stretch the image
                 objectFit="cover" // Adjust as needed to 'cover' or 'contain'
                 objectPosition="center" // Optional, adjust as needed
               />
             </div>
-            <span>ArXiv Preprint</span>
+            <span>Lancet Digital Health</span>
           </a>
         </div>
 
         {/* Summary box */}
         <div className="max-w-3xl mx-auto bg-white border border-gray-300 p-8 rounded-lg"> {/* Added border and increased padding */}
-          <h3 className="font-semibold text-center text-gray-900 text-2xl mb-4">How Should We Prioritize Fixing Model Mistakes?</h3>
+          <h3 className="font-semibold text-center text-gray-900 text-2xl mb-4">Evaluating Systematic Equality Improvement</h3>
           <Paragraph className="text-base text-slate-900">
-            This paper critically examines the widely held belief in machine learning (ML) that the area under the precision-recall curve (AUPRC) is superior to the area under the receiver operating characteristic (AUROC) for binary classification tasks in class-imbalanced scenarios. 
-            Through novel mathematical analysis, it demonstrates that AUPRC is not inherently superior and may even be detrimental due to its tendency to overemphasize improvements in subpopulations with more frequent positive labels, potentially exacerbating algorithmic biases. 
+              This paper addresses the growing need for systematic, continuous, and transparent reporting of patient outcomes across diverse populations. 
+              It evaluates studies that have successfully developed disparity dashboards, highlighting their role in visualizing data to identify clinical outcome disparities. 
+              This aids in guiding quality and equality improvement efforts that aim to enhance health equity. 
           </Paragraph>
         </div>
 
-        {/* Images and Figures */}
+        {/* Introduction Box */}
         <div className="max-w-4xl mx-auto py-8"> {/* Padding around the entire section */}
           <div className="text-left mb-4"> {/* Title with bottom margin */}
-            <p className="font-semibold text-gray-900 text-2xl">Using Atomic Mistakes</p>
+            <p className="font-semibold text-gray-900 text-2xl">Monitoring Health Outcomes</p>
           </div>
 
-          <div className="text-center pb-2"> {/* Caption with top margin */}
+          <div className="text-center pb-2"> {/* Basic text */}
             <Paragraph className="text-base text-slate-900 ">
-                Atomic mistakes occur when neighboring samples, when
-                ordered by model score, are out-of-order with respect to the classi-
-                fication label. AUROC improves by a constant amount no matter
-                which atomic mistake is corrected; AUPRC improves in descend-
-                ing order with model score due to the dependence on model firing
-                rate (Theorem 1). 
+            The COVID-19 pandemic starkly exposed health inequities, especially among racial and ethnic subgroups, with these groups experiencing higher rates of infection, hospitalization, and mortality. 
+            This scenario is not unique to COVID-19 but extends to other health disparities influenced by interconnected social determinants of health.
+            Additionally, artificial intelligence (AI) in healthcare, while offering personalized care and improved quality, poses risks of exacerbating existing biases. This highlights the need for infrastructure to evaluate, validate, and update AI models and monitor their impact on patient subgroups.
+            </Paragraph>
+            <Paragraph className="text-base text-slate-900 ">
+            The need for continuous monitoring and evaluation of health disparities is critical to address these issues effectively. 
+            This necessitates systematic reporting of patient outcomes in specific subgroups and the development of infrastructure to capture differences over time.
             </Paragraph>
           </div>
 
           <div className="flex justify-center pt-8">
             <a href="https://arxiv.org/pdf/2401.06091.pdf" target="_blank" rel="noopener noreferrer">
-              <div className="relative w-[30vw] h-[40vh] border border-gray-300 mx-auto">
+              <div className="relative w-[60vw] h-[40vh] border border-gray-300 mx-auto">
                 <Image 
-                  src={atomic_mistakes} 
-                  alt="Atomic Mistakes Diagram"
+                  src={disp_dash} 
+                  alt="Disparity Dashboard Diagram"
                   layout="fill"
                   objectFit="contain"
                   objectPosition="center"
@@ -139,114 +139,136 @@ export default function ProjectPage() {
           {/* Caption with top margin */}
           <div className="text-center my-2"> 
             <Paragraph className="italic text-sm text-slate-600">
-              Different types of mistakes a model can learn to fix. 
-              y= 0 is the negative class and y= 1 is the positive class. 
-              a= 0 is subgroup 1 and a= 1 is subgroup 2.
+              Electronic patient data flows in NHS England
+              Data flows go upwards and are coloured by destination. 
+              For data source and extractors, node size is proportional to population catchment (eg, NHS Digital=55 million). 
+              For data consumers, node size is proportional to the number of projects (eg, University of Oxford=178). 
+              NHS=National Health Service.
             </Paragraph>
           </div>
 
-          <div className="text-center my-2"> {/* Caption with top margin */}
-            <Paragraph className="text-base text-slate-900">
-              Which mistake you should prioritize fixing first
-              depends on usage; in a classification setting, where you do not
-              know whether the sample of interest is from a high-scoring or
-              low-scoring region, you want to use a metric that optimizes scores
-              in an unbiased manner, like AUROC. In a single-stream retrieval
-              setting, where you choose the top-k samples, regardless of group
-              membership and evaluate with those, a metric that favors mistakes
-              in high-scoring regions like AUPRC will be most impactful. But,
-              if you care about retrieving the top-k metrics from multiple distinct
-              subpopulations within your dataset, AUPRC will be dangerous as
-              it will favor the high-prevalence sub-population
-            </Paragraph>
-          </div>
-        </div>
 
 
-        {/* More content */}
-        <div className="max-w-4xl mx-auto py-8"> {/* Padding around the entire section */}
-          <div className="text-left mb-4"> {/* Title with bottom margin */}
-            <p className="font-semibold text-gray-900 text-2xl">Optimizing AUPRC Introduces Disparities</p>
-          </div>
-
-          <div className="flex justify-center space-x-4"> {/* Flex container for images */}
-            <div style={{ width: '50%' }}> {/* Container for the first image */}
-              <Image 
-                src={auc_optim} 
-                alt="First Image Description"
-                layout="responsive"
-                width={100} // Example ratio
-                height={100} // Maintain aspect ratio
-              />
-              <p className="text-center text-sm text-slate-900"> {/* Caption for the second image */}
-                Optimizing overall AUROC.
-              </p>
-            </div>
-
-            <div style={{ width: '50%' }}> {/* Container for the second image */}
-              <Image 
-                src={auprc_optim} 
-                alt="Second Image Description"
-                layout="responsive"
-                width={100} // Example ratio
-                height={100} // Maintain aspect ratio
-              />
-              <p className="text-center text-sm text-slate-900"> {/* Caption for the second image */}
-                Optimizing overall AUPRC.
-              </p>
+          {/* Table Content Box */}
+          <div className="max-w-4xl mx-auto py-8"> {/* Padding around the entire section */}
+            <div className="text-left mb-4"> {/* Title with bottom margin */}
+              <p className="font-semibold text-gray-900 text-2xl">Current State of Disparity Dashboards</p>
+              <div className="text-center pb-2"> {/* Basic text */}
+                <Paragraph className="text-base text-slate-900 ">
+                We identified 22 studies that published disparity dashboards, covering areas like COVID-19, maternal mortality, pediatric healthcare, emergency departments, HIV cases, rural healthcare, and Medicare Health Equity Summary Score outcomes.  
+                Key findings from these studies are summarized in the table below.
+                </Paragraph>
+              </div>
             </div>
           </div>
 
-          <div className="text-center mt-2"> {/* Caption with top margin */}
-            <Paragraph className="italic text-sm text-slate-600">
-              Comparison of the impact of optimizing for overall AUROC and overall AUPRC on the per-group AUROC and AUPRCs of two groups in a synthetic setting, using both the sequentially fixing atomic mistakes optimization procedure. 
-              Left: Fixing atomic mistakes to optimize overall AUROC, Right: Fixing atomic mistakes to optimize overall AUPRC.  
-            </Paragraph>
+          <div className="max-w-3xl mx-auto bg-white border border-gray-300 p-8 mt-4 rounded-lg"> {/* Added margin top and increased padding */}
+            <h4 className="font-semibold text-center text-gray-900 text-xl mb-4">Important Questions for Developing Disparity Dashboards</h4>
+            <table className="min-w-full leading-normal">
+              <thead>
+                <tr>
+                  <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-800 uppercase tracking-wider">Key Questions</th>
+                  <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-800 uppercase tracking-wider">Explanation</th>
+                </tr>
+              </thead>
+              <tbody className='text-gray-700'>
+                <tr>
+                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm ">Clear audience and use case</td>
+                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Clarifying the intended use and user is essential, with different interfaces for various groups such as management, governments, physicians, and patients. Multilanguage functionality is crucial for engaging diverse cohorts.</td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Focused outcomes</td>
+                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Dashboards must collect data addressing the root causes of outcomes and disparities. Outcomes should be tailored to individual groups, with inclusion of process measures for tracking intermediate steps.</td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Interaction and exploration</td>
+                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Functionality should allow analysis of various population sizes and permit interactive exploration with different levels of detail. Providing multiple views and exploring data for biases is essential.</td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Context-appropriate design</td>
+                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Important to present absolute and relative values with uncertainty measures, using contextual language. Visual cues can simplify information and emphasize key results.</td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Maximum transparency</td>
+                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Transparency in data sources and methods builds trust. Data should be accessible to researchers and patients, with consideration of legal and privacy issues.</td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Continuous sampling</td>
+                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Continuous monitoring is necessary to track disparities over time and in relation to policies. Dashboards should have flexibility for challenging assumptions and integrating new data.</td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Appropriate disaggregation</td>
+                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Moving beyond demographic criteria to underlying social risk factors is crucial. Data should be collected on key areas like REGAL, and a variety of composites should be created to represent patients accurately.</td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Diversity in design and in use</td>
+                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Diverse backgrounds of users and designers are crucial to prevent biased assessments. Consultation with patient partners and stakeholders is important in the design process.</td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Process evaluation</td>
+                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Data integrity checks, forecasting, and exploratory analysis are key for calibration and evaluation. Findings should be distributed transparently for honest discourse and solution development.</td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Oversight and funding</td>
+                  <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">Benchmarks and aligned incentives are necessary for organizations to strive towards goals. Local accountability measures should ensure active identification and deployment of interventions.</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          
-          <div className="text-center mt-2"> {/* Caption with top margin */}
-            <Paragraph className="text-base text-slate-900">
-              These figures demonstrate the impact of the optimization metric on subpopulation disparity. In particular, 
-              on the right we observe a notable disparity introduced
-              when optimizing under the AUPRC metric. This is evident
-              in the performance metrics across the high and low preva-
-              lence subpopulations, which exhibit significant divergence
-              as the optimization process favors the group with higher
-              prevalence. In comparison, when optimizing for overall AUROC (Left), the AUROC and
-              AUPRC of both groups increase together.  
-            </Paragraph>
+
+          {/* Conclusion Box */}
+          <div className="max-w-4xl mx-auto py-8"> {/* Padding around the entire section */}
+            <div className="text-left mb-4"> {/* Title with bottom margin */}
+              <p className="font-semibold text-gray-900 text-2xl">Advancing Health Equity with Disparity Dashboards</p>
+              <div className="text-center pb-2"> {/* Basic text */}
+                <Paragraph className="text-base text-slate-900 ">
+                Disparity dashboards extend beyond traditional clinical dashboards by not only identifying and monitoring disparities but also aiding in understanding their underlying causes. These dashboards emphasize the importance of considering a broad range of factors including social or structural determinants of health and the need for actionable information. However, challenges exist in achieving interoperability between sites, regions, and countries, and in standardizing health equity data for comparative assessment.
+                <br/><br/>
+                Despite these challenges, disparity dashboards hold immense potential in improving health equity. 
+                As institutions increasingly align their strategies to promote equitable outcomes, the use of disparity dashboards becomes even more crucial. 
+                These tools, developed by diverse, interdisciplinary teams, are vital for safeguarding patient outcomes, improving health policies, and reducing health inequities.
+                They empower health systems and providers to track, measure, and understand their capabilities in delivering equitable care, ensuring accountability and supporting the overarching goal of improving healthcare equity and quality.
+                </Paragraph>
+              </div>
+            </div>
           </div>
         </div>
-
 
         {/* Related Work */}
         <div className="max-w-4xl mx-auto bg-white border border-gray-300 p-8 rounded-lg"> {/* Added border and increased padding */}
           <div className="text-center mb-4"> {/* Title with bottom margin */}
             <h3 className="font-semibold text-left text-gray-900 text-2xl mb-4">Related Work</h3>
             <Paragraph className="text-base text-slate-900">
-              Our work builds upon insights in other work that has examined robustness of models and metrics among subpopulations:
+              Our work builds upon work using digital tools to evaluate health inequities:
             </Paragraph>
           </div>
 
           <div className="flex justify-center space-x-4"> {/* Flex container for images */}
             <div style={{ width: '33%' }}> {/* Container for the first image */}
               <Image 
-                src={subpop_thumbnail} 
+                src={dig_ineq_thumbnail}
                 alt="First Image Description"
                 layout="responsive"
                 width={100} // Example ratio
                 height={100} // Maintain aspect ratio
               />
-          </div>
+            </div>
 
             {/* Entry 1 */}
             <div style={{ width: '66%' }}> {/* Container for the first image */}
-              <h3 className="font-semibold text-gray-900"> Yang, Zhang*, Katabi, and Ghassemi. Change is Hard: A Closer Look at Subpopulation Shift. 2023.</h3>
+              <Link
+                href="https://doi.org/10.1136%2Fbmjhci-2023-100809"
+              >
+                <h3 className="font-semibold text-gray-900 hover:text-blue-600">Joe Zhang, Jack Gallifant, Robin L Pierce, Aoife Fordham, James Teo, Leo Celi, Hutan Ashrafian. Quantifying digital health inequality across a national healthcare system. 2023.</h3>
+              </Link>
               <p className="text-base text-justify mt-1 text-slate-900">
               <span className='font-bold'> Notes</span>: 
-              This work is a fine-grained analysis of the variation in mechanisms that cause subpopulation shifts, and how algorithms generalize across such diverse shifts at scale. 
+              This study quantified factors associated with differential utilisation of digital tools in the National Health Service (NHS). 
+              Results are concerning for technologically driven widening of healthcare inequalities. 
+              Targeted incentive to digital is necessary to prevent digital disparity from becoming health outcomes disparity.
               </p>
             </div>
+
           </div>
         </div>
 
@@ -256,28 +278,30 @@ export default function ProjectPage() {
           <div className="text-center mb-4"> {/* Title with bottom margin */}
             <h3 className="font-semibold text-left text-gray-900 text-2xl mb-4">How To Cite</h3>
             <Paragraph className="italic text-sm text-slate-900">
-              This work is not yet peer-reviewed. The preprint can be cited as follows. 
+              This study can be cited as follows. 
             </Paragraph>
           </div>
 
           <div className="mb-4">
             <h3 className="font-semibold text-slate-900 mb-2">Bibliography</h3>
             <p className="text-sm text-slate-900">
-              Matthew B. A. McDermott, Lasse Hyldig Hansen, Haoran Zhang, Giovanni Angelotti, and Jack Gallifant. "A Closer Look at AUROC and AUPRC under Class Imbalance" arXiv preprint arXiv:2401.06091 (2024).
+              Zhang J, Gallifant J, Pierce RL, et al. "Quantifying digital health inequality across a national healthcare system." BMJ Health & Care Informatics 2023;30:e100809. doi: 10.1136/bmjhci-2023-100809.
             </p>          
           </div>
 
           <div>
             <h3 className="font-semibold text-slate-900 mb-2">BibTeX</h3>
             <pre className="text-left bg-white p-3 rounded-md overflow-x-auto whitespace-pre-wrap break-words text-sm text-slate-900">
-              {`@misc{mcdermott2024closer,
-            title={A Closer Look at AUROC and AUPRC under Class Imbalance}, 
-            author={Matthew B. A. McDermott and Lasse Hyldig Hansen and Haoran Zhang and Giovanni Angelotti and Jack Gallifant},
-            year={2024},
-            eprint={2401.06091},
-            archivePrefix={arXiv},
-            primaryClass={cs.LG}
-        }`}
+              {`@article{zhang2023quantifying,
+                title={Quantifying digital health inequality across a national healthcare system},
+                author={Zhang, Joe and Gallifant, Jack and Pierce, Robin L and Fordham, Aoife and Teo, James and Celi, Leo and Ashrafian, Hutan},
+                journal={BMJ Health & Care Informatics},
+                volume={30},
+                pages={e100809},
+                year={2023},
+                publisher={BMJ Publishing Group},
+                doi={10.1136/bmjhci-2023-100809}
+              }`}
             </pre>
           </div>
         </div>
@@ -285,7 +309,7 @@ export default function ProjectPage() {
       </div>
       <footer className="bg-[#0B1120] text-center text-xl font-bold text-slate-900 p-4">
         <Link href="/" className="text-white hover:text-blue-800 p-2 rounded-lg transition duration-300 ease-in-out">
-        See more work
+        Home
         </Link>
     </footer>
     </section>

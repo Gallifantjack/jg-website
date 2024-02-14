@@ -156,6 +156,30 @@ function News_section() {
         <div className="mt-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <Slider {...settings}>            {[
               {
+                superTitle: 'January 2024',
+                title: 'AUC vs AUPRC- ICML Submission',
+                body: (
+                  <p>
+                    Our paper looking at AUC & AUPRC under class imbalance has just been submitted to ICML.
+                  </p>
+                ),
+                href: 'https://headlessui.dev',
+                image: require('@/img/resources/atomic_mistakes.png').default.src,
+                color: 'text-cyan-500',
+              },
+              {
+                superTitle: 'January 2024',
+                title: 'Peer Review of GPT-4 Published',
+                body: (
+                  <p>
+                    New paper published in Plos DH on the technical report of GPT-4.
+                  </p>
+                ),
+                href: 'https://headlessui.dev',
+                image: require('@/img/resources/PLOS_DH_color.png').default.src,
+                color: 'text-cyan-500',
+              },
+              {
                 superTitle: 'December 2023',
                 title: 'PRIMR 23 - Generative AI impact on IRB',
                 body: (

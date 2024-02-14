@@ -78,8 +78,7 @@ function Featured_work() {
           </BigText>
 
           <Paragraph>
-            A collection of research and projects that focus on ethical AI
-            deployment, healthcare equity, and understanding biological systems.
+            A collection of research and projects that are of particular interest.
           </Paragraph>
         </div>
         <div className="mt-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
