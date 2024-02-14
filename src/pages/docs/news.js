@@ -162,7 +162,7 @@ function News_section() {
                     Our paper looking at AUC & AUPRC under class imbalance has just been submitted to ICML.
                   </p>
                 ),
-                href: 'https://headlessui.dev',
+                href: 'https://arxiv.org/pdf/2401.06091.pdf',
                 image: require('@/img/resources/atomic_mistakes.png').default.src,
                 color: 'text-cyan-500',
               },
@@ -174,7 +174,7 @@ function News_section() {
                     New paper published in Plos DH on the technical report of GPT-4.
                   </p>
                 ),
-                href: 'https://headlessui.dev',
+                href: 'https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000417',
                 image: require('@/img/resources/PLOS_DH_color.png').default.src,
                 color: 'text-cyan-500',
               },
@@ -186,7 +186,7 @@ function News_section() {
                     Panel discussion on challenges faced by the IRB in the wake of generative AI.
                   </p>
                 ),
-                href: 'https://headlessui.dev',
+                href: 'https://primr23-sber23.eventscribe.net/searchGlobal.asp?mode=Speakers&SearchQuery=jack%20gallifant',
                 image: require('@/img/resources/primr_logo.png').default.src,
                 color: 'text-cyan-500',
               },
@@ -198,7 +198,7 @@ function News_section() {
                     Our paper that looks at NHS app usage across the UK has been published in BMJ HCI.
                   </p>
                 ),
-                href: 'https://heroicons.com',
+                href: 'https://informatics.bmj.com/content/30/1/e100809',
                 image: require('@/img/resources/dig_ineq.jpg').default.src,
                 color: 'text-purple-500', 
               },
@@ -210,7 +210,7 @@ function News_section() {
                     Our paper on health equity dashboards has been published in Lancet Digital Health.
                   </p>
                 ),
-                href: 'https://heroicons.com',
+                href: 'https://www.thelancet.com/journals/landig/article/PIIS2589-7500(23)00150-4/fulltext',
                 image: require('@/img/resources/landig.png').default.src,
                 color: 'text-purple-500',
               },
@@ -222,7 +222,7 @@ function News_section() {
                     Invited talk at Texas Children's Hospital on what 2024 holds for generative AI in healthcare.
                   </p>
                 ),
-                href: 'https://heroicons.com',
+                href: 'https://www.texaschildrens.org/',
                 image: require('@/img/resources/TCH_Logo_Color.jpg').default.src,
                 color: 'text-pink-500',
               },
@@ -234,7 +234,7 @@ function News_section() {
                     Our paper on evaluating NHS data flows has been accepted to Lancet Digital Health.
                   </p>
                 ),
-                href: 'https://heroicons.com',
+                href: 'https://www.thelancet.com/journals/landig/article/PIIS2589-7500(23)00157-7/fulltext',
                 image: require('@/img/resources/map_ball_chart.jpg').default.src,
                 color: 'text-purple-500',
               },
