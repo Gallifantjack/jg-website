@@ -51,7 +51,7 @@ export default function App({ Component, pageProps, router }) {
   const description =
     meta.metaDescription ||
     meta.description ||
-    'Tailwind CSS is a utility-first CSS framework for rapidly building modern websites without ever leaving your HTML.'
+    'Jack Gallifant is a clinician and post-doctoral researcher in AI Alignment at MIT .'
   let image = meta.ogImage ?? meta.image
   image = image
     ? `https://tailwindcss.com${image.default?.src ?? image.src ?? image}`
