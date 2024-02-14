@@ -12,12 +12,13 @@ function About_index() {
           <Caption className="text-indigo-700 dark:text-indigo-400">About Me</Caption>
 
           <BigText>
-            <Widont>Bridging Human Values and Machine Learning</Widont>
+            <Widont>Exploring the Intersection of Healthcare and AI</Widont>
           </BigText>
 
           <Paragraph className="text-lg text-slate-700">
-            With a unique blend of clinical and AI expertise, I am dedicated to unlocking AI's potential in transforming healthcare. 
-            As a Postdoctoral researcher at MIT, my research centers around unraveling the complexities of AI alignment and superintelligence, to ensure technology serves as a beacon for health equity. 
+            I blend my clinical background with my passion for AI. 
+            As a postdoctoral researcher at MIT, I strive to understand and shape how AI can be aligned with human values, particularly in the realm of healthcare. 
+            My goal is to contribute to a future where AI can be used to improve health outcomes for everyone.          
           </Paragraph>
         </div>
 
@@ -37,11 +38,11 @@ function About_index() {
                   <p className="font-semibold text-gray-900 text-2xl">Artificial Intelligence</p>
                   </div>
                    <Paragraph className="text-base text-slate-700">
-                    My goal is to understand how superintelligent systems make decisions, ensuring safety and fairness.
+                    I am deeply interested in ensuring that intelligent systems are aligned with human values and building mechanisms to ensure that these systems are developed with fairness and safety in mind.
                   </Paragraph>
                    <Paragraph className="text-base text-slate-700">
-                    Most recently, I have been using mechanistic interpretability to understand how language models encode biases and how to mitigate them.
-                  </Paragraph>
+                    My recent work involves investigating mechanistic interpretability of language models, how they encode clinical information across subgroups, and exploring ways to mitigate biases.
+                  </Paragraph>                
                 </div>
               </div>
 
@@ -58,10 +59,10 @@ function About_index() {
                     <p className="font-semibold text-gray-900 text-2xl">Healthcare</p>
                   </div>
                    <Paragraph className="text-base text-slate-700">
-                    Implementation of AI is becoming inevitable, my goal is to build systems that facilitate safe deployment in real world settings.
+                    Implementation of AI in healthcare is inevitable, my goal is to build systems that facilitate safe deployment in real world settings and educating healthcare workers about the risks of these tools.
                   </Paragraph>
                    <Paragraph className="text-base text-slate-700">
-                    I am currently working on building tools for detecting subpopulation shifts in clinical data, to ensure AI systems are safe and equitable.
+                    I am currently working on building tools for monitoring AI tools post deployment, detecting subpopulation shifts in clinical data, and building capacity around high quality educational resources.
                   </Paragraph>
                 </div>
               </div>

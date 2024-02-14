@@ -15,45 +15,45 @@ function Research_index() {
           </BigText>
 
           <Paragraph className="text-slate-50">
-            My goal is to build the tools that help us understand how AI learns, thinks, and reasons, so that we can harmonize
-            human and machine intelligence to improve human lives.
+            As the capabilities of AI increases we will soon reach a point where it consistently outperforms humans.  
+            It is important that we prepare for this future to make sure that models are using relevant features in a manner that is faithful to humans broader goals.
           </Paragraph>
         </div>
         <div class="mx-auto mt-16 flex max-w-2xl flex-col gap-8 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end">
           <div class="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-gray-900 p-8 lg:w-full lg:max-w-sm lg:flex-auto lg:flex-col lg:items-start lg:gap-y-44">
             <p class="flex-none text-3xl font-bold tracking-tight text-white">
-              Alignment
+              Interpretability
             </p>
             <div class="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
               <p class="text-lg font-semibold tracking-tight text-white">
                 Reverse Engineering AI Systems
               </p>
               <p class="mt-2 text-base text-justify leading-7 text-gray-400">
-                We are using causal interventions to understand how knowledge is stored and used by AI.
+                Employing mechanistic interpretability to demystify AI decision-making processes.
               </p>
             </div>
           </div>
           <div class="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-slate-200 p-8 lg:w-72 lg:max-w-none lg:flex-none lg:flex-col lg:items-start">
             <p class="flex-none text-3xl font-bold tracking-tight text-gray-900">
-              Personalization Without Discrimination
+              Robustness Benchmarks 
             </p>
             <div class="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
               <p class="text-lg text-justify font-semibold tracking-tight text-gray-900">
-                AI that works for everyone
+                Setting the Standards
               </p>
               <p class="mt-2 text-base leading-7 text-gray-600">
-                Developing tools to mitigate perpetuation of biases encoded in clinical data.
+                Establishing benchmarks for reliable, safe, and effective healthcare AI models.
               </p>
             </div>
           </div>
           <div class="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-red-800 p-8 lg:w-full lg:max-w-none lg:flex-auto lg:flex-col lg:items-start lg:gap-y-28">
             <p class="flex-none text-3xl font-bold tracking-tight text-white">
-              Building The Flywheel
+              Dynamic Monitoring
             </p>
             <div class="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
-              <p class="text-lg font-semibold tracking-tight text-white">Promote health equity</p>
+              <p class="text-lg font-semibold tracking-tight text-white">Reducing Cycle Times</p>
               <p class="mt-2 text-base text-justify leading-7 text-red-200">
-                We are building open-source tools to maximize the impact of AI in healthcare.
+                Implementing continuous feedback for AI adaptation and improvement in dynamic environments.
               </p>
             </div>
           </div>
