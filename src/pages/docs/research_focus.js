@@ -1,10 +1,8 @@
-import { Button } from '@/components/Button'
-import { BigText, Caption, IconContainer, Link, Paragraph, Widont } from '@/components/home/common'
-import clsx from 'clsx'
+import { BigText, Caption, Paragraph, Widont } from '@/components/home/common'
 
 function Research_index() {
   return (
-    <section className="min-h-screen py-24 sm:py-32">
+    <section className="bg-[#0B1120] min-h-screen py-24 sm:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         <div className="mb-20 md:mb-10">
           <div class="bg-red-800 text-white p-4 text-xl font-bold rounded-full w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] flex items-center justify-center flex-shrink-0">

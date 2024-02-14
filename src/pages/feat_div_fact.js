@@ -4,15 +4,11 @@ import Image from 'next/image';
 import React from 'react';
 import { BigText, Caption, Paragraph, Button } from '@/components/home/common';
 
-import atomic_mistakes from '@/img/resources/atomic_mistakes.png';
 
 export default function ProjectPage() {
   const div_fact_thumbnail = require("@/img/resources/arxiv_thumbnails/div_fact_thumb.png").default.src;
   const git_thumbnail = require("@/img/resources/git_thumbnails/auc_git.png").default.src;
   const equity_thumbnail = require("@/img/resources/equity_fundamental.png").default.src;
-  const auprc_optim = require("@/img/resources/auc_optim_auprc.png").default.src;
-  const subpop_thumbnail = require("@/img/resources/subpop_thumbnail.png").default.src;
-
 
   return (
     <section className='bg-white min-h-screen pt-24 sm:pt-32'>

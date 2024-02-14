@@ -13,8 +13,6 @@ import {
   simplifyToken,
   normalizeTokens,
 } from './remark/utils.mjs'
-import remarkGfm from 'remark-gfm'
-import remarkUnwrapImages from 'remark-unwrap-images'
 import { recmaImportImages } from './recma/importImages.mjs'
 import resolveConfig from 'tailwindcss/resolveConfig.js'
 import tailwindDefaultConfig from 'tailwindcss/defaultConfig.js'
@@ -46,7 +44,7 @@ const fallbackGetStaticProps = {}
 
 export default {
   swcMinify: true,
-  pageExtensions: ['js', 'jsx', 'mdx'],
+  pageExtensions: ['js', 'jsx'],
   experimental: {
     esmExternals: false,
     scrollRestoration: true,
@@ -62,7 +60,7 @@ export default {
   webpack(config, options) {
     config.module.rules.push({
       test: /\.mp4$/i,
-      issuer: /\.(jsx?|tsx?|mdx)$/,
+      issuer: /\.(jsx?|tsx?)$/,
       use: [
         {
           loader: 'file-loader',
@@ -178,186 +176,7 @@ export default {
           `
         }),
       ],
-    })
-
-    let mdx = (plugins = []) => [
-      {
-        loader: '@mdx-js/loader',
-        options:
-          plugins === null
-            ? { providerImportSource: '@mdx-js/react' }
-            : {
-                providerImportSource: '@mdx-js/react',
-                remarkPlugins: [
-                  remarkGfm,
-                  remarkUnwrapImages,
-                  withExamples,
-                  withTableOfContents,
-                  withSyntaxHighlighting,
-                  withSmartQuotes,
-                  ...plugins,
-                ],
-                rehypePlugins: [withLinkRoles],
-                recmaPlugins: [[recmaImportImages, { property: 'src' }]],
-              },
-      },
-      createLoader(function (source) {
-        let pathSegments = this.resourcePath.split(path.sep)
-        let slug =
-          pathSegments[pathSegments.length - 1] === 'index.mdx'
-            ? pathSegments[pathSegments.length - 2]
-            : pathSegments[pathSegments.length - 1].replace(/\.mdx$/, '')
-        return source + `\n\nexport const slug = '${slug}'`
-      }),
-    ]
-
-    config.module.rules.push({
-      test: { and: [/\.md$/, /snippets/] },
-      resourceQuery: { not: [/rss/, /preview/] },
-      use: [
-        options.defaultLoaders.babel,
-        {
-          loader: '@mdx-js/loader',
-          options: {
-            providerImportSource: '@mdx-js/react',
-            remarkPlugins: [withSyntaxHighlighting],
-          },
-        },
-      ],
-    })
-
-    config.module.rules.push({
-      test: /\.mdx$/,
-      resourceQuery: /rss/,
-      use: [options.defaultLoaders.babel, ...mdx()],
-    })
-
-    config.module.rules.push({
-      test: /\.mdx$/,
-      resourceQuery: /preview/,
-      use: [
-        options.defaultLoaders.babel,
-        createLoader(function (src) {
-          const [preview] = src.split('{/*/excerpt*/}')
-          return preview.replace('{/*excerpt*/}', '')
-        }),
-        ...mdx([
-          () => (tree) => {
-            let firstParagraphIndex = tree.children.findIndex((child) => child.type === 'paragraph')
-            if (firstParagraphIndex > -1) {
-              tree.children = tree.children.filter((child, index) => {
-                if (child.type === 'import' || child.type === 'export') {
-                  return true
-                }
-                return index <= firstParagraphIndex
-              })
-            }
-          },
-        ]),
-      ],
-    })
-
-    function mainMdxLoader(plugins) {
-      return [
-        options.defaultLoaders.babel,
-        createLoader(function (source) {
-          if (source.includes('/*START_META*/')) {
-            let match = source.match(/^export const meta = (\{.*?\n\})/ms)
-            return 'export default ' + match[1]
-          }
-          let exports = Array.from(source.matchAll(/^export const ([^=\s]+)/gm)).map(
-            ([, name]) => name
-          )
-          return (
-            source.replace(/export const/gs, 'const') +
-            `\nMDXContent.layoutProps = { ${exports.join(',')} }\n`
-          )
-        }),
-        ...mdx(plugins),
-        createLoader(function (source) {
-          let fields = new URLSearchParams(this.resourceQuery.substr(1)).get('meta') ?? undefined
-          let { attributes: meta, body } = frontMatter(source)
-          if (fields) {
-            for (let field in meta) {
-              if (!fields.split(',').includes(field)) {
-                delete meta[field]
-              }
-            }
-          }
-
-          let extra = []
-          let resourcePath = path.relative(__dirname, this.resourcePath)
-
-          if (!/^\s*export\s+(var|let|const)\s+Layout\s+=/m.test(source)) {
-            for (let glob in fallbackLayouts) {
-              if (minimatch(resourcePath, glob)) {
-                extra.push(
-                  `import { ${fallbackLayouts[glob][1]} as _Layout } from '${fallbackLayouts[glob][0]}'`,
-                  'export const Layout = _Layout'
-                )
-                break
-              }
-            }
-          }
-
-          if (!/^\s*export\s+default\s+/m.test(source.replace(/```(.*?)```/gs, ''))) {
-            for (let glob in fallbackDefaultExports) {
-              if (minimatch(resourcePath, glob)) {
-                extra.push(
-                  `import { ${fallbackDefaultExports[glob][1]} as _Default } from '${fallbackDefaultExports[glob][0]}'`,
-                  'export default _Default'
-                )
-                break
-              }
-            }
-          }
-
-          if (
-            !/^\s*export\s+(async\s+)?function\s+getStaticProps\s+/m.test(
-              source.replace(/```(.*?)```/gs, '')
-            )
-          ) {
-            for (let glob in fallbackGetStaticProps) {
-              if (minimatch(resourcePath, glob)) {
-                extra.push(`export { getStaticProps } from '${fallbackGetStaticProps[glob]}'`)
-                break
-              }
-            }
-          }
-
-          let metaExport
-          if (!/export\s+(const|let|var)\s+meta\s*=/.test(source)) {
-            metaExport =
-              typeof fields === 'undefined'
-                ? `export const meta = ${JSON.stringify(meta)}`
-                : `export const meta = /*START_META*/${JSON.stringify(meta || {})}/*END_META*/`
-          }
-
-          return [
-            ...(typeof fields === 'undefined' ? extra : []),
-            typeof fields === 'undefined'
-              ? body.replace(/\{\/\*excerpt\*\/\}.*\{\/\*\/excerpt\*\/\}/s, '')
-              : '',
-            metaExport,
-          ]
-            .filter(Boolean)
-            .join('\n\n')
-        }),
-      ]
-    }
-
-    config.module.rules.push({
-      test: { and: [/\.mdx$/], not: [/snippets/] },
-      resourceQuery: { not: [/rss/, /preview/] },
-      exclude: [path.join(__dirname, 'src/pages/showcase/')],
-      use: mainMdxLoader(),
-    })
-
-    config.module.rules.push({
-      test: /\.mdx$/,
-      include: [path.join(__dirname, 'src/pages/showcase/')],
-      use: mainMdxLoader(null),
-    })
+    });
 
     return config
   },

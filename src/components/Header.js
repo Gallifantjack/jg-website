@@ -6,12 +6,11 @@ import clsx from 'clsx'
 import Link from 'next/link'
 import Router from 'next/router'
 import { useEffect, useState } from 'react'
-import { ThemeSelect, ThemeToggle } from './ThemeToggle'
 
 function Featured() {
   return (
     <a
-      href="https://connect.tailwindcss.com"
+      href="/feat_nhs_map"
       target="_blank"
       className="ml-3 text-xs leading-5 font-medium text-sky-600 dark:text-sky-400 bg-sky-400/10 rounded-full py-1 px-3 hidden xl:flex items-center hover:bg-sky-400/20"
     >
@@ -112,9 +111,6 @@ export function NavPopover({ display = 'md:hidden', className, ...props }) {
               </a>
             </li>
           </ul>
-          <div className="mt-6 pt-6 border-t border-slate-200 dark:border-slate-200/10">
-            <ThemeSelect />
-          </div>
         </div>
       </Dialog>
     </div>
@@ -208,7 +204,7 @@ export function Header({ hasNav = false, navIsOpen, onNavToggle, title, section 
                   Router.push('/brand')
                 }}
               >
-                <span className="sr-only">Tailwind CSS home page</span>
+                <span className="sr-only">JG home page</span>
                 <Logo className="w-auto h-5" />
               </Link>
               <Featured />

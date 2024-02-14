@@ -54,9 +54,9 @@ module.exports = {
         DEFAULT: {
           css: {
             maxWidth: 'none',
-            color: theme('colors.slate.700'),
+            color: theme('colors.slate.400'), // updated from dark theme
             hr: {
-              borderColor: theme('colors.slate.100'),
+              borderColor: theme('colors.slate.200'), // updated from dark theme
               marginTop: '3em',
               marginBottom: '3em',
             },
@@ -65,18 +65,21 @@ module.exports = {
             },
             h2: {
               marginBottom: `${16 / 24}em`,
+              color: theme('colors.slate.200'), // updated from dark theme
             },
             h3: {
               marginTop: '2.4em',
               lineHeight: '1.4',
+              color: theme('colors.slate.200'), // updated from dark theme
             },
             h4: {
               marginTop: '2em',
               fontSize: '1.125em',
+              color: theme('colors.slate.200'), // updated from dark theme
             },
             'h2 small, h3 small, h4 small': {
               fontFamily: theme('fontFamily.mono').join(', '),
-              color: theme('colors.slate.500'),
+              color: theme('colors.slate.400'), // updated from dark theme
               fontWeight: 500,
             },
             'h2 small': {
@@ -118,7 +121,8 @@ module.exports = {
             a: {
               fontWeight: theme('fontWeight.semibold'),
               textDecoration: 'none',
-              borderBottom: `1px solid ${theme('colors.sky.300')}`,
+              borderBottom: `1px solid ${theme('colors.sky.400')}`, // updated from dark theme
+              color: theme('colors.white'), // updated from dark theme
             },
             'a:hover': {
               borderBottomWidth: '2px',
@@ -128,7 +132,7 @@ module.exports = {
               fontWeight: 'inherit',
             },
             strong: {
-              color: theme('colors.slate.900'),
+              color: theme('colors.slate.200'), // updated from dark theme
               fontWeight: theme('fontWeight.semibold'),
             },
             'a strong': {
@@ -136,11 +140,10 @@ module.exports = {
               fontWeight: 'inherit',
             },
             kbd: {
-              background: theme('colors.slate.100'),
-              borderWidth: '1px',
-              borderColor: theme('colors.slate.200'),
+              background: theme('colors.slate.700'), // updated from dark theme
+              borderColor: theme('colors.slate.600'), // updated from dark theme
               padding: '0.125em 0.25em',
-              color: theme('colors.slate.700'),
+              color: theme('colors.slate.200'), // updated from dark theme
               fontWeight: 500,
               fontSize: '0.875em',
               fontVariantLigatures: 'none',
@@ -150,12 +153,13 @@ module.exports = {
             code: {
               fontWeight: theme('fontWeight.medium'),
               fontVariantLigatures: 'none',
+              color: theme('colors.slate.200'), // updated from dark theme
             },
             pre: {
               color: theme('colors.slate.50'),
               borderRadius: theme('borderRadius.xl'),
               padding: theme('padding.5'),
-              boxShadow: theme('boxShadow.md'),
+              boxShadow: 'inset 0 0 0 1px rgb(255 255 255 / 0.1)', // updated from dark theme
               display: 'flex',
               marginTop: `${20 / 14}em`,
               marginBottom: `${32 / 14}em`,
@@ -175,15 +179,15 @@ module.exports = {
               lineHeight: theme('fontSize.sm')[1].lineHeight,
             },
             thead: {
-              color: theme('colors.slate.700'),
-              borderBottomColor: theme('colors.slate.200'),
+              color: theme('colors.slate.300'), // updated from dark theme
+              borderBottomColor: 'rgb(148 163 184 / 0.2)', // updated from dark theme
             },
             'thead th': {
               paddingTop: 0,
               fontWeight: theme('fontWeight.semibold'),
             },
             'tbody tr': {
-              borderBottomColor: theme('colors.slate.100'),
+              borderBottomColor: 'rgb(148 163 184 / 0.1)', // updated from dark theme
             },
             'tbody tr:last-child': {
               borderBottomWidth: '1px',
@@ -200,7 +204,7 @@ module.exports = {
             },
           },
         },
-        dark: {
+        dark2: {
           css: {
             color: theme('colors.slate.400'),
             'h2, h3, h4, thead th': {
